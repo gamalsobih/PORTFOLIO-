@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamal Sobih — Graphic Designer & Visual Content Specialist</title>
+  <meta name="description" content="Portfolio of Gamal El-Din Sobih Mahmoud - Senior Graphic Designer, Visual Content Specialist & Generative AI Pioneer based in Cairo, Egypt.">
+
+  <!-- Google Fonts: Space Mono (Typewriter/Editorial) & Syne (Bold Neo-Brutalist Badges) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       CSS VARIABLES & BASE STYLING (Editorial Zine / Neo-Brutalist)
+       ========================================================= */
+    :root {
+      --bg-cream: #E5E0D8;           /* Authentic paper cream from reference */
+      --bg-card: #F0ECE4;
+      --bg-card-light: #FAF8F5;
+      --ink-black: #121212;          /* Crisp high-contrast black */
+      --ink-muted: #3D3B38;          /* Editorial body text */
+      --ink-light: #6E6B66;
+      --border-ink: 1.8px solid #121212;
+      --border-thick: 2.5px solid #121212;
+      --shadow-flat: 4px 4px 0px #121212;
+      --shadow-hover: 6px 6px 0px #121212;
+      --font-mono: 'Space Mono', 'Courier New', monospace;
+      --font-display: 'Syne', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-cream);
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--ink-black);
+      font-family: var(--font-mono);
+      line-height: 1.55;
+      font-size: 14px;
+      overflow-x: hidden;
+      padding: 0;
+      margin: 0;
+      background-image: radial-gradient(rgba(18, 18, 18, 0.04) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* =========================================================
+       STICKER BADGES & EDITORIAL SHAPES (Directly from Reference)
+       ========================================================= */
+    .sticker-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FAF8F5;
+      border: var(--border-thick);
+      padding: 8px 22px;
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--ink-black);
+      box-shadow: 2px 2px 0px rgba(18, 18, 18, 0.15);
+      user-select: none;
+      transition: var(--transition);
+    }
+
+    .sticker-badge:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: var(--shadow-flat);
+    }
+
+    .sticker-badge.tilt-left {
+      transform: rotate(-3.5deg);
+    }
+    .sticker-badge.tilt-left:hover {
+      transform: rotate(-2deg) translateY(-2px);
+    }
+
+    .sticker-badge.tilt-right {
+      transform: rotate(3deg);
+    }
+    .sticker-badge.tilt-right:hover {
+      transform: rotate(1.5deg) translateY(-2px);
+    }
+
+    .sticker-badge.tilt-slight {
+      transform: rotate(-1.5deg);
+    }
+
+    .sticker-badge.framed {
+      border: var(--border-thick);
+      padding: 10px 32px;
+      font-size: 1.65rem;
+      letter-spacing: 1.5px;
+      background: transparent;
+    }
+
+    .smiley-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border: 2px solid var(--ink-black);
+      border-radius: 50%;
+      font-family: var(--font-mono);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
+      background: #fff;
+    }
+
+    .asterisk-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      vertical-align: middle;
+      color: var(--ink-black);
+    }
+
+    /* =========================================================
+       NAVIGATION BAR
+       ========================================================= */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(229, 224, 216, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: var(--border-ink);
+      padding: 14px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.25rem;
+      text-decoration: none;
+      color: var(--ink-black);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-logo span {
+      background: var(--ink-black);
+      color: var(--bg-cream);
+      padding: 2px 7px;
+      border-radius: 3px;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--ink-black);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding-bottom: 2px;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .btn-action {
+      background: var(--ink-black);
+      color: var(--bg-cream);
+      border: var(--border-ink);
+      padding: 7px 18px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 2px 2px 0px rgba(18, 18, 18, 0.2);
+      transition: var(--transition);
+    }
+
+    .btn-action:hover {
+      background: #FAF8F5;
+      color: var(--ink-black);
+      box-shadow: var(--shadow-flat);
+      transform: translate(-1px, -1px);
+    }
+
+    .btn-action.btn-outline {
+      background: transparent;
+      color: var(--ink-black);
+    }
+    .btn-action.btn-outline:hover {
+      background: var(--ink-black);
+      color: var(--bg-cream);
+    }
+
+    /* Mobile Hamburger */
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: var(--border-ink);
+      padding: 6px 10px;
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       SECTION 1: HERO / HEADER (EXACT REFERENCE REPRODUCTION)
+       ========================================================= */
+    .hero-section {
+      padding: 50px 0 30px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+    }
+
+    .hero-left-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+    }
+
+    .hero-tagline {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      line-height: 1.35;
+      border-bottom: 2px solid var(--ink-black);
+      padding-bottom: 4px;
+      display: inline-block;
+    }
+
+    .hero-name-badge {
+      margin-top: 10px;
+    }
+
+    /* Hand-Drawn Doodle Arrow */
+    .doodle-arrow-container {
+      position: relative;
+      width: 140px;
+      height: 80px;
+      margin-left: 50px;
+    }
+
+    .doodle-arrow-svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: var(--ink-black);
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hero-quick-meta {
+      font-size: 0.86rem;
+      color: var(--ink-muted);
+      border-left: 2px solid var(--ink-black);
+      padding-left: 14px;
+      max-width: 380px;
+    }
+
+    .hero-quick-meta strong {
+      color: var(--ink-black);
+      display: block;
+      margin-bottom: 4px;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-right-content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .portrait-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      height: 520px;
+      border: var(--border-thick);
+      box-shadow: var(--shadow-flat);
+      background: #D9D4CB;
+      overflow: hidden;
+    }
+
+    .portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(115%) brightness(95%);
+      transition: filter 0.3s ease;
+      display: block;
+    }
+
+    .portrait-wrapper:hover .portrait-img {
+      filter: grayscale(50%) contrast(110%);
+    }
+
+    /* Tilted "SOBIH" Badge over the image */
+    .hero-surname-badge {
+      position: absolute;
+      bottom: 40px;
+      right: -25px;
+      z-index: 10;
+    }
+
+    /* =========================================================
+       SECTION 2: MY WORK :) (SPLIT IMAGE & EDITORIAL BIO)
+       ========================================================= */
+    .my-work-section {
+      padding: 60px 0;
+      border-top: var(--border-ink);
+      border-bottom: var(--border-ink);
+      background-color: var(--bg-cream);
+    }
+
+    .my-work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .work-photo-box {
+      border: var(--border-thick);
+      box-shadow: var(--shadow-flat);
+      background: #fff;
+      overflow: hidden;
+      max-height: 440px;
+    }
+
+    .work-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(110%);
+      display: block;
+    }
+
+    .my-work-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .bio-text {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--ink-black);
+      text-align: justify;
+    }
+
+    .highlight-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 6px;
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .highlight-item h4 {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .highlight-item p {
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      line-height: 1.45;
+    }
+
+    /* =========================================================
+       SECTION 3: SERVICES I OFFER (EXACT BOX & ICONS FROM IMAGE)
+       ========================================================= */
+    .services-section {
+      padding: 70px 0;
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 60px;
+      row-gap: 45px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 14px;
+      border: 1.5px dashed transparent;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      border-color: var(--ink-black);
+      background: rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .service-icon-box {
+      width: 70px;
+      height: 60px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-icon-svg {
+      width: 58px;
+      height: 52px;
+      stroke: var(--ink-black);
+      stroke-width: 2.2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-content h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid var(--ink-black);
+      display: inline-block;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+    }
+
+    .service-content p {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      line-height: 1.45;
+    }
+
+    /* =========================================================
+       SECTION 4: PORTFOLIO & SELECTED WORKS (FILTERABLE GALLERY)
+       ========================================================= */
+    .portfolio-section {
+      padding: 70px 0;
+      border-top: var(--border-ink);
+      background: var(--bg-card);
+    }
+
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    /* Filter tabs */
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: var(--border-ink);
+      color: var(--ink-black);
+      padding: 6px 16px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--ink-black);
+      color: var(--bg-cream);
+      box-shadow: 2px 2px 0px rgba(18, 18, 18, 0.25);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .project-card {
+      background: #FAF8F5;
+      border: var(--border-thick);
+      box-shadow: var(--shadow-flat);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .project-thumb {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+      background: #dedede;
+      border-bottom: var(--border-ink);
+    }
+
+    .project-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease, filter 0.3s ease;
+      filter: grayscale(80%) contrast(110%);
+    }
+
+    .project-card:hover .project-thumb img {
+      transform: scale(1.05);
+      filter: grayscale(0%) contrast(100%);
+    }
+
+    .project-category-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #FAF8F5;
+      border: var(--border-ink);
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .project-body {
+      padding: 18px 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .project-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1.25;
+      text-transform: uppercase;
+      color: var(--ink-black);
+    }
+
+    .project-desc {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      line-height: 1.4;
+    }
+
+    .project-meta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px dashed var(--ink-black);
+      padding-top: 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .project-meta-bar .view-link {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--ink-black);
+      text-decoration: none;
+    }
+
+    /* =========================================================
+       SECTION 5: CAREER JOURNEY & TIMELINE (10+ YEARS)
+       ========================================================= */
+    .timeline-section {
+      padding: 70px 0;
+      border-top: var(--border-ink);
+    }
+
+    .timeline-container {
+      max-width: 850px;
+      margin: 0 auto;
+      border-left: var(--border-thick);
+      padding-left: 28px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -37px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      background: var(--ink-black);
+      border: 3px solid var(--bg-cream);
+      box-shadow: 0 0 0 2px var(--ink-black);
+      border-radius: 50%;
+    }
+
+    .timeline-date {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: #FAF8F5;
+      border: var(--border-ink);
+      display: inline-block;
+      padding: 2px 8px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--ink-black);
+      margin-bottom: 4px;
+    }
+
+    .timeline-company {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--ink-muted);
+      margin-bottom: 10px;
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+    }
+
+    .timeline-bullets li {
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .timeline-bullets li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--ink-black);
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       SECTION 6: CV HUB / DOWNLOAD BANNER
+       ========================================================= */
+    .cv-banner-section {
+      background: var(--ink-black);
+      color: var(--bg-cream);
+      padding: 50px 0;
+      border-top: var(--border-ink);
+      border-bottom: var(--border-ink);
+    }
+
+    .cv-banner-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .cv-banner-text h2 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .cv-banner-text p {
+      font-size: 0.9rem;
+      color: #C0BAB0;
+      max-width: 520px;
+    }
+
+    .cv-banner-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-cv {
+      background: var(--bg-cream);
+      color: var(--ink-black);
+      border: 2px solid var(--bg-cream);
+      padding: 10px 20px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .btn-cv:hover {
+      background: transparent;
+      color: var(--bg-cream);
+      border-color: var(--bg-cream);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       SECTION 7: CONNECT WITH ME (EXACT REFERENCE BOTTOM SECTION)
+       ========================================================= */
+    .connect-section {
+      padding: 70px 0 90px;
+    }
+
+    .connect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .connect-photo-box {
+      border: var(--border-thick);
+      box-shadow: var(--shadow-flat);
+      background: #D9D4CB;
+      overflow: hidden;
+      height: 480px;
+    }
+
+    .connect-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(115%);
+      display: block;
+    }
+
+    .connect-info-box {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    .contact-details-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-link-row {
+      font-family: var(--font-mono);
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--ink-black);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .contact-link-row:hover {
+      color: #555;
+      transform: translateX(4px);
+    }
+
+    .contact-link-row svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--ink-black);
+      stroke-width: 2;
+      fill: none;
+    }
+
+    /* Connect with me sticker */
+    .connect-badge-wrap {
+      margin-top: 15px;
+    }
+
+    .direct-actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .whatsapp-btn {
+      background: #121212;
+      color: #FAF8F5;
+      border: var(--border-ink);
+      padding: 10px 22px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-flat);
+      transition: var(--transition);
+    }
+
+    .whatsapp-btn:hover {
+      background: #25D366;
+      border-color: #121212;
+      color: #121212;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       MODAL LIGHTBOX (PROJECT PREVIEW)
+       ========================================================= */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 18, 18, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--bg-cream);
+      border: var(--border-thick);
+      box-shadow: 10px 10px 0px var(--ink-black);
+      max-width: 780px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 28px;
+      position: relative;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: var(--ink-black);
+      color: var(--bg-cream);
+      border: none;
+      width: 34px;
+      height: 34px;
+      font-family: var(--font-mono);
+      font-weight: 900;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .modal-close-btn:hover {
+      background: #ff4757;
+      color: #fff;
+    }
+
+    .modal-img-wrap {
+      border: var(--border-ink);
+      height: 340px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: #222;
+    }
+
+    .modal-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .modal-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .modal-tag {
+      background: #FAF8F5;
+      border: var(--border-ink);
+      padding: 2px 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .modal-desc {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--ink-muted);
+      margin-bottom: 22px;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    footer {
+      border-top: var(--border-thick);
+      background: #DAD4C9;
+      padding: 30px 0;
+      font-size: 0.82rem;
+      text-align: center;
+      color: var(--ink-muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Toast Notification */
+    .toast-notify {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--ink-black);
+      color: var(--bg-cream);
+      border: var(--border-ink);
+      padding: 10px 20px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.85rem;
+      box-shadow: var(--shadow-flat);
+      display: none;
+      z-index: 10001;
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* =========================================================
+       RESPONSIVE MEDIA QUERIES
+       ========================================================= */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-left-content {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-quick-meta {
+        border-left: none;
+        border-top: 2px solid var(--ink-black);
+        padding: 12px 0 0;
+        text-align: center;
+      }
+
+      .doodle-arrow-container {
+        display: none;
+      }
+
+      .hero-right-content {
+        margin: 0 auto;
+      }
+
+      .hero-surname-badge {
+        right: 0;
+        bottom: 20px;
+      }
+
+      .my-work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .connect-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .connect-info-box {
+        align-items: center;
+        text-align: center;
+      }
+
+      .contact-details-list {
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sticker-badge {
+        font-size: 1.4rem;
+        padding: 6px 16px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-cream);
+        border-bottom: var(--border-thick);
+        padding: 20px;
+      }
+
+      .portrait-wrapper {
+        height: 420px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================
+       TOP NAVIGATION BAR
+       ========================================================= -->
+  <nav class="top-nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand-logo">
+        <span>GS</span> GAMAL SOBIH
+      </a>
+
+      <button class="menu-toggle" onclick="toggleMobileMenu()">MENU ☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" onclick="closeMobileMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+        <li><a href="#portfolio" onclick="closeMobileMenu()">Portfolio</a></li>
+        <li><a href="#timeline" onclick="closeMobileMenu()">Experience</a></li>
+        <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+      </ul>
+
+      <div style="display: flex; gap: 8px;">
+        <a href="#cv-hub" class="btn-action">
+          <span>CV / RESUME</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================
+       SECTION 1: HERO / HEADER (FAITHFUL TO YOUR REFERENCE)
+       ========================================================= -->
+  <header class="hero-section" id="hero">
+    <div class="container hero-grid">
+      
+      <!-- Left Content -->
+      <div class="hero-left-content">
+        <div class="hero-tagline">
+          FREELANCE GRAPHIC DESIGNER<br>&amp; VISUAL SPECIALIST
+        </div>
+
+        <!-- Tilted Name Badge with Smiley -->
+        <div class="hero-name-badge">
+          <div class="sticker-badge tilt-left">
+            <span class="smiley-icon">:)</span>
+            <span>GAMAL</span>
+          </div>
+        </div>
+
+        <!-- Hand-drawn Doodle Arrow pointing to photo -->
+        <div class="doodle-arrow-container">
+          <svg class="doodle-arrow-svg" viewBox="0 0 140 80">
+            <!-- Curved hand-drawn playful arrow path -->
+            <path d="M 15 20 C 50 10, 90 20, 115 55" />
+            <!-- Arrow tip -->
+            <path d="M 100 56 L 117 57 L 115 41" />
+          </svg>
+        </div>
+
+        <div class="hero-quick-meta">
+          <strong>10+ YEARS OF CREATIVE EXCELLENCE</strong>
+          Cairo, Egypt • Brand Identity, Paid Social Ads, Motion Graphics, Video Reels &amp; Generative AI Workflows.
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#portfolio" class="btn-action">VIEW SELECTED WORK</a>
+          <a href="https://wa.me/201066439963?text=Hello%20Gamal,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" class="btn-action btn-outline">LET'S TALK</a>
+        </div>
+      </div>
+
+      <!-- Right Content: Grayscale Portrait & Surname Badge -->
+      <div class="hero-right-content">
+        <div class="portrait-wrapper">
+          <!-- Monochrome artistic portrait -->
+          <img 
+            src="assets/images/hero-portrait.png" 
+            alt="Gamal El-Din Sobih Mahmoud" 
+            class="portrait-img"
+            id="heroPortrait"
+          >
+        </div>
+
+        <!-- Tilted Surname Badge -->
+        <div class="hero-surname-badge">
+          <div class="sticker-badge tilt-right">
+            <span>SOBIH</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================
+       SECTION 2: MY WORK :) (KEYBOARD PHOTO & EDITORIAL BIO)
+       ========================================================= -->
+  <section class="my-work-section" id="about">
+    <div class="container my-work-grid">
+      
+      <!-- Vintage Mechanical Keyboard / Workspace photo (like reference) -->
+      <div class="work-photo-box">
+        <img 
+          src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80" 
+          alt="Creative Design Workspace"
+        >
+      </div>
+
+      <!-- Editorial Bio and Credentials -->
+      <div class="my-work-info">
+        <div>
+          <div class="sticker-badge tilt-slight">
+            <span>MY WORK</span>
+            <span class="smiley-icon">:)</span>
+          </div>
+        </div>
+
+        <p class="bio-text">
+          Gamal Sobih is a senior graphic designer and visual specialist with over 10 years of multi-disciplinary experience specialising in brand identity creation, high-converting social media collateral, motion graphics, and short-form video editing (Reels/TikTok). Proven track record directing visual campaigns at <em>El-Afareet Mobile store</em>, <em>Sigma Tours</em>, and <em>Friday Tours</em>. Expert in Adobe Photoshop, Premiere Pro, After Effects, and pioneering Generative AI workflows that boost design turnaround speed by 50%.
+        </p>
+
+        <!-- Highlight items with asterisks (like reference) -->
+        <div class="highlight-bullets">
+          <div class="highlight-item">
+            <!-- 8-point geometric asterisk icon -->
+            <svg class="asterisk-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11 2h2v6.5l4.6-4.6 1.4 1.4L14.4 10H21v2h-6.6l4.6 4.6-1.4 1.4L13 13.4V22h-2v-8.6l-4.6 4.6-1.4-1.4L9.6 12H3v-2h6.6L5 5.4l1.4-1.4L11 8.5V2z"/>
+            </svg>
+            <div>
+              <h4>LEAD GRAPHIC DESIGNER &amp; MEDIA BUYER</h4>
+              <p>El-Afareet Mobile store • 2021 – Sep 2026<br>Directing digital branding, high-converting ad packages, and AI-optimized video production.</p>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <svg class="asterisk-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11 2h2v6.5l4.6-4.6 1.4 1.4L14.4 10H21v2h-6.6l4.6 4.6-1.4 1.4L13 13.4V22h-2v-8.6l-4.6 4.6-1.4-1.4L9.6 12H3v-2h6.6L5 5.4l1.4-1.4L11 8.5V2z"/>
+            </svg>
+            <div>
+              <h4>COMPUTER SCIENCE &amp; FRONT-END CERTIFIED</h4>
+              <p>B.Sc. in Statistics &amp; Computer Science (Helwan University) • ALX Front-End Diploma • Udacity Digital Marketing Nanodegree.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 3: SERVICES I OFFER (EXACT LINE-ART ICONS FROM REFERENCE)
+       ========================================================= -->
+  <section class="services-section" id="services">
+    <div class="container">
+      
+      <!-- Framed Badge Header -->
+      <div class="services-header">
+        <div class="sticker-badge framed">
+          <span>SERVICES &nbsp;I OFFER</span>
+        </div>
+      </div>
+
+      <!-- 4 Services Grid matching reference: Laptop, Speech bubble, Pencil, Browser window -->
+      <div class="services-grid">
+
+        <!-- 1. Laptop Icon: BRAND IDENTITY & VISUAL COLLATERAL -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg class="service-icon-svg" viewBox="0 0 64 64">
+              <!-- Laptop screen -->
+              <rect x="10" y="10" width="44" height="30" rx="3" />
+              <line x1="16" y1="34" x2="48" y2="34" />
+              <!-- Laptop base -->
+              <path d="M 4 48 L 60 48 L 54 40 L 10 40 Z" />
+              <!-- Trackpad / notch -->
+              <line x1="28" y1="44" x2="36" y2="44" />
+            </svg>
+          </div>
+          <div class="service-content">
+            <h3>BRAND IDENTITY &amp; COLLATERAL</h3>
+            <p>Complete logo systems, brand guidelines, corporate identities, and print/digital collateral.</p>
+          </div>
+        </div>
+
+        <!-- 2. Speech Bubble Icon: SOCIAL MEDIA & PAID ADS -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg class="service-icon-svg" viewBox="0 0 64 64">
+              <!-- Speech bubble -->
+              <path d="M 10 16 C 10 12, 14 8, 20 8 L 44 8 C 50 8, 54 12, 54 16 L 54 36 C 54 40, 50 44, 44 44 L 24 44 L 14 54 L 14 44 C 11 44, 10 41, 10 36 Z" />
+              <!-- Three dots o o o -->
+              <circle cx="24" cy="26" r="2.5" fill="#121212" />
+              <circle cx="32" cy="26" r="2.5" fill="#121212" />
+              <circle cx="40" cy="26" r="2.5" fill="#121212" />
+            </svg>
+          </div>
+          <div class="service-content">
+            <h3>PAID AD CREATIVES &amp; MEDIA BUYING</h3>
+            <p>High-converting promotional visuals and video packages for Meta Ads, TikTok Ads &amp; Google Ads.</p>
+          </div>
+        </div>
+
+        <!-- 3. Pencil Icon: GENERATIVE AI WORKFLOWS -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg class="service-icon-svg" viewBox="0 0 64 64">
+              <!-- Pencil tilted -->
+              <path d="M 42 10 L 54 22 L 24 52 L 10 54 L 12 40 Z" />
+              <line x1="36" y1="16" x2="48" y2="28" />
+              <line x1="16" y1="48" x2="20" y2="44" />
+              <!-- Eraser line -->
+              <line x1="46" y1="14" x2="40" y2="20" />
+            </svg>
+          </div>
+          <div class="service-content">
+            <h3>GENERATIVE AI &amp; AUTOMATION</h3>
+            <p>Midjourney &amp; Flux visual generation, prompt engineering, and automated creative asset workflows.</p>
+          </div>
+        </div>
+
+        <!-- 4. Browser Window Icon: MOTION GRAPHICS & REELS -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg class="service-icon-svg" viewBox="0 0 64 64">
+              <!-- Browser window 1 -->
+              <rect x="8" y="10" width="44" height="34" rx="2" />
+              <line x1="8" y1="20" x2="52" y2="20" />
+              <line x1="38" y1="15" x2="42" y2="15" />
+              <rect x="44" y="13" width="3" height="3" />
+              <!-- Shadow window behind -->
+              <path d="M 16 48 L 56 48 L 56 22" />
+              <path d="M 20 52 L 60 52 L 60 26" />
+            </svg>
+          </div>
+          <div class="service-content">
+            <h3>MOTION GRAPHICS &amp; VIDEO REELS</h3>
+            <p>Short-form vertical video editing, After Effects animations, sound design, and TikTok/Reels pacing.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 4: FEATURED PORTFOLIO / SELECTED WORKS
+       ========================================================= -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      
+      <div class="section-title-wrap">
+        <div class="sticker-badge tilt-left">
+          <span>FEATURED PROJECTS</span>
+          <span class="smiley-icon">:)</span>
+        </div>
+        <p style="margin-top: 14px; color: var(--ink-muted); font-size: 0.88rem;">A curation of high-impact brand identities, performance ads, motion design, and AI visual assets.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">[ ALL WORK ]</button>
+        <button class="filter-btn" onclick="filterProjects('branding', this)">[ BRAND IDENTITY ]</button>
+        <button class="filter-btn" onclick="filterProjects('social', this)">[ SOCIAL &amp; ADS ]</button>
+        <button class="filter-btn" onclick="filterProjects('motion', this)">[ REELS &amp; MOTION ]</button>
+        <button class="filter-btn" onclick="filterProjects('ai', this)">[ AI VISUALS ]</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card" data-category="social" onclick="openProjectModal(1)">
+          <div class="project-thumb">
+            <span class="project-category-tag">SOCIAL ADS</span>
+            <img src="https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=700&q=80" alt="El-Afareet Mobile Brand Campaign">
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">EL-AFAREET MOBILE ADS</h3>
+              <p class="project-desc">High-converting social media creatives and promotional campaigns across Meta &amp; TikTok.</p>
+            </div>
+            <div class="project-meta-bar">
+              <span>META / TIKTOK</span>
+              <span class="view-link">VIEW PROJECT →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="branding" onclick="openProjectModal(2)">
+          <div class="project-thumb">
+            <span class="project-category-tag">BRAND IDENTITY</span>
+            <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=700&q=80" alt="Sigma Tours Identity & Collateral">
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">SIGMA TOURS BRANDING</h3>
+              <p class="project-desc">Complete visual identity system, travel package collaterals, and digital ad sets.</p>
+            </div>
+            <div class="project-meta-bar">
+              <span>BRANDING / PRINT</span>
+              <span class="view-link">VIEW PROJECT →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="motion" onclick="openProjectModal(3)">
+          <div class="project-thumb">
+            <span class="project-category-tag">MOTION &amp; REELS</span>
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=700&q=80" alt="Promotional Reels Series">
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">VIRAL REELS &amp; TIKTOK</h3>
+              <p class="project-desc">Dynamic short-form video edits with After Effects typography and high-retention pacing.</p>
+            </div>
+            <div class="project-meta-bar">
+              <span>PREMIERE / AFTER EFFECTS</span>
+              <span class="view-link">VIEW PROJECT →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-category="ai" onclick="openProjectModal(4)">
+          <div class="project-thumb">
+            <span class="project-category-tag">AI VISUALS</span>
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=700&q=80" alt="Generative AI Concept Art">
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">SYNTHETIC CONCEPT ART</h3>
+              <p class="project-desc">Exploratory visual series leveraging Midjourney &amp; custom prompt architecture.</p>
+            </div>
+            <div class="project-meta-bar">
+              <span>MIDJOURNEY / FLUX</span>
+              <span class="view-link">VIEW PROJECT →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-category="branding" onclick="openProjectModal(5)">
+          <div class="project-thumb">
+            <span class="project-category-tag">BRAND IDENTITY</span>
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=700&q=80" alt="Corporate Brand Book & Logo System">
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">RMS 4 IT CORPORATE KIT</h3>
+              <p class="project-desc">Minimalist corporate branding, typography system, digital stationery, and presentation decks.</p>
+            </div>
+            <div class="project-meta-bar">
+              <span>IDENTITY &amp; PRINT</span>
+              <span class="view-link">VIEW PROJECT →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-category="social" onclick="openProjectModal(6)">
+          <div class="project-thumb">
+            <span class="project-category-tag">SOCIAL ADS</span>
+            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=700&q=80" alt="Friday Tours Ad Campaign">
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">FRIDAY TOURS CAMPAIGN</h3>
+              <p class="project-desc">A/B tested promotional banners, holiday seasonal graphics, and lead generation packages.</p>
+            </div>
+            <div class="project-meta-bar">
+              <span>META / GOOGLE ADS</span>
+              <span class="view-link">VIEW PROJECT →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Behance external profile CTA -->
+      <div style="text-align: center; margin-top: 45px;">
+        <a href="https://www.behance.net/gamalsobih" target="_blank" class="btn-action" style="padding: 12px 28px; font-size: 0.9rem;">
+          <span>EXPLORE COMPLETE PORTFOLIO ON BEHANCE</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 5: CAREER JOURNEY & TIMELINE (2014 – 2026)
+       ========================================================= -->
+  <section class="timeline-section" id="timeline">
+    <div class="container">
+      
+      <div class="services-header">
+        <div class="sticker-badge framed">
+          <span>CAREER &nbsp;TIMELINE</span>
+        </div>
+      </div>
+
+      <div class="timeline-container">
+
+        <!-- 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">2021 – SEP 2026</span>
+          <h3 class="timeline-title">LEAD GRAPHIC DESIGNER &amp; MEDIA BUYER</h3>
+          <p class="timeline-company">El-Afareet Mobile Store — Cairo, Egypt</p>
+          <ul class="timeline-bullets">
+            <li>Designed high-converting graphic design packages, social media visuals, and promotional video Reels.</li>
+            <li>Pioneered implementation of Generative AI design workflows improving delivery turnaround by 50%.</li>
+            <li>Managed and optimized ad creatives across Meta Ads Manager &amp; TikTok Ads to maximize ROAS.</li>
+          </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">2022 – 2024</span>
+          <h3 class="timeline-title">GRAPHIC DESIGNER &amp; PERFORMANCE SPECIALIST</h3>
+          <p class="timeline-company">Sigma Tours</p>
+          <ul class="timeline-bullets">
+            <li>Designed high-converting visual collaterals, ad banners, and promotional graphics for tourism packages.</li>
+            <li>Executed creative A/B testing on graphic layouts and ad copies to reduce Cost Per Lead (CPL).</li>
+          </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">2021 – 2022</span>
+          <h3 class="timeline-title">GRAPHIC DESIGNER &amp; DIGITAL SPECIALIST</h3>
+          <p class="timeline-company">Friday Tours</p>
+          <ul class="timeline-bullets">
+            <li>Created promotional graphic assets, visual identity materials, and motion graphics for travel campaigns.</li>
+            <li>Monitored ad performance metrics and optimized visual layout engagement.</li>
+          </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">2014 – 2020</span>
+          <h3 class="timeline-title">SENIOR GRAPHIC DESIGNER &amp; PROMOTER</h3>
+          <p class="timeline-company">RMS 4 IT Solutions</p>
+          <ul class="timeline-bullets">
+            <li>Designed comprehensive branding packages, corporate logos, and advertising collaterals.</li>
+            <li>Collaborated with web development teams to deliver cohesive, responsive brand systems.</li>
+          </ul>
+        </div>
+
+        <!-- 5 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">2014 – PRESENT</span>
+          <h3 class="timeline-title">FREELANCE VISUAL DESIGNER &amp; VIDEO EDITOR</h3>
+          <p class="timeline-company">Self-Employed • Global &amp; Regional Clients</p>
+          <ul class="timeline-bullets">
+            <li>Delivering bespoke visual identities, logo design, print &amp; digital marketing assets, and video reels.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 6: CV / RESUME DOWNLOAD & PRINT HUB
+       ========================================================= -->
+  <section class="cv-banner-section" id="cv-hub">
+    <div class="container cv-banner-inner">
+      <div class="cv-banner-text">
+        <h2>LOOKING FOR MY FULL RESUME?</h2>
+        <p>Access the formal ATS-optimized executive resume or browse the interactive modern digital CV format.</p>
+      </div>
+
+      <div class="cv-banner-buttons">
+        <a href="classic.html" target="_blank" class="btn-cv">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          CLASSIC ATS CV
+        </a>
+        <a href="modern.html" target="_blank" class="btn-cv">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          MODERN VISUAL CV
+        </a>
+        <a href="cv-hub.html" class="btn-cv" style="background: transparent; color: #fff; border-color: #fff;">
+          OPEN RESUME HUB ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 7: CONNECT WITH ME (FAITHFUL TO YOUR REFERENCE)
+       ========================================================= -->
+  <section class="connect-section" id="contact">
+    <div class="container connect-grid">
+      
+      <!-- Monochrome Studio Portrait Box -->
+      <div class="connect-photo-box">
+        <img 
+          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+          alt="Connect with Gamal Sobih"
+        >
+      </div>
+
+      <!-- Links in Monospace & Tilted Sticker -->
+      <div class="connect-info-box">
+        
+        <div class="contact-details-list">
+          <div class="contact-link-row" onclick="copyToClipboard('gamalsob@gmail.com', 'Email copied to clipboard!')">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>GAMALSOB@GMAIL.COM</span>
+          </div>
+
+          <a href="https://www.behance.net/gamalsobih" target="_blank" class="contact-link-row">
+            <svg viewBox="0 0 24 24"><path d="M18 13h6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>
+            <span>BEHANCE.NET/GAMALSOBIH</span>
+          </a>
+
+          <a href="https://eg.linkedin.com/in/gamalsobih" target="_blank" class="contact-link-row">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LINKEDIN.COM/IN/GAMALSOBIH</span>
+          </a>
+
+          <div class="contact-link-row" onclick="copyToClipboard('+201066439963', 'Phone number copied!')">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+20 106 643 9963</span>
+          </div>
+        </div>
+
+        <!-- Tilted "CONNECT WITH ME" Badge -->
+        <div class="connect-badge-wrap">
+          <div class="sticker-badge tilt-left">
+            <span>CONNECT &nbsp;WITH ME</span>
+          </div>
+        </div>
+
+        <!-- Direct Actions -->
+        <div class="direct-actions-row">
+          <a href="https://wa.me/201066439963?text=Hello%20Gamal,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" class="whatsapp-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            CHAT ON WHATSAPP
+          </a>
+          <a href="mailto:gamalsob@gmail.com" class="btn-action btn-outline">
+            SEND EMAIL DIRECTLY
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>GAMAL EL-DIN SOBIH MAHMOUD</strong> — GRAPHIC DESIGNER &amp; VISUAL SPECIALIST
+      </div>
+      <div>
+        CAIRO, EGYPT • BEHANCE: @GAMALSOBIH • &copy; 2026 ALL RIGHTS RESERVED
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       MODAL LIGHTBOX COMPONENT
+       ========================================================= -->
+  <div class="modal-overlay" id="projectModal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeProjectModal()">&times;</button>
+      <div class="modal-img-wrap">
+        <img id="modalImg" src="" alt="Project Preview">
+      </div>
+      <h2 class="modal-title" id="modalTitle">Project Title</h2>
+      <div class="modal-tags" id="modalTags">
+        <span class="modal-tag">Brand Identity</span>
+      </div>
+      <p class="modal-desc" id="modalDesc">Detailed project description will appear here.</p>
+      <div style="display: flex; gap: 12px;">
+        <a id="modalBehanceLink" href="https://www.behance.net/gamalsobih" target="_blank" class="btn-action">
+          VIEW ON BEHANCE ↗
+        </a>
+        <button class="btn-action btn-outline" onclick="closeProjectModal()">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notify" id="toastNotify">Copied to clipboard!</div>
+
+  <!-- =========================================================
+       JAVASCRIPT INTERACTIONS
+       ========================================================= -->
+  <script>
+    // Project Data for the Lightbox
+    const projectsData = {
+      1: {
+        title: "EL-AFAREET MOBILE BRAND CAMPAIGN",
+        category: "SOCIAL ADS & VIDEO REELS",
+        tags: ["Social Media", "Paid Ads", "TikTok Reels", "Photoshop", "Premiere Pro"],
+        image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=1200&q=80",
+        desc: "Comprehensive promotional visual package conceptualized and produced for El-Afareet Mobile store. Leveraged high-contrast graphics, fast-paced Reels editing, and AI-assisted asset workflows that increased customer engagement and ROAS across Meta & TikTok campaigns.",
+        link: "https://www.behance.net/gamalsobih"
+      },
+      2: {
+        title: "SIGMA TOURS IDENTITY & COLLATERAL",
+        category: "BRAND IDENTITY & PRINT",
+        tags: ["Logo Design", "Brand Guidelines", "A/B Testing", "Travel Collateral"],
+        image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1200&q=80",
+        desc: "End-to-end visual identity and performance advertising collateral designed for Sigma Tours. Built complete tourism packages, promotional banners, and tested multiple creative variations reducing Cost Per Lead (CPL).",
+        link: "https://www.behance.net/gamalsobih"
+      },
+      3: {
+        title: "VIRAL REELS & SHORT-FORM MOTION",
+        category: "MOTION GRAPHICS & EDITING",
+        tags: ["After Effects", "Premiere Pro", "Short-Form Video", "Motion Design"],
+        image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80",
+        desc: "A series of dynamic, rhythmic motion graphics and commercial video edits crafted for digital brands. Integrated kinetic typography, sound design, and narrative pacing optimized for modern mobile consumption.",
+        link: "https://www.behance.net/gamalsobih"
+      },
+      4: {
+        title: "SYNTHETIC VISUAL CONCEPT ART",
+        category: "GENERATIVE AI & PROMPT DESIGN",
+        tags: ["Midjourney v6", "Flux", "Prompt Engineering", "Concept Design"],
+        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+        desc: "Exploratory generative AI visual art series. Developed custom prompt architectures and composite workflows to generate bespoke marketing assets, key visuals, and conceptual product mockups.",
+        link: "https://www.behance.net/gamalsobih"
+      },
+      5: {
+        title: "RMS 4 IT CORPORATE BRAND SYSTEM",
+        category: "CORPORATE BRANDING",
+        tags: ["Corporate Identity", "Vector Graphics", "Stationery", "Web Graphics"],
+        image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80",
+        desc: "A timeless corporate visual identity system developed for RMS 4 IT Solutions, featuring clean typographic hierarchy, vector logo marks, cohesive digital collateral, and responsive brand assets.",
+        link: "https://www.behance.net/gamalsobih"
+      },
+      6: {
+        title: "FRIDAY TOURS PERFORMANCE CAMPAIGN",
+        category: "AD CREATIVES & MARKETING",
+        tags: ["Ad Banners", "Google Ads", "Meta Ads", "Visual Strategy"],
+        image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1200&q=80",
+        desc: "Performance marketing visual packages for seasonal tourism campaigns. Designed multi-channel ad banners, social carousels, and landing page visual elements that delivered high conversion rates.",
+        link: "https://www.behance.net/gamalsobih"
+      }
+    };
+
+    // Filter Projects
+    function filterProjects(category, btn) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+      
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      cards.forEach(card => {
+        const itemCat = card.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Functions
+    function openProjectModal(id) {
+      const data = projectsData[id];
+      if (!data) return;
+
+      document.getElementById('modalTitle').textContent = data.title;
+      document.getElementById('modalDesc').textContent = data.desc;
+      document.getElementById('modalImg').src = data.image;
+      document.getElementById('modalBehanceLink').href = data.link;
+
+      const tagsContainer = document.getElementById('modalTags');
+      tagsContainer.innerHTML = '';
+      data.tags.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'modal-tag';
+        span.textContent = tag;
+        tagsContainer.appendChild(span);
+      });
+
+      document.getElementById('projectModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      document.getElementById('projectModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'projectModal') {
+        closeProjectModal();
+      }
+    }
+
+    // Copy to Clipboard Toast
+    function copyToClipboard(text, message) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(message || 'Copied to clipboard!');
+      }).catch(() => {
+        showToast('Copied: ' + text);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotify');
+      toast.textContent = msg;
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 2500);
+    }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('open');
+    }
+
+    function closeMobileMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.remove('open');
+    }
+
+    // Keyboard escape listener for modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeProjectModal();
+    });
+  </script>
+</body>
+</html>

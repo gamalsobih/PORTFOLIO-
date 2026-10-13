@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamal El-Din Sobih Mahmoud - Graphic Designer Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --secondary: #06b6d4;
+      --accent: #f43f5e;
+      --bg-dark: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.45;
+      font-size: 13px;
+      padding: 20px 10px;
+    }
+
+    .cv-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(6, 182, 212, 0.15));
+      border-bottom: 1px solid var(--border-color);
+      padding: 24px 30px;
+      position: relative;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .name-title h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 30%, #a5b4fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2px;
+    }
+
+    .name-title h2 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .header-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: rgba(99, 102, 241, 0.2);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: #c7d2fe;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-item i {
+      color: var(--primary);
+      width: 14px;
+    }
+
+    .contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    /* MAIN CONTENT LAYOUT */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+      padding: 24px 30px;
+    }
+
+    @media (max-width: 768px) {
+      .cv-body {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid var(--border-color);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 35px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+
+    .section-title i {
+      color: var(--secondary);
+      font-size: 0.88rem;
+    }
+
+    .summary-text {
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      line-height: 1.48;
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    /* TIMELINE / EXPERIENCE */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 16px;
+      border-left: 2px solid var(--border-color);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .job-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .job-company {
+      font-size: 0.83rem;
+      color: var(--secondary);
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .job-period {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 400;
+    }
+
+    .job-bullets {
+      list-style-type: none;
+    }
+
+    .job-bullets li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      margin-bottom: 3px;
+      line-height: 1.38;
+    }
+
+    .job-bullets li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--secondary);
+    }
+
+    .highlight-ai {
+      color: #a5b4fc;
+      font-weight: 600;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .skill-category {
+      margin-bottom: 8px;
+    }
+
+    .skill-category-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .skill-badge {
+      background: #334155;
+      color: #e2e8f0;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .skill-badge.featured {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(6, 182, 212, 0.3));
+      border: 1px solid rgba(99, 102, 241, 0.5);
+      color: #ffffff;
+    }
+
+    .edu-item {
+      margin-bottom: 8px;
+    }
+
+    .edu-degree {
+      font-size: 0.83rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .edu-school {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .edu-year {
+      font-size: 0.75rem;
+      color: var(--secondary);
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 6px;
+      font-size: 0.78rem;
+    }
+
+    .cert-item i {
+      color: var(--secondary);
+      margin-top: 2px;
+    }
+
+    /* PRINT MEDIA QUERY FOR PERFECT 2-PAGE EXPORT */
+    @page {
+      size: A4;
+      margin: 8mm;
+    }
+
+    @media print {
+      html, body {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        padding: 0 !important;
+      }
+      .cv-container {
+        background: #ffffff !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        max-width: 100% !important;
+      }
+      .header {
+        background: #f8fafc !important;
+        border-bottom: 1.5px solid #e2e8f0 !important;
+        padding: 16px 20px !important;
+      }
+      .name-title h1 {
+        color: #0f172a !important;
+        -webkit-text-fill-color: initial !important;
+        background: none !important;
+        font-size: 1.6rem !important;
+      }
+      .name-title h2 {
+        color: #4f46e5 !important;
+      }
+      .tag {
+        background: #e0e7ff !important;
+        color: #3730a3 !important;
+        border: 1px solid #c7d2fe !important;
+      }
+      .contact-grid {
+        color: #475569 !important;
+      }
+      .cv-body {
+        padding: 16px 20px !important;
+      }
+      .section-title {
+        color: #0f172a !important;
+        border-bottom: 1.5px solid #e2e8f0 !important;
+      }
+      .section-title::after {
+        background: #4f46e5 !important;
+      }
+      .summary-text, .job-bullets li {
+        color: #334155 !important;
+      }
+      .job-title, .edu-degree {
+        color: #0f172a !important;
+      }
+      .job-company {
+        color: #4f46e5 !important;
+      }
+      .skill-badge {
+        background: #f1f5f9 !important;
+        color: #334155 !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+      .skill-badge.featured {
+        background: #e0e7ff !important;
+        color: #3730a3 !important;
+      }
+      .fab-print {
+        display: none !important;
+      }
+      .timeline-item, .sidebar section {
+        page-break-inside: avoid;
+      }
+    }
+
+    .fab-print {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: linear-gradient(135deg, #6366f1, #06b6d4);
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fab-bar" style="position: fixed; bottom: 24px; right: 24px; display: flex; gap: 10px; z-index: 9999;">
+    <a href="index.html" class="fab-print" style="text-decoration: none; background: #1e293b; border: 1px solid #334155;">
+      ← Back to Portfolio
+    </a>
+    <button class="fab-print" onclick="window.print()">
+      <i class="fa-solid fa-print"></i> Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="cv-container">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-content">
+        <div class="name-title">
+          <h1>Gamal El-Din Sobih Mahmoud</h1>
+          <h2>Graphic Designer & Visual Content Specialist</h2>
+          <div class="header-tags">
+            <span class="tag"><i class="fa-solid fa-paintbrush"></i> Graphic Designer</span>
+            <span class="tag"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Visual Specialist</span>
+            <span class="tag"><i class="fa-solid fa-video"></i> Motion & Reels Creator</span>
+            <span class="tag"><i class="fa-solid fa-layer-group"></i> Brand Identity</span>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-item"><i class="fa-solid fa-phone"></i> <span>01066439963</span></div>
+          <div class="contact-item"><i class="fa-solid fa-envelope"></i> <span>gamalsob@gmail.com</span></div>
+          <div class="contact-item"><i class="fa-solid fa-location-dot"></i> <span>Cairo, Egypt</span></div>
+          <div class="contact-item"><i class="fa-solid fa-globe"></i> <a href="https://www.behance.net/gamalsobih" target="_blank">behance.net/gamalsobih</a></div>
+          <div class="contact-item"><i class="fa-brands fa-linkedin"></i> <a href="https://eg.linkedin.com/in/gamalsobih" target="_blank">linkedin.com/in/gamalsobih</a></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <div class="cv-body">
+      <!-- LEFT COLUMN (Main Content) -->
+      <main class="main-content">
+        <section>
+          <h3 class="section-title"><i class="fa-solid fa-user-gear"></i> Professional Summary</h3>
+          <p class="summary-text">
+            Creative and results-driven <strong>Graphic Designer</strong> and <strong>Visual Specialist</strong> with 10+ years of multi-disciplinary experience in brand identity creation, graphic design packages, promotional visual collateral, motion graphics, and short-form video editing (Reels/TikTok). Proven track record at <em>El-Afareet Mobile store</em> directing visual content creation and brand consistency. Expert in <strong>Adobe Photoshop</strong>, <strong>Premiere Pro</strong>, <strong>After Effects</strong>, and leveraging <span class="highlight-ai">Generative AI tools</span> to accelerate creative output by 50%. Backed by a <strong>B.Sc. in Computer Science & Statistics</strong> and certifications in Front-End Web Development and Digital Marketing.
+          </p>
+        </section>
+
+        <section>
+          <h3 class="section-title"><i class="fa-solid fa-briefcase"></i> Work Experience</h3>
+          <div class="timeline">
+
+            <!-- Job 1 -->
+            <div class="timeline-item">
+              <div class="job-title">Lead Graphic Designer, Media Buyer & Team Manager</div>
+              <div class="job-company">
+                <span>El-Afareet Mobile store</span>
+                <span class="job-period">2021 – Sep 2026</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Conceptualize, design, and produce high-converting graphic design packages, social media visuals, and video Reels using Photoshop, Premiere Pro, and After Effects.</li>
+                <li>Direct visual branding strategy across digital touchpoints for Social Media Content & Customer Support teams.</li>
+                <li>Pioneered <span class="highlight-ai">Generative AI design workflows</span> (AI image generation, graphic asset production, video editing), accelerating turnaround by 50%.</li>
+                <li>Manage and optimize visual ad creatives across Meta Ads Manager and TikTok Ads to maximize ROAS.</li>
+                <li>Utilize audience data insights to continuously refine promotional graphics and visual content strategies.</li>
+              </ul>
+            </div>
+
+            <!-- Job 2: Sigma Tours -->
+            <div class="timeline-item">
+              <div class="job-title">Graphic Designer & Performance Marketing Specialist</div>
+              <div class="job-company">
+                <span>Sigma Tours</span>
+                <span class="job-period">2022 – 2024</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Designed high-converting visual collaterals, ad banners, and promotional graphics for travel & tourism packages across Meta, TikTok, and Google Ads.</li>
+                <li>Executed A/B testing on graphic ad creatives, visual layouts, and promotional copy to reduce CPL and increase bookings.</li>
+              </ul>
+            </div>
+
+            <!-- Job 3: Friday Tours -->
+            <div class="timeline-item">
+              <div class="job-title">Graphic Designer & Digital Content Specialist</div>
+              <div class="job-company">
+                <span>Friday Tours</span>
+                <span class="job-period">2021 – 2022</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Created promotional graphic assets, visual identity materials, and motion graphics for tourism ad campaigns.</li>
+                <li>Optimized ad spend allocation and monitored performance metrics to drive client bookings.</li>
+              </ul>
+            </div>
+
+            <!-- Job 4: RMS 4 IT Solutions -->
+            <div class="timeline-item">
+              <div class="job-title">Senior Graphic Designer & Sales Promoter</div>
+              <div class="job-company">
+                <span>RMS 4 IT Solutions</span>
+                <span class="job-period">2014 – 2020</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Designed comprehensive graphic design packages, digital branding, logos, and promotional advertising collateral for diverse corporate clients.</li>
+                <li>Executed visual marketing campaigns and promotional strategies to drive client acquisition and business growth.</li>
+                <li>Collaborated with web development teams to align visual design with interactive web platforms.</li>
+              </ul>
+            </div>
+
+            <!-- Job 5: Harlem English College -->
+            <div class="timeline-item">
+              <div class="job-title">Graphic Designer & Video Creator</div>
+              <div class="job-company">
+                <span>Harlem English College</span>
+                <span class="job-period">2014 – 2019</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Produced educational & promotional visual graphics, marketing collaterals, print assets, and video content.</li>
+              </ul>
+            </div>
+
+            <!-- Job 6: Freelance -->
+            <div class="timeline-item">
+              <div class="job-title">Freelance Graphic Designer & Video Editor</div>
+              <div class="job-company">
+                <span>Self-Employed</span>
+                <span class="job-period">2014 – Present</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Deliver tailored visual identity design, logo creation, print & digital graphics, motion graphics, and video editing for regional clients.</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+      </main>
+
+      <!-- RIGHT COLUMN (Sidebar) -->
+      <aside class="sidebar">
+        <!-- SKILLS -->
+        <section>
+          <h3 class="section-title"><i class="fa-solid fa-palette"></i> Skills & Expertise</h3>
+          
+          <div class="skill-category">
+            <div class="skill-category-name">Graphic & Video Tools</div>
+            <div class="skill-tags">
+              <span class="skill-badge featured">Graphic Design</span>
+              <span class="skill-badge featured">Brand Identity</span>
+              <span class="skill-badge featured">Photoshop</span>
+              <span class="skill-badge">Premiere Pro</span>
+              <span class="skill-badge">After Effects</span>
+              <span class="skill-badge">Reels / Motion Graphics</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-name">AI & Visual Tools</div>
+            <div class="skill-tags">
+              <span class="skill-badge featured">Generative AI Tools</span>
+              <span class="skill-badge">AI Image Generation</span>
+              <span class="skill-badge">Prompt Engineering</span>
+              <span class="skill-badge">Visual Automation</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-name">Marketing & Design</div>
+            <div class="skill-tags">
+              <span class="skill-badge featured">Paid Ad Creatives</span>
+              <span class="skill-badge">Media Buying (Meta/TikTok)</span>
+              <span class="skill-badge">Content Strategy</span>
+              <span class="skill-badge">ROAS Optimization</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-name">Web & Tech</div>
+            <div class="skill-tags">
+              <span class="skill-badge">HTML5 / CSS3</span>
+              <span class="skill-badge">JavaScript (Front-End)</span>
+              <span class="skill-badge">Statistical Analysis</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+          <h3 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <div class="edu-item">
+            <div class="edu-degree">B.Sc. in Statistics & Computer Science</div>
+            <div class="edu-school">Faculty of Science, Helwan University</div>
+            <div class="edu-year">Graduated 2016 • Grade: Good</div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATIONS & COURSES -->
+        <section>
+          <h3 class="section-title"><i class="fa-solid fa-certificate"></i> Courses & Diplomas</h3>
+          
+          <div class="cert-item">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <strong>ALX Front-End Diploma</strong> (2022)
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <strong>Udacity Digital Marketing Nanodegree</strong> (2016)
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <strong>Full-Stack Web Certificate</strong> - RMS 4 IT Solutions (2015)
+            </div>
+          </div>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section>
+          <h3 class="section-title"><i class="fa-solid fa-language"></i> Languages</h3>
+          <div class="cert-item">
+            <i class="fa-solid fa-check"></i>
+            <div><strong>Arabic:</strong> Native Language</div>
+          </div>
+          <div class="cert-item">
+            <i class="fa-solid fa-check"></i>
+            <div><strong>English:</strong> Very Good</div>
+          </div>
+        </section>
+
+      </aside>
+    </div>
+  </div>
+
+</body>
+</html>

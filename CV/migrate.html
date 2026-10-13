@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نقل الداتا إلى ملفات السيرفر</title>
+  <style>
+    body {
+      background: #0b0c10;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card {
+      background: #14161f;
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 650px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+    .icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    h1 {
+      color: #00BC91;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+    .status-box {
+      background: rgba(0, 188, 145, 0.08);
+      border: 1px solid rgba(0, 188, 145, 0.3);
+      color: #00BC91;
+      padding: 18px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+    .status-box.error {
+      background: rgba(239, 68, 68, 0.1);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: #f87171;
+    }
+    .btn {
+      background: #00BC91;
+      color: #060606;
+      border: none;
+      padding: 14px 30px;
+      font-size: 1rem;
+      font-weight: 800;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin: 6px;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #00e0ad;
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    pre {
+      background: #08090c;
+      text-align: left;
+      direction: ltr;
+      padding: 15px;
+      border-radius: 10px;
+      max-height: 200px;
+      overflow: auto;
+      font-size: 0.8rem;
+      color: #cbd5e1;
+      margin-top: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="icon">🚀</span>
+    <h1>نقل الداتا إلى ملفات السيرفر</h1>
+    <p>
+      تقوم هذه الصفحة بقراءة الداتا المحفوظة داخل متصفح كروم الخاص بك وترحيلها مباشرة إلى ملفات السيرفر الدائمة (portfolio-data.json و portfolio-data.js) على الهارد ديسك.
+    </p>
+
+    <div id="statusBox" class="status-box">
+      جاري فحص الذاكرة المحلية ونقل الداتا...
+    </div>
+
+    <div>
+      <button class="btn" onclick="startMigration()">إعادة محاولة النقل الآن</button>
+      <a href="http://localhost:8080/" class="btn btn-secondary">فتح الموقع على السيرفر</a>
+      <a href="http://localhost:8080/admin.html" class="btn btn-secondary">لوحة التحكم</a>
+    </div>
+
+    <pre id="previewBox" style="display: none;"></pre>
+  </div>
+
+  <script>
+    function startMigration() {
+      const statusBox = document.getElementById('statusBox');
+      const previewBox = document.getElementById('previewBox');
+
+      const STORAGE_KEY = "gamal_portfolio_data_v1";
+      const savedStr = localStorage.getItem(STORAGE_KEY);
+
+      if (!savedStr) {
+        statusBox.className = 'status-box error';
+        statusBox.innerHTML = '⚠️ لم يتم العثور على داتا مخصصة في localStorage لهذا المتصفح.<br><small>إذا كنت قد عدلت الموقع من نافذة تصفح أخرى، تأكد من فتح هذا الرابط في نفس المتصفح.</small>';
+        return;
+      }
+
+      let parsedData;
+      try {
+        parsedData = JSON.parse(savedStr);
+      } catch (e) {
+        statusBox.className = 'status-box error';
+        statusBox.textContent = '❌ حدث خطأ في قراءة ملف JSON من المتصفح.';
+        return;
+      }
+
+      statusBox.innerHTML = '⏳ تم العثور على الداتا في المتصفح! جاري إرسالها وحفظها في السيرفر...';
+
+      fetch('http://127.0.0.1:8080/api/save-portfolio-data', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(parsedData)
+      })
+      .then(res => res.json())
+      .then(result => {
+        if (result.success) {
+          const secCount = parsedData.sections ? Object.keys(parsedData.sections).length : 0;
+          statusBox.className = 'status-box';
+          statusBox.innerHTML = `
+            🎉 <strong>تم النقل والحفظ بنجاح 100%!</strong><br>
+            ✓ تم تحديث ملف <code>portfolio-data.json</code> على الهارد ديسك.<br>
+            ✓ تم تحديث ملف <code>portfolio-data.js</code> في كود الموقع.<br>
+            ✓ عدد السكاشن المحفوظة: ${secCount}<br>
+            الآن أي زائر على الإنترنت أو شبكة الواي فاي سيرى داتا موقعك الحقيقية!
+          `;
+          previewBox.style.display = 'block';
+          previewBox.textContent = JSON.stringify(parsedData, null, 2);
+        } else {
+          statusBox.className = 'status-box error';
+          statusBox.textContent = '❌ رفض السيرفر الحفظ: ' + (result.error || 'خطأ غير معروف');
+        }
+      })
+      .catch(err => {
+        statusBox.className = 'status-box error';
+        statusBox.innerHTML = `
+          ⚠️ تعذر الاتصال بسيرفر Node.js (تأكد أن السيرفر يعمل على منفذ 8080).<br>
+          <small>الخطأ: ${err.message}</small>
+        `;
+      });
+    }
+
+    // Auto-run on load
+    window.addEventListener('DOMContentLoaded', startMigration);
+  </script>
+</body>
+</html>
