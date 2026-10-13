@@ -1,0 +1,740 @@
+/**
+ * PORTFOLIO DATA ENGINE & DEFAULT CONTENT
+ * Central dynamic data structure for Gamal Sobih's Portfolio & Admin Dashboard.
+ */
+
+const DEFAULT_PORTFOLIO_DATA = {
+  "profile": {
+    "name": "Gamal El-Din Sobih",
+    "role": "Senior Graphic Designer &Content creator With extra media buying spices",
+    "greeting": "Hello ! I'M GAMAL SOBIH",
+    "headlineMain": "Crafting High-Converting Visual Media, Reels & AI Experiences.",
+    "pitchText": "10+ years directing visual identity packages, high-ROAS social ads for Meta & TikTok, dynamic video Reels, and AI-accelerated creative systems.",
+    "heroImage": "assets/images/hero-portrait.png",
+    "stats": {
+      "years": 10,
+      "campaigns": 500,
+      "speedBoost": 50
+    },
+    "contact": {
+      "email": "gamalsob@gmail.com",
+      "phone": "+201066439963",
+      "behance": "https://www.behance.net/gamalsobih",
+      "linkedin": "https://eg.linkedin.com/in/gamalsobih",
+      "whatsapp": "https://wa.me/201066439963"
+    },
+    "nameAr": "",
+    "roleAr": "مصمم جرافيك-مونتير  وصانع محتوي",
+    "greetingAr": "",
+    "headlineMainAr": "",
+    "pitchTextAr": ""
+  },
+  "sections": {
+    "afareet": {
+      "number": "01",
+      "enabled": true,
+      "icon": "fa-mobile-screen",
+      "color": "#F20101",
+      "hasVideoPlayer": true,
+      "title": "El-Afareet Mobile Store",
+      "subtitle": "Featured Client (2021 – 2026)",
+      "roleTitle": "Lead Graphic Designer Content creator , Media Buyer & Team Manager",
+      "roleDesc": "Spearheaded visual branding across digital touchpoints, managed Meta Ads &  pioneered Generative AI workflows improving production turnaround by 50%.",
+      "tags": [
+        "Meta Ads Manager",
+        "TikTok Ads",
+        "Premiere Pro",
+        "After Effects",
+        "Photoshop",
+        "AI Workflows"
+      ],
+      "videos": [
+        {
+          "id": "15dTg1tdLhIps3pOKgXokKdnBfcxyQq4X",
+          "title": "Promo Reel #1 Eid Fetr Video",
+          "desc": "short form Ai generated Video",
+          "ratio": "9-16",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-11h22m02s63_1791879778640.png",
+          "link": "https://www.facebook.com/reel/2970644059811406"
+        },
+        {
+          "id": "1msGns37e9ORHbYiQC7DL_l73SpGep93Y",
+          "title": "Promo Reel #2 so many talking head and mobile review videos",
+          "desc": "Optimized 9:16 vertical ratio for Instagram Reels & TikTok.",
+          "ratio": "9-16",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-11h28m23s98_1791880215439.png",
+          "link": "https://www.facebook.com/reel/2059959747949775"
+        },
+        {
+          "id": "1GIE_wKlWqMFsdmTVg3BNJM0H8NisMNu8",
+          "title": "Promo Reel #3: AI-Enhanced Device Showcase",
+          "desc": "Synthesized AI visuals composite + 3D motion .",
+          "ratio": "9-16",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-11h27m02s10_1791880164681.png",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "id": "1mChXaaVxfeSLjnOJ3dQgAqxMMxjvwEYG",
+          "title": "Promo Reel #4 unboxing Reel customer Video",
+          "desc": "unboxing Reel customer Video",
+          "ratio": "9-16",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-11h27m11s45_1791880224597.png",
+          "link": "https://www.facebook.com/El3fareetMobile/reels/"
+        },
+        {
+          "id": "1NJvpeJTsqtvFelZgPAmvZdTg-8Lz99qG",
+          "title": "Promo Reel",
+          "desc": "",
+          "ratio": "16-9",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-11h27m11s45_1791880301378.png",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "id": "1CBj2TuM4Ey-r5b6ca4vFYaxconQjWyVQ",
+          "title": "Promo Reel",
+          "desc": "",
+          "ratio": "16-9",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-11h29m08s12_1791880334339.png",
+          "link": "https://www.facebook.com/reel/1018496454094242"
+        },
+        {
+          "id": "1EPiRDCVIGnIS5YYl_XrMbp0TM72NTqB1",
+          "title": "Promo Reel",
+          "desc": "",
+          "ratio": "16-9",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-11h28m34s08_1791880445816.png",
+          "link": "https://www.facebook.com/reel/2490506451417560"
+        },
+        {
+          "id": "1st-GgAq9PuqQRvhO7ibW02vBwR6PEzPE",
+          "title": "Promo Reel",
+          "desc": "",
+          "ratio": "16-9",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-11h27m37s87_1791880491795.png",
+          "link": "https://www.facebook.com/reel/915578737613568"
+        },
+        {
+          "id": "1TGt6vK1Ry_zw_z-0fLRXrbEzY2pQ7Odu",
+          "title": "Promo Reel",
+          "desc": "",
+          "ratio": "16-9",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-11h27m26s77_1791880541046.png",
+          "link": "https://www.facebook.com/reel/1543588786929153"
+        },
+        {
+          "id": "1_z3eizo-TRxIXjHMcOv1ro5a5igZVYPC",
+          "title": "Promo Reel",
+          "desc": "",
+          "ratio": "16-9",
+          "thumb": "https://lh3.googleusercontent.com/d/1_z3eizo-TRxIXjHMcOv1ro5a5igZVYPC=w1200",
+          "link": "https://www.behance.net/gamalsobih"
+        }
+      ],
+      "gallery": [
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.99422-6/742407083_1922793008433738_180338082369184945_n.png?stp=dst-jpg_tt6&cstp=mx1482x1360&ctp=s1482x1360&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lUYYjZGV2EMQ7kNvwGP7zlA&_nc_oc=AdpwrzkIioaOEyNsnknWo1meSE-KWIa1A0NQvUr9qJbXykIBJuJnxqMxZvz-FPWJfBQ&_nc_zt=14&_nc_ht=scontent.fcai19-6.fna&_nc_gid=Fqh-noO765F0ogzsy_5xbQ&_nc_ss=7b2a8&oh=00_AQMYIciWKrQ6aKFEoRuyHael9r2UZd4hlpNK_9gwoUISNQ&oe=6AD19009",
+          "title": "Flagship Mobile Launch",
+          "titleAr": "",
+          "tag": "META ADS",
+          "tagAr": "",
+          "desc": "Vibrant high-contrast product staging for Meta and Instagram feed ads.",
+          "descAr": "",
+          "metric": "High ROAS",
+          "tool": "Photoshop + AI",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid06jdgRoKTRT1ZuYi97nCAAdsLD8FVW388uj6T44RRv2wCukq97trbbaSBSMubTmDLl"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.99422-6/759040496_1374846908044189_6281301587374943623_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=CuF5a5Zb1RkQ7kNvwERjiwd&_nc_oc=Adpzr2ClhfSt7qT7jeqwen8mGRtEIzSp0yCwxFDWsU0DMs6qp1WlX3pjDIpsET4xvB0&_nc_zt=14&_nc_ht=scontent.fcai19-6.fna&_nc_gid=y7gtOCgFBpKIQfXOusetnw&_nc_ss=7b2a8&oh=00_AQMM-VhAE5wDMdA2ogxlaPgA-nhIIgWWEE5g7CLjjMd55w&oe=6AD18922",
+          "title": "Flash Deals & Accessories",
+          "titleAr": "",
+          "tag": "meta AD",
+          "tagAr": "",
+          "desc": "Carousel layouts and dynamic price badge hierarchy for TikTok campaigns.",
+          "descAr": "",
+          "metric": "Engagement",
+          "tool": "photoshop + AI",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid02z2xC64REVVd3aTp3poGzUA7TsMsvvd3gpKG42BVXe43k1eqzbjmwLT4S2Vsoo66yl"
+        },
+        {
+          "img": "assets/images/uploads/763018702_1045392374649210_337_1791886293047.jpg",
+          "title": "Trade-in Promo Creative",
+          "titleAr": "",
+          "tag": "SOCIAL POST",
+          "tagAr": "",
+          "desc": "Clean typography hierarchy designed for instant mobile comprehension.",
+          "descAr": "",
+          "metric": "Lead Gen",
+          "tool": "Photoshop",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid0cXZBAQjc62nZZgSCPr2Y6yXqtLPNjAndrpVCkMLrW3LGmJAr8soo2fVA7qLqQvGpl"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.99422-6/785777136_2166324510899403_3869872143914375412_n.png?stp=dst-jpg_tt6&cstp=mx1792x1815&ctp=s1792x1815&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dBnAVl-A52wQ7kNvwEoYwFM&_nc_oc=AdojndYVVWb3rAYCW8R_4X--BTuFML4kye55FSxJENCQMmHg3mr9RskO1_IqJPQaXAw&_nc_zt=14&_nc_ht=scontent.fcai19-6.fna&_nc_gid=lVynh8RjaUGfVRDMqi28lw&_nc_ss=7b2a8&oh=00_AQNbd7X_7r2PHAVgb0fQbvFI2LuUOy7pHtRWzftgddgIhA&oe=6AD184DF",
+          "title": "Smart Gadgets & Audio Kit",
+          "titleAr": "",
+          "tag": "PROMO KIT",
+          "tagAr": "",
+          "desc": "Minimalist branding package with bold contrasting color accents.",
+          "descAr": "",
+          "metric": "Conversion",
+          "tool": "Adobe Suite",
+          "link": "https://www.facebook.com/photo.php?fbid=1105960978805960&set=pb.100081762047734.-2207520000&type=3"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.99422-6/729375747_4422691047987972_5004054112097922856_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hs7ppXIfxz4Q7kNvwHTRNvm&_nc_oc=AdoNGNYQGfLWovuDif-kW9CQ490qKOrOo00K-xCoFZsdCQBa53DVaiWD_PO5RXYNTpE&_nc_zt=14&_nc_ht=scontent.fcai19-6.fna&_nc_gid=4m6RlW47elVw3WDTsM3TtA&_nc_ss=7b2a8&oh=00_AQOzZE6kcCHQo1yrVJWb3o5kelTxfaza1KQkKP3QJ1fsCA&oe=6AD19A7E",
+          "title": "promotional Campaign",
+          "titleAr": "",
+          "tag": "meta  and social media",
+          "tagAr": "",
+          "desc": "Carousel layouts and dynamic price badge hierarchy for META campaigns.",
+          "descAr": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid04k67RNouCxxJ1Sr78DfLyAR9j1uZyWBBLUfu8vEjbP7z6ZXNTZhBYReVzWZQR3eXl"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.99422-6/729579116_27190651743959538_3023625173303548071_n.png?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BW6hAm4aMgUQ7kNvwFXamX_&_nc_oc=AdqGL8cEhFoWRA7D_uLtAMOxvSwkypJDRnvxmDX0d3JVpY2t9QZuo6s27ZJibkQ4-aY&_nc_zt=14&_nc_ht=scontent.fcai19-6.fna&_nc_gid=QLS0lhk_RZoJpsMvo6akqw&_nc_ss=7b2a8&oh=00_AQM_Wp6MaTRhJX9s-0Ep1va091T_sz8CESN_830z4NZ_9w&oe=6AD18249",
+          "title": "promotional Campaign",
+          "titleAr": "",
+          "tag": "",
+          "tagAr": "",
+          "desc": "",
+          "descAr": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid04k67RNouCxxJ1Sr78DfLyAR9j1uZyWBBLUfu8vEjbP7z6ZXNTZhBYReVzWZQR3eXl"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/713784152_1030031643065561_6885838116843278610_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BZbO4p568GQQ7kNvwEgeIV7&_nc_oc=AdrhIuc7e2k1_QTre5AE6YVUyG9qjYaI1vkMly6S2FoZsUM8ISjbc9WSGE2XITXloRo&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=aoTg1dvwtsT7W1CpOzU0_Q&_nc_ss=7b2a8&oh=00_AQOo1TnifKIAxPJ3SlCkhdchwqM_BNKekG82zBewoGh0ZQ&oe=6AD19411",
+          "title": "promotional Campaign",
+          "titleAr": "",
+          "tag": "",
+          "tagAr": "",
+          "desc": "",
+          "descAr": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid02zuBvBHbZYQEE169EfGT6HJYjtaMmn2uMTqBnVuWpXWx6xQDFJGCVPJ9jYrXaqTTcl"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/712924523_1028109549924437_832535262444896454_n.jpg?stp=dst-jpg_tt6&cstp=mx1482x1360&ctp=s1482x1360&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2R5DVxq6zTwQ7kNvwGnEaEK&_nc_oc=AdqMf-b5DjNvJ7noffkLUBnuRlbyBA6HdEorVm2Llvn2s_udYwHdqFaHuOPMW1_4ZKA&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=J-G8chlBwBgHR48u0qVayQ&_nc_ss=7b2a8&oh=00_AQM9dV96zNxL0FO4ti1Y1sT2a1HvzZyfTGdfWhCxC6-JFw&oe=6AD197F0",
+          "title": "promotional Campaign",
+          "tag": "",
+          "desc": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/706595170_1021900983878627_4681500522143555709_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1251&ctp=s1280x1251&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IJhjprj-LMAQ7kNvwEj3OYX&_nc_oc=Adq8ZecARHiDtNmg1QlHOddZjg5dAtmS0YSS5kA60tG7r4e7oIqsjIP14WOzdAvB-84&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=82onEJkJ2Y5Apc7A-H-eKg&_nc_ss=7b2a8&oh=00_AQPnKT_JKYy3_WFplPPkom365r2XMOJ-MBfjAAlHJcwHxw&oe=6AD1A509",
+          "title": "adha Design",
+          "tag": "",
+          "desc": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/700369224_1015045191230873_6052517037782299902_n.jpg?stp=dst-jpg_tt6&cstp=mx1482x1360&ctp=s1482x1360&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=8TdI0bmKSMkQ7kNvwHwPiKs&_nc_oc=AdqAoh0Bwffx4bjeNmGfZqCXNg5hKWaixIqbqQH9axKukGtvqSSBVkuhYbY6XeF4pcc&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=S_ZbvEhcBh7AyCBEhlwqsA&_nc_ss=7b2a8&oh=00_AQMDH5FcuI3E1v6rBMpuI1OxcB9hx-LEDOeL48pwfvZRvg&oe=6AD19FCA",
+          "title": "promotional Campaign",
+          "tag": "",
+          "desc": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid0aR8WAkQ3hj14v5RRWty6SGYoAk4QoNp5PFA5Xx5YWtM8E84P38x7WfJpLq9zyEdJl"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/696035369_1009066105162115_612442716097739460_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=TF0lCk2gPgYQ7kNvwEzzHo1&_nc_oc=Adr_OZToG_1WFz6QlfepqVDP41Jg2_8rElMQUFqn4StkARF6gA1ftBknjNjJn5_EnEE&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=VZlYEHo-KKRn4F1vooXRhQ&_nc_ss=7b2a8&oh=00_AQObdTmEwzRnpE1AxEBSNJDnXIL7P6eZEbeXAPIMyBhZGw&oe=6AD19A20",
+          "title": "promotional Campaign",
+          "titleAr": "",
+          "tag": "",
+          "tagAr": "",
+          "desc": "",
+          "descAr": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid0hh1Wp8Ddg2eT8M7VwQYvHSgnheApmhpP3QmMic5qtf519E1Y3HhQWFT6hfM4qiRYl"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/666412356_977403198328406_2282050877829178335_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=VDlc3R3KDbgQ7kNvwEt4yra&_nc_oc=AdopSvyQMrP3WKwpOwbWojAk9pdFeNpN6Cb7JxfodY3NDsuaxkeMyhOpco9LKXQfIJo&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=MebUWTPFDac2GlfuD5Cdqg&_nc_ss=7b2a8&oh=00_AQORJ_GyDwxqGVETIDTzpkaKmbt-NMkAykh8QFFG8uahnA&oe=6AD1D6F6",
+          "title": "promotional Campaign",
+          "tag": "",
+          "desc": "Carousel layouts and dynamic price badge hierarchy for meta campaigns.",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid02PMxSFfT3pHPiHrvvFdSjxEg2vKQUpee3zqdaWkKpHz9tkMy7BuSNLKBqaeEGSyKpl"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/650834047_957088327026560_3007470889770439862_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oKloh33CJgoQ7kNvwFiY26r&_nc_oc=AdpNbKgeCsCd2xgTCsqj60rzJr7AX1UxmFrJkeitV8gQtKsuViohwjsSyz1RCKonz4A&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=kaWOQ4X70GpQyKK0FjWQ3g&_nc_ss=7b2a8&oh=00_AQPA6EBfxbbgDxwY_4RdyYqRsJRE7LrqGqGGlubGn12PQQ&oe=6AD1D62E",
+          "title": "Flash Deals",
+          "tag": "",
+          "desc": "Carousel layouts and dynamic price badge hierarchy for TikTok campaigns.",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid02Ujrr7FLHPysHj7oE2Enas83ZjaMdV3X1Z7FtDxCs4bDo7APjCCvynWUsEA3B2KTQl"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/647680437_951645610904165_1429412100440626075_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OdmpXFdItNcQ7kNvwF278A5&_nc_oc=Ado_i82RziPTZ0Cp8xtxaSWpX6aCnRMYRjGBbFpFeXn0DoVnODJX5Cp1Y34o947TbOg&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=YhZDbafLFubo6L8KDOfw4Q&_nc_ss=7b2a8&oh=00_AQM4yXccYvJ_IKhAhHittFzcbm0danBjum3XS3VEx4BpJw&oe=6AD1DFA6",
+          "title": "promotional Campaign",
+          "tag": "",
+          "desc": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid02WNmHCbqXzUGJGCFUSRei5UP14Kt81aJSTW44UsgWcf7LuHg9jYj24cnuDb8kGkm6l"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/635130217_936250519110341_2389173307017057996_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ppBQkldw08MQ7kNvwFBcG0u&_nc_oc=Adp8dZIct3UOan7dluV_Lw_FiaNqgq3wZVm_z-SlTCrHSdp0oLz94a9MWv259eWce8E&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=JHICG2DJ39ay_bkrG9DQRQ&_nc_ss=7b2a8&oh=00_AQOx3CwzGEfytx3zdbfbkbi4RcIDaHjDVlfbdJfm2QTfaw&oe=6AD1C95C",
+          "title": "promotional Campaign",
+          "tag": "",
+          "desc": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid0PUWYh3dgwsdNT4gx35qAwv63T1682v7Pjk81tnoxefdiMyd3v54qJy7gHtZRqMf7l"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/631172950_931771372891589_1315266584493730133_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=M2P1XZHrsecQ7kNvwH84yZt&_nc_oc=AdrtkCHZwj7OIEBF66nsR_QWuZtuMsd71DgLdqUSdSptV_IAU0zscajXcSITbshTQ5I&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=gcteXC1a52yfbcA2NIgW8g&_nc_ss=7b2a8&oh=00_AQPwLCd-ca_HHgCyS-P1P3P3UniibuTvNFjBZvCZXhEbQw&oe=6AD1C08D",
+          "title": "promotional Campaign",
+          "tag": "",
+          "desc": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid0A2kS2mBkYv82UbWudZ5Y2GUr7u1uxjCwJfUC7QECy81gVRY326kDu8LBkue1Mgjol"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/611856263_902977985770928_3504326387963501289_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=p6UMiHFExxQQ7kNvwEcHoVh&_nc_oc=AdqtpRocYJxl3MtD1BOCQMgLrqMLcgafcFLumFN3Cu0GRB63g14IkMejXyQ_fV0FUKo&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=9xZxfPXMtkdKelNt8C2pjA&_nc_ss=7b2a8&oh=00_AQOKXfXeNLb7w3YHfHs16eFPatGqgxP715OzUCwOqGHqBQ&oe=6AD1E84D",
+          "title": "promotional Campaign",
+          "tag": "",
+          "desc": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/El3fareetMobile/posts/pfbid02m3qZxkr6wEaYdKcZvonNbNQcAHVmVx3S6PE1Qinzaq2SzetncLGUgZro518798pDl"
+        }
+      ]
+    },
+    "travel": {
+      "number": "02",
+      "enabled": true,
+      "icon": "fa-plane-departure",
+      "color": "#4E92E3",
+      "hasVideoPlayer": true,
+      "title": "Tourism & Travel Campaigns",
+      "subtitle": "Sigma Tours & Friday Tours (2021 – 2026)",
+      "roleTitle": "Performance Marketing Visual Specialist",
+      "roleDesc": "Engineered ad creatives across Meta Ads, TikTok Ads, and Google Display Network. Executed creative split-testing on copy and layout to maximize booking conversions.",
+      "tags": [
+        "A/B Testing",
+        "CPL Optimization",
+        "GDN Banners",
+        "Travel Packages"
+      ],
+      "videos": [
+        {
+          "id": "https://drive.google.com/drive/folders/1Rb9N5R0eDyxiPSk52G0OSZwtkaEdOV4V?fbclid=IwY2xjawT0oyBwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMWx4b3lOdlhJQ2hCZElaY0dzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe1CSLQwKegJjDZ1_Nk2jdCdW4bpA4fAO2ksQnEfzvbpsDyKoJVKVuUJ_sv1c_aem_Mm3HKWDmF7DyOlIgGyJeuA",
+          "title": "Summer Coastal Getaways Campaign",
+          "titleAr": "",
+          "desc": "",
+          "descAr": "",
+          "ratio": "16-9",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-14h10m31s05_1791889841071.png",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "id": "https://drive.google.com/drive/folders/1Rb9N5R0eDyxiPSk52G0OSZwtkaEdOV4V?fbclid=IwY2xjawT0oyBwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMWx4b3lOdlhJQ2hCZElaY0dzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe1CSLQwKegJjDZ1_Nk2jdCdW4bpA4fAO2ksQnEfzvbpsDyKoJVKVuUJ_sv1c_aem_Mm3HKWDmF7DyOlIgGyJeuA",
+          "title": "Promo Reel",
+          "titleAr": "",
+          "desc": "",
+          "descAr": "",
+          "ratio": "9-16",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-14h32m38s50_1791891163605.png",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "id": "1uMnL-2FVgeG1KyyM2GMq2m5vs_voDud2",
+          "title": "Luxury Experience Promo",
+          "titleAr": "",
+          "desc": "",
+          "descAr": "",
+          "ratio": "9-16",
+          "thumb": "https://lh3.googleusercontent.com/d/1uMnL-2FVgeG1KyyM2GMq2m5vs_voDud2=w1000",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "id": "1vZf4gIdJ_sWt-KloXMrjEd9R4pyeOoM7",
+          "title": "Red Sea Diving & Coral Reefs (Reel)",
+          "titleAr": "",
+          "desc": "Vertical 9:16 color-graded mobile promo with sound design.",
+          "descAr": "",
+          "ratio": "9-16",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-14h53m10s51_1791892395329.png",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "id": "1clcCr09-Ys-IiYrkbaOvEtfotg6bNcCq",
+          "title": "OMRAH PROMO",
+          "titleAr": "",
+          "desc": "",
+          "descAr": "",
+          "ratio": "16-9",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-14h56m02s68_1791892572449.png",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "id": "1Dh_Z3fkVgPoUZH6nm7KTcp6dQ7Sw_2Nb",
+          "title": "OMRAH SIGMA TOURS",
+          "titleAr": "",
+          "desc": "Fast-paced UGC style vertical cut driving direct WhatsApp bookings.",
+          "descAr": "",
+          "ratio": "9-16",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-14h32m38s50_1791892582483.png",
+          "link": "https://www.behance.net/gamalsobih"
+        }
+      ],
+      "gallery": []
+    },
+    "aiMotion": {
+      "number": "03",
+      "enabled": true,
+      "icon": "fa-wand-magic-sparkles",
+      "color": "#00BC91",
+      "hasVideoPlayer": true,
+      "title": "RMS for digital solution ",
+      "subtitle": "Lead Graphic Designer, Media Buyer & Team Manager",
+      "roleTitle": "Lead Graphic Designer, Media Buyer & Team Manager",
+      "roleDesc": "Merging prompt engineering, Midjourney, Flux, and AI video generators with Adobe Premiere Pro and After Effects post-production.",
+      "tags": [
+        "Midjourney v6",
+        "Flux.1",
+        "Prompt Engineering",
+        "Runway Gen-3",
+        "After Effects"
+      ],
+      "videos": [
+        {
+          "id": "1TKfLTC-RXPuhEWIgJg-mXaIiOx9RBpIl",
+          "title": "AI Motion Reel #1",
+          "desc": "",
+          "ratio": "9-16",
+          "thumb": "https://lh3.googleusercontent.com/d/1TKfLTC-RXPuhEWIgJg-mXaIiOx9RBpIl=w1200",
+          "link": "https://www.facebook.com/reel/1588246396411768"
+        },
+        {
+          "id": "14YMmF_0l5oa0Yd_fCZho_Z7MujIWMiS5",
+          "title": "AI Motion Reel #2",
+          "desc": "",
+          "ratio": "9-16",
+          "thumb": "https://lh3.googleusercontent.com/d/14YMmF_0l5oa0Yd_fCZho_Z7MujIWMiS5=w1200",
+          "link": "https://www.facebook.com/reel/2659651282520117"
+        },
+        {
+          "id": "1Dum8vU6Frn2vS6hVcnDAVVKwU0cwQcYC",
+          "title": "AI Motion Reel #3:",
+          "desc": "",
+          "ratio": "9-16",
+          "thumb": "https://lh3.googleusercontent.com/d/1Dum8vU6Frn2vS6hVcnDAVVKwU0cwQcYC=w1200",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "id": "16nmSUzZVqZ5tEzUiE3MXA1_aonmAD5EG",
+          "title": "AI Motion Reel #4: Generative Fashion Hologram",
+          "desc": "Vertical fashion video composite using Midjourney v6 + Luma Dream.",
+          "ratio": "9-16",
+          "thumb": "https://lh3.googleusercontent.com/d/16nmSUzZVqZ5tEzUiE3MXA1_aonmAD5EG=w1200",
+          "link": "https://www.facebook.com/reel/1560760888863998"
+        },
+        {
+          "id": "1Cq15OuWvy4Ak4ACcmy9sfn63NMxM6_6W",
+          "title": "AI Motion Reel #5:",
+          "titleAr": "",
+          "desc": "Dynamic speed cuts and cinematic lighting transitions.",
+          "descAr": "",
+          "ratio": "9-16",
+          "thumb": "assets/images/uploads/vlcsnap-2026-10-13-13h40m21s76_1791888033271.png",
+          "link": "https://www.facebook.com/reel/1343471868842852"
+        }
+      ],
+      "gallery": [
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/699997604_1425338279630952_1197619149935502270_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=4m8Py_JoGe8Q7kNvwGrF5Oo&_nc_oc=AdrrpWQRZsCNDde-9Yyw7R9hlySWbfvF7n4rmVDUf0R6f7b3vj9DKyqPS33HB6wuE2g&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=faZV_vDEqnRX9744XEGd7A&_nc_ss=7b2a8&oh=00_AQN8jFDSn3t9X0p30-R4tzIo__Z1kDcUZbJoxJNzNknaTA&oe=6AD3D5ED",
+          "title": "Synthetic Cyber Key Visuals",
+          "titleAr": "",
+          "tag": "MIDJOURNEY v6",
+          "tagAr": "",
+          "desc": "Abstract 3D-fluid styling engineered for tech brand backdrops.",
+          "descAr": "",
+          "metric": "AI Prompting",
+          "tool": "Photoshop Composite",
+          "link": "https://www.facebook.com/photo.php?fbid=1425338276297619&set=pb.100064643801177.-2207520000&type=3"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/694704929_1417864727044974_7946572889079931639_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nATuiY0fjV8Q7kNvwHRat_C&_nc_oc=Ado2AOxn53-TzySkAYwT8YUQ4B_4DebHen0I9FUlE5cHOTr6eEoYH-8mW22a47M6Gyg&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=pTh3YOkI0VZ9XUKqB8HGMg&_nc_ss=7b2a8&oh=00_AQOW-qepO-VOd6XcS-S2MvySF-J56FBUldt-8AJca2J8BQ&oe=6AD3C3D7",
+          "title": "promotional Campaign",
+          "titleAr": "",
+          "tag": "",
+          "tagAr": "",
+          "desc": "High-energy visual pacing designed for mobile engagement.",
+          "descAr": "",
+          "metric": "",
+          "tool": "",
+          "link": "https://www.facebook.com/photo/?fbid=1417864720378308&set=pb.100064643801177.-2207520000"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/672656668_1399441078887339_4513272688328413032_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1600&ctp=s1600x1600&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=NeKWsjJF0jcQ7kNvwHLp1po&_nc_oc=Adpeq1-lJzniMebDcv29MzElLPmZl4DG7W5GmGIOw_tP88SSKl1H5NJsWAHsZJhuLVU&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=u7T961eJ-BQt9FR51PkS5g&_nc_ss=7b2a8&oh=00_AQM6QGyLh5iKSjN_JAs6r09TqUGS80F_C13IASTIs3mQxQ&oe=6AD3F605",
+          "title": "promotional Campaign",
+          "titleAr": "",
+          "tag": "",
+          "tagAr": "",
+          "desc": "Generating packaging variations and commercial lighting setups.",
+          "descAr": "",
+          "metric": "50% Faster",
+          "tool": "Generative AI",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/579246893_1266886968809418_3204570624721378189_n.jpg?stp=dst-jpg_tt6&cstp=mx1046x970&ctp=s1046x970&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=EVROcPk2GowQ7kNvwEz_RV8&_nc_oc=AdqOfP6t8rnzFDpQZZmV6ZAsvd7FbZpDsB-vcS-6f7_r7KB3l-BErxbCqiDTSugxhuQ&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=Kn0wG1qhdi_ek1FMD1q2jw&_nc_ss=7b2a8&oh=00_AQNaesKnYQq4qCPmAAh-LdsBbxNPh3QBHI6tRwIzVNLGHw&oe=6AD3FB9B",
+          "title": "promotional Campaign",
+          "titleAr": "",
+          "tag": "",
+          "tagAr": "",
+          "desc": "promotional Campaign",
+          "descAr": "",
+          "metric": "Textures",
+          "tool": "Midjourney",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "img": "https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/492787427_24313095198290621_2763272188423540527_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x954&ctp=s1200x954&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Pie3Xaed_OwQ7kNvwH-HxIA&_nc_oc=AdrBSY9YoA21UEkkvThVOxkzyT1xfYaZSIRf-71QxZfuqVI7IA5ksE8dHfBtAIAxNnc&_nc_zt=23&_nc_ht=scontent.fcai19-6.fna&_nc_gid=IGHs3li7SAJqfsR2g3iHkw&_nc_ss=7b2a8&oh=00_AQP5zsEwcAyamSIjkGdt0LVE2VizjCXz002N234hRYeZEg&oe=6AD3DF51",
+          "title": "promotional Campaign",
+          "titleAr": "",
+          "tag": "",
+          "tagAr": "",
+          "desc": "",
+          "descAr": "",
+          "metric": "Concept Art",
+          "tool": "",
+          "link": "https://www.facebook.com/rms4design/posts/pfbid0pJSqqh6MBYXLE2cdL8WZfCJDZCzhv6Bszaprbms6asjbTqqDjjQGsStRdf2Ho7nSl"
+        }
+      ]
+    },
+    "branding": {
+      "number": "04",
+      "enabled": true,
+      "icon": "fa-shapes",
+      "color": "#f59e0b",
+      "hasVideoPlayer": false,
+      "title": "Brand Identity & Systems",
+      "subtitle": "Enduring Corporate Systems (2014 – Present)",
+      "roleTitle": "Brand Architecture & Corporate Kits",
+      "roleDesc": "End-to-end corporate branding, vector logo design, digital stationery, and packaging design built for enduring commercial recognition.",
+      "tags": [
+        "Brand Guidelines",
+        "Vector Geometry",
+        "Corporate Stationery",
+        "Packaging"
+      ],
+      "videos": [],
+      "gallery": [
+        {
+          "title": "RMS 4 IT Corporate System",
+          "tag": "RMS 4 IT",
+          "img": "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80",
+          "desc": "Minimalist vector logo, typography rules, business stationery.",
+          "metric": "Corporate Kit",
+          "tool": "Illustrator",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "title": "Harlem English College Assets",
+          "tag": "HARLEM COLLEGE",
+          "img": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80",
+          "desc": "Educational and promotional visuals, print assets, and banners.",
+          "metric": "Education",
+          "tool": "Photoshop / Print",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "title": "Modern Tech Geometric Mark",
+          "tag": "LOGO DESIGN",
+          "img": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1200&q=80",
+          "desc": "Modular icon design scalable from favicon to giant billboards.",
+          "metric": "Vector",
+          "tool": "Illustrator",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "title": "Retail Packaging Architecture",
+          "tag": "PACKAGING",
+          "img": "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?auto=format&fit=crop&w=1200&q=80",
+          "desc": "Die-cut templates, foil stamping accents, and 3D mockups.",
+          "metric": "Packaging",
+          "tool": "Adobe Suite",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "title": "Luxury Coffee Roastery Brand Book",
+          "tag": "BRAND BOOK",
+          "img": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80",
+          "desc": "Comprehensive 48-page brand identity guidelines and color specs.",
+          "metric": "Guidelines",
+          "tool": "InDesign / Illustrator",
+          "link": "https://www.behance.net/gamalsobih"
+        },
+        {
+          "title": "Corporate Apparel & Merchandise Kit",
+          "tag": "MERCH",
+          "img": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80",
+          "desc": "Embroidered uniform mockups, enamel badges, and branded stationery.",
+          "metric": "Merchandise",
+          "tool": "Photoshop 3D",
+          "link": "https://www.behance.net/gamalsobih"
+        }
+      ]
+    }
+  },
+  "sectionOrder": [
+    "afareet",
+    "aiMotion",
+    "travel",
+    "branding"
+  ]
+};
+
+const STORAGE_KEY = "gamal_portfolio_data_v1";
+
+/**
+ * Get active portfolio data from localStorage or fallback to default
+ */
+function getPortfolioData() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (parsed && parsed.sections) {
+        Object.keys(parsed.sections).forEach(k => {
+          const sec = parsed.sections[k];
+          if (sec.enabled === undefined) sec.enabled = true;
+          if (!sec.icon) sec.icon = "fa-folder";
+          if (!sec.color) sec.color = "#00BC91";
+          if (!sec.videos) sec.videos = [];
+          if (!sec.gallery) sec.gallery = [];
+        });
+
+        // Respect saved items directly without overriding with default template items
+        const coreKeys = ['afareet', 'travel', 'aiMotion', 'branding'];
+        coreKeys.forEach(k => {
+          if (parsed.sections[k] && DEFAULT_PORTFOLIO_DATA.sections[k]) {
+            const defSec = DEFAULT_PORTFOLIO_DATA.sections[k];
+            // Only fill if array was completely missing or undefined
+            if (!parsed.sections[k].videos && defSec.videos) {
+              parsed.sections[k].videos = JSON.parse(JSON.stringify(defSec.videos));
+            }
+            if (!parsed.sections[k].gallery && defSec.gallery) {
+              parsed.sections[k].gallery = JSON.parse(JSON.stringify(defSec.gallery));
+            }
+          }
+        });
+
+        // Ensure every video and gallery item has a default campaign link for Visit button
+        Object.keys(parsed.sections).forEach(k => {
+          const sec = parsed.sections[k];
+          if (sec && sec.videos) {
+            sec.videos.forEach(v => {
+              if (!v.link) v.link = "https://www.behance.net/gamalsobih";
+            });
+          }
+          if (sec && sec.gallery) {
+            sec.gallery.forEach(g => {
+              if (!g.link) g.link = "https://www.behance.net/gamalsobih";
+            });
+          }
+        });
+
+        // Maintain sectionOrder consistency
+        if (!Array.isArray(parsed.sectionOrder)) {
+          parsed.sectionOrder = Object.keys(parsed.sections);
+        } else {
+          // Add any missing sections to order
+          Object.keys(parsed.sections).forEach(k => {
+            if (!parsed.sectionOrder.includes(k)) {
+              parsed.sectionOrder.push(k);
+            }
+          });
+          // Remove any deleted sections from order
+          parsed.sectionOrder = parsed.sectionOrder.filter(k => parsed.sections[k]);
+        }
+      }
+      return parsed;
+    }
+  } catch (e) {
+    console.warn("Error reading portfolio data from localStorage, using default:", e);
+  }
+  return JSON.parse(JSON.stringify(DEFAULT_PORTFOLIO_DATA));
+}
+
+/**
+ * Save portfolio data to localStorage
+ */
+function savePortfolioData(data) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    return true;
+  } catch (e) {
+    console.error("Failed to save portfolio data:", e);
+    return false;
+  }
+}
+
+/**
+ * Reset data back to initial defaults
+ */
+function resetPortfolioData() {
+  localStorage.removeItem(STORAGE_KEY);
+  return JSON.parse(JSON.stringify(DEFAULT_PORTFOLIO_DATA));
+}
+
+/**
+ * Helper to extract Google Drive file ID from URL or raw ID
+ */
+function extractDriveId(input) {
+  if (!input) return "";
+  input = input.trim();
+  // Match standard Google Drive URL patterns:
+  // - /file/d/ID/view
+  // - /d/ID
+  // - ?id=ID or &id=ID
+  // - thumbnail?id=ID
+  const match = input.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) ||
+                input.match(/\/d\/([a-zA-Z0-9_-]+)/) || 
+                input.match(/[?&]id=([a-zA-Z0-9_-]+)/) ||
+                input.match(/thumbnail\?id=([a-zA-Z0-9_-]+)/);
+  if (match && match[1]) {
+    return match[1];
+  }
+  // If it's already a raw Drive ID (alphanumeric with underscores/hyphens, >= 15 chars and no slashes/periods)
+  if (!input.includes("/") && !input.includes(".") && input.length >= 15) {
+    return input;
+  }
+  return input;
+}
+
+/**
+ * Helper to convert any image input (Google Drive share link, raw ID, local path, data URL)
+ * into a directly displayable image URL that works in HTML <img> tags.
+ */
+function formatDriveImageUrl(input) {
+  if (!input) return "";
+  input = input.trim();
+  // If already base64 data url or local relative/absolute path
+  if (input.startsWith("data:image/") || input.startsWith("assets/") || input.startsWith("./") || input.startsWith("/")) {
+    return input;
+  }
+  // If already direct Google CDN image URL
+  if (input.includes("googleusercontent.com")) {
+    return input;
+  }
+  // Check if it's a Google Drive link, thumbnail link, or bare drive ID
+  const driveId = extractDriveId(input);
+  if (driveId && (input.includes("drive.google.com") || input.includes("docs.google.com") || (!input.includes("/") && !input.includes(".")))) {
+    return `https://lh3.googleusercontent.com/d/${driveId}=w1000`;
+  }
+  return input;
+}
+

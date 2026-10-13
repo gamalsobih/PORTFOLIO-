@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamal El-Din Sobih Mahmoud - Graphic Designer Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #1a1a1a;
+      line-height: 1.4;
+      font-size: 13px;
+      padding: 20px 10px;
+    }
+
+    .cv-paper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-top: 5px solid #1a365d;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      padding-bottom: 12px;
+      border-bottom: 1.5px solid #e2e8f0;
+      margin-bottom: 14px;
+    }
+
+    .name {
+      font-family: 'Merriweather', serif;
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: #1a365d;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #2b6cb0;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: #4a5568;
+    }
+
+    .contact-info span {
+      display: inline-block;
+    }
+
+    .contact-info span:not(:last-child)::after {
+      content: "•";
+      margin-left: 10px;
+      color: #cbd5e0;
+    }
+
+    /* SECTIONS */
+    .section {
+      margin-bottom: 14px;
+    }
+
+    .section-header {
+      font-family: 'Merriweather', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a365d;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid #1a365d;
+      margin-bottom: 8px;
+    }
+
+    .summary-p {
+      font-size: 0.85rem;
+      color: #2d3748;
+      line-height: 1.45;
+      text-align: justify;
+    }
+
+    /* EXPERIENCE & EDUCATION ITEMS */
+    .item {
+      margin-bottom: 10px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #2d3748;
+    }
+
+    .item-company {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #2b6cb0;
+    }
+
+    .item-date {
+      font-size: 0.8rem;
+      color: #718096;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .bullet-list {
+      margin-top: 2px;
+      padding-left: 16px;
+    }
+
+    .bullet-list li {
+      font-size: 0.83rem;
+      color: #4a5568;
+      margin-bottom: 3px;
+      line-height: 1.38;
+    }
+
+    /* TWO COLUMN SKILLS / EDU SECTION */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skill-group {
+      margin-bottom: 8px;
+    }
+
+    .skill-group-title {
+      font-weight: 700;
+      font-size: 0.83rem;
+      color: #1a365d;
+      margin-bottom: 1px;
+    }
+
+    .skill-group-items {
+      font-size: 0.82rem;
+      color: #4a5568;
+      line-height: 1.38;
+    }
+
+    /* PRINT STYLES - STRICTLY FIT 2 PAGES */
+    @page {
+      size: A4;
+      margin: 8mm 10mm;
+    }
+
+    @media print {
+      html, body {
+        height: 99%;
+        background-color: #ffffff !important;
+        padding: 0 !important;
+      }
+      .cv-paper {
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        border-top: none !important;
+      }
+      .fab-print {
+        display: none !important;
+      }
+      .section {
+        margin-bottom: 10px;
+      }
+      .item {
+        margin-bottom: 8px;
+        page-break-inside: avoid;
+      }
+      .two-col {
+        page-break-inside: avoid;
+      }
+    }
+
+    .fab-print {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1a365d;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fab-bar" style="position: fixed; bottom: 24px; right: 24px; display: flex; gap: 10px; z-index: 9999;">
+    <a href="index.html" class="fab-print" style="text-decoration: none; background: #2d3748;">
+      ← Back to Portfolio
+    </a>
+    <button class="fab-print" onclick="window.print()">
+      🖨️ Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="cv-paper">
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="name">Gamal El-Din Sobih Mahmoud</h1>
+      <div class="title">Graphic Designer & Visual Content Specialist</div>
+      <div class="contact-info">
+        <span>Cairo, Egypt</span>
+        <span>Phone: <a href="tel:01066439963" style="color: inherit; text-decoration: none;">01066439963</a></span>
+        <span>Email: <a href="mailto:gamalsob@gmail.com" style="color: inherit; text-decoration: none;">gamalsob@gmail.com</a></span>
+        <span>Portfolio: <a href="https://www.behance.net/gamalsobih" target="_blank" style="color: #2b6cb0; text-decoration: none;">behance.net/gamalsobih</a></span>
+        <span>LinkedIn: <a href="https://eg.linkedin.com/in/gamalsobih" target="_blank" style="color: #2b6cb0; text-decoration: none;">linkedin.com/in/gamalsobih</a></span>
+      </div>
+    </header>
+
+    <!-- SUMMARY -->
+    <section class="section">
+      <h2 class="section-header">Professional Summary</h2>
+      <p class="summary-p">
+        Creative and results-driven Graphic Designer and Visual Specialist with 10+ years of multi-disciplinary experience in brand identity creation, graphic design packages, promotional visual collateral, motion graphics, and short-form video editing (Reels/TikTok). Proven track record at <em>El-Afareet Mobile store</em> directing visual content creation and brand consistency while scaling digital engagement. Expert in Adobe Photoshop, Premiere Pro, After Effects, and leveraging Generative AI tools to optimize visual design workflows. Holds a B.Sc. in Computer Science & Statistics with certifications in Front-End Web Development and Digital Marketing.
+      </p>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="section">
+      <h2 class="section-header">Professional Experience</h2>
+
+      <!-- Job 1 -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Lead Graphic Designer, Media Buyer & Team Manager</span> — 
+            <span class="item-company">El-Afareet Mobile store</span>
+          </div>
+          <div class="item-date">2021 – Sep 2026</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Conceptualize, design, and produce high-converting graphic design packages, social media visuals, and promotional video Reels utilizing Adobe Photoshop, Premiere Pro, and After Effects.</li>
+          <li>Direct visual branding strategy across digital touchpoints for the Social Media Content & Customer Support teams.</li>
+          <li>Pioneered Generative AI design workflows (AI image generation, graphic asset production, video editing), accelerating creative turnaround speed by 50%.</li>
+          <li>Manage and optimize visual ad creatives across Meta Ads Manager and TikTok Ads to maximize ROAS.</li>
+          <li>Utilize audience data insights to continuously refine promotional graphics and visual content strategies.</li>
+        </ul>
+      </div>
+
+      <!-- Job 2: Sigma Tours -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Graphic Designer & Performance Marketing Specialist</span> — 
+            <span class="item-company">Sigma Tours</span>
+          </div>
+          <div class="item-date">2022 – 2024</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Designed high-converting visual collaterals, ad banners, and promotional graphics for travel & tourism packages across Meta, TikTok, and Google Ads.</li>
+          <li>Executed A/B testing on graphic ad creatives, visual layouts, and promotional copy to reduce CPL and maximize booking conversions.</li>
+        </ul>
+      </div>
+
+      <!-- Job 3: Friday Tours -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Graphic Designer & Digital Content Specialist</span> — 
+            <span class="item-company">Friday Tours</span>
+          </div>
+          <div class="item-date">2021 – 2022</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Created promotional graphic assets, visual identity materials, and motion graphics for tourism ad campaigns.</li>
+          <li>Monitored ad engagement metrics to optimize visual asset performance and layout design.</li>
+        </ul>
+      </div>
+
+      <!-- Job 4: RMS 4 IT Solutions -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Senior Graphic Designer & Sales Promoter</span> — 
+            <span class="item-company">RMS 4 IT Solutions</span>
+          </div>
+          <div class="item-date">2014 – 2020</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Designed comprehensive graphic design packages, digital branding, logos, and promotional advertising collateral for diverse corporate clients.</li>
+          <li>Executed visual marketing campaigns and promotional strategies to drive client acquisition and business growth.</li>
+          <li>Collaborated with web development teams to deliver cohesive brand identities.</li>
+        </ul>
+      </div>
+
+      <!-- Job 5: Harlem English College -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Graphic Designer & Video Creator</span> — 
+            <span class="item-company">Harlem English College</span>
+          </div>
+          <div class="item-date">2014 – 2019</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Produced educational & promotional visual graphics, marketing collaterals, print assets, and video content.</li>
+        </ul>
+      </div>
+
+      <!-- Job 6: Freelance -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Freelance Graphic Designer & Video Editor</span> — 
+            <span class="item-company">Self-Employed</span>
+          </div>
+          <div class="item-date">2014 – Present</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Deliver tailored visual identity design, logo creation, print & digital graphics, motion graphics, and video post-production for varied regional clients.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TWO COLUMN: SKILLS & EDUCATION -->
+    <div class="two-col">
+      <section class="section">
+        <h2 class="section-header">Skills & Capabilities</h2>
+        
+        <div class="skill-group">
+          <div class="skill-group-title">Graphic Design & Creative Software:</div>
+          <div class="skill-group-items">Graphic Design, Brand Identity & Logo Design, Photoshop, Premiere Pro, After Effects, Visual Collateral, Reels & Motion Graphics.</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Generative AI & Visual Automation:</div>
+          <div class="skill-group-items">AI Content Generation, Visual Prompt Engineering, AI Image/Video Editing Tools, Workflow Automation.</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Visual Marketing & Leadership:</div>
+          <div class="skill-group-items">Paid Ad Creatives (Meta/TikTok), Media Buying, Content Strategy, Team Management, ROAS Optimization.</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Web & Analytics:</div>
+          <div class="skill-group-items">HTML5, CSS3, JavaScript, Front-End Development, Statistical Analysis.</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-header">Education & Certifications</h2>
+        
+        <div class="item">
+          <div class="item-title">B.Sc. in Statistics & Computer Science</div>
+          <div class="item-company">Faculty of Science, Helwan University (2016)</div>
+          <div class="skill-group-items">Grade: Good</div>
+        </div>
+
+        <div class="item" style="margin-top: 6px;">
+          <div class="skill-group-title">Diplomas & Certificates:</div>
+          <ul class="bullet-list" style="padding-left: 14px; margin-top: 2px;">
+            <li><strong>ALX Front-End Diploma</strong> (2022)</li>
+            <li><strong>Udacity Digital Marketing Nanodegree</strong> (2016)</li>
+            <li><strong>Full-Stack Web Certificate</strong> - RMS 4 IT Solutions (2015)</li>
+          </ul>
+        </div>
+
+        <div class="item" style="margin-top: 6px;">
+          <div class="skill-group-title">Languages:</div>
+          <div class="skill-group-items">Arabic (Native), English (Very Good)</div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+</body>
+</html>

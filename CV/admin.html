@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم الديناميكية — بورتفوليو جمال صبيح</title>
+  
+  <!-- Google Fonts: Cairo & Sora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Sora:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-deep: #08080b;
+      --bg-surface: #101015;
+      --bg-card: #16161e;
+      --bg-card-hover: #1c1c26;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-focus: #00BC91;
+      --accent: #00BC91;
+      --accent-glow: rgba(0, 188, 145, 0.35);
+      --accent-blue: #3b82f6;
+      --accent-red: #ef4444;
+      --text-white: #ffffff;
+      --text-muted: #9ca3af;
+      --font-ar: 'Cairo', sans-serif;
+      --font-display: 'Sora', sans-serif;
+      --radius: 12px;
+      --transition: all 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-white);
+      font-family: var(--font-ar);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* TOP BAR */
+    .top-header {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, #00BC91, #3b82f6);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #000;
+      box-shadow: 0 4px 15px var(--accent-glow);
+    }
+
+    .brand-title h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .brand-title p {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-family: var(--font-ar);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+    .btn-primary:hover {
+      background: #05d4a4;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--border);
+      color: #fff;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-danger {
+      background: rgba(239, 68, 68, 0.1);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: #f87171;
+    }
+    .btn-danger:hover {
+      background: rgba(239, 68, 68, 0.2);
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 188, 145, 0.1);
+      border: 1px solid rgba(0, 188, 145, 0.3);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* MAIN APP LAYOUT */
+    .dashboard-layout {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: calc(100vh - 72px);
+    }
+
+    /* SIDEBAR */
+    .sidebar-nav {
+      background: var(--bg-surface);
+      border-left: 1px solid var(--border);
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .nav-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-family: var(--font-ar);
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-align: right;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .nav-tab-btn i {
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    .nav-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.04);
+      color: #fff;
+    }
+
+    .nav-tab-btn.active {
+      background: rgba(0, 188, 145, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(0, 188, 145, 0.25);
+    }
+
+    /* CONTENT VIEWPORT */
+    .content-viewport {
+      padding: 35px 40px;
+      overflow-y: auto;
+      max-height: calc(100vh - 72px);
+    }
+
+    .tab-section {
+      display: none;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .tab-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header-box {
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .section-header-box h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-header-box p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-top: 4px;
+    }
+
+    /* FORM CARD & GROUPS */
+    .form-panel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .form-grid.full {
+      grid-template-columns: 1fr;
+    }
+
+    .form-grid.tri {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #cbd5e1;
+    }
+
+    .form-control {
+      background: var(--bg-deep);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: var(--font-ar);
+      font-size: 0.9rem;
+      outline: none;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .form-control:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+
+    textarea.form-control {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    /* ITEM CARDS LIST (VIDEOS & DESIGNS) */
+    .items-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 24px 0 16px;
+    }
+
+    .items-header h3 {
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .item-card:hover {
+      border-color: rgba(0, 188, 145, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .item-thumb-box {
+      height: 180px;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .item-thumb-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .item-badge-pill {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .item-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      gap: 10px;
+    }
+
+    .item-body h4 {
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+    }
+
+    .item-body p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .item-meta-info {
+      font-size: 0.75rem;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+
+    .item-actions-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .btn-sm {
+      padding: 6px 12px;
+      font-size: 0.78rem;
+      border-radius: 6px;
+    }
+
+    /* MODAL WINDOWS */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      max-width: 620px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 28px;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-header h3 {
+      font-size: 1.25rem;
+    }
+
+    .modal-close {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    .modal-close:hover {
+      color: #fff;
+    }
+
+    /* TOAST NOTIFICATION */
+    .toast-box {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: var(--accent);
+      color: #000;
+      padding: 12px 26px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 30px var(--accent-glow);
+      display: none;
+      z-index: 2000;
+      animation: slideUp 0.3s ease;
+    }
+
+    /* SWITCH TOGGLE */
+    .switch-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      user-select: none;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(255, 255, 255, 0.16);
+      transition: .25s ease;
+      border-radius: 34px;
+      border: 1px solid var(--border);
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 3px;
+      background-color: #fff;
+      transition: .25s ease;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: var(--accent);
+      border-color: var(--accent);
+    }
+    input:checked + .slider:before {
+      transform: translateX(20px);
+      background-color: #000;
+    }
+    .sec-status-pill {
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .sec-status-pill.disabled {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+
+    /* DRAGGABLE TABS & REORDER ARROWS */
+    .draggable-tab {
+      cursor: grab;
+      position: relative;
+      user-select: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .draggable-tab:active {
+      cursor: grabbing;
+    }
+    .draggable-tab.dragging {
+      opacity: 0.45;
+      border: 1px dashed var(--accent);
+      background: rgba(0, 188, 145, 0.1);
+    }
+    .draggable-tab.drag-over {
+      border-top: 2px solid var(--accent);
+      transform: translateY(-2px);
+    }
+    .drag-handle {
+      color: var(--text-muted);
+      cursor: grab;
+      margin-left: 6px;
+      font-size: 0.85rem;
+      padding: 4px 2px;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    .drag-handle:hover, .draggable-tab:hover .drag-handle {
+      opacity: 1;
+      color: var(--accent);
+    }
+    .tab-order-arrows {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-right: auto;
+      margin-left: 6px;
+    }
+    .arrow-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      width: 18px;
+      height: 14px;
+      font-size: 0.52rem;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+    .arrow-btn:hover {
+      background: var(--accent);
+      color: #000;
+      border-color: var(--accent);
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 900px) {
+      .dashboard-layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        border-left: none;
+        border-bottom: 1px solid var(--border);
+        padding: 12px;
+      }
+      .nav-tab-btn {
+        white-space: nowrap;
+      }
+      .content-viewport {
+        padding: 20px;
+      }
+      .form-grid, .form-grid.tri {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================
+       TOP HEADER BAR
+       ========================================================= -->
+  <header class="top-header">
+    <div class="brand-wrap">
+      <div class="brand-icon">GS</div>
+      <div class="brand-title">
+        <h1>لوحة تحكم البورتفوليو</h1>
+        <p>نظام إدارة البيانات الديناميكي المتكامل</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="status-pill">
+        <i class="fa-solid fa-circle-check"></i> متصل بالموقع مباشرة
+      </div>
+
+      <button class="btn" style="background: linear-gradient(135deg, #00BC91 0%, #008768 100%); color: #060606; font-weight: 800; font-size: 0.92rem; padding: 10px 18px; box-shadow: 0 4px 18px rgba(0, 188, 145, 0.35);" onclick="saveAndSyncAll()" title="حفظ ونشر التعديلات فوراً في المتصفح وعلى ملفات السيرفر">
+        <i class="fa-solid fa-floppy-disk"></i> حفظ ونشر التعديلات 🚀
+      </button>
+
+      <a href="index.html" target="_blank" class="btn btn-secondary" title="View Default English Site">
+        <i class="fa-solid fa-globe"></i> الموقع الرئيسي (English)
+      </a>
+
+      <a href="ar.html" target="_blank" class="btn btn-secondary" title="معاينة النسخة العربية">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> النسخة العربية (AR)
+      </a>
+
+      <button class="btn btn-secondary" onclick="exportDataJSON()">
+        <i class="fa-solid fa-download"></i> تصدير نسخة احتياطية
+      </button>
+
+      <label class="btn btn-secondary" style="cursor: pointer;">
+        <i class="fa-solid fa-upload"></i> استيراد نسخة
+        <input type="file" id="importFileInput" accept=".json" style="display: none;" onchange="importDataJSON(event)">
+      </label>
+
+      <button class="btn btn-danger" onclick="confirmResetDefaults()">
+        <i class="fa-solid fa-rotate-left"></i> استعادة الافتراضي
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       DASHBOARD MAIN LAYOUT
+       ========================================================= -->
+  <div class="dashboard-layout">
+    
+    <!-- SIDEBAR TABS -->
+    <aside class="sidebar-nav">
+      <button class="nav-tab-btn active" id="tabBtn-profile" onclick="switchTab('profile', this)">
+        <i class="fa-solid fa-user-tie"></i> بيانات الهيرو والملف الشخصي
+      </button>
+
+      <div id="dynamicSidebarTabs" style="display: flex; flex-direction: column; gap: 8px;">
+        <!-- Rendered dynamically via renderSidebarTabs() -->
+      </div>
+
+      <button class="btn btn-primary" style="margin-top: 16px; width: 100%; font-size: 0.88rem; justify-content: center; padding: 11px;" onclick="openAddSectionModal()">
+        <i class="fa-solid fa-folder-plus"></i> إضافة سيكشن جديد
+      </button>
+    </aside>
+
+    <!-- CONTENT VIEWPORT -->
+    <main class="content-viewport">
+      
+      <!-- =====================================================
+           TAB 1: HERO & PROFILE SETTINGS
+           ===================================================== -->
+      <section class="tab-section active" id="tab-profile">
+        <div class="section-header-box">
+          <div>
+            <h2><i class="fa-solid fa-user-pen" style="color: var(--accent);"></i> إعدادات الهيرو سيكشن والبيانات الشخصية</h2>
+            <p>تعديل النصوص الرئيسية، عدادات الخبرة، الروابط، وصورة الهيرو الشخصية.</p>
+          </div>
+        </div>
+
+        <div class="form-panel-card">
+          <div class="form-grid full" style="margin-bottom: 16px;">
+            <div class="form-group">
+              <label style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span><i class="fa-solid fa-image-portrait" style="color: var(--accent);"></i> مسار أو رابط الصورة الشخصية بالهيرو سيكشن (Hero Image):</span>
+                <span style="font-size: 0.72rem; color: var(--accent); font-weight: normal;">يدعم روابط درايف، رفع مباشر، أو مسار محلي</span>
+              </label>
+              <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <input type="text" class="form-control" id="p-heroImage" placeholder="assets/images/hero-portrait.png" style="flex: 1; min-width: 240px;" oninput="onThumbInputChanged(this.value, 'p-heroPreview', 'p-heroImage')">
+                <input type="file" id="p-heroFile" accept="image/*" style="display:none;" onchange="handleImageFileUpload(event, 'p-heroImage', 'p-heroPreview')">
+                <button type="button" class="btn btn-secondary" style="padding: 9px 12px; font-size: 0.78rem; white-space: nowrap;" onclick="document.getElementById('p-heroFile').click()" title="رفع صورة من جهازك">
+                  <i class="fa-solid fa-upload"></i> رفع ملف
+                </button>
+                <img id="p-heroPreview" src="assets/images/hero-portrait.png" alt="معاينة" style="width: 52px; height: 52px; border-radius: 10px; object-fit: cover; border: 1px solid var(--border); flex-shrink: 0;" onerror="this.src='assets/images/hero-portrait.png';">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Full Name (English - Default):</label>
+              <input type="text" class="form-control" id="p-name" placeholder="Gamal El-Din Sobih">
+            </div>
+            <div class="form-group">
+              <label>الاسم الكامل (العربية - اختياري):</label>
+              <input type="text" class="form-control" id="p-nameAr" placeholder="جمال الدين صبيح">
+            </div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 14px;">
+            <div class="form-group">
+              <label>Job Title / Role (English - Default):</label>
+              <input type="text" class="form-control" id="p-role" placeholder="Senior Graphic Designer & Content Creator">
+            </div>
+            <div class="form-group">
+              <label>المسمى الوظيفي (العربية - اختياري):</label>
+              <input type="text" class="form-control" id="p-roleAr" placeholder="كبير مصممي الجرافيك وصانع محتوى">
+            </div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 14px;">
+            <div class="form-group">
+              <label>Greeting Pill (English - Default):</label>
+              <input type="text" class="form-control" id="p-greeting" placeholder="HOWDY! I'M GAMAL SOBIH">
+            </div>
+            <div class="form-group">
+              <label>تحية الهيرو (العربية - اختياري):</label>
+              <input type="text" class="form-control" id="p-greetingAr" placeholder="أهلاً بك! أنا جمال صبيح">
+            </div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 14px;">
+            <div class="form-group">
+              <label>Main Headline (English - Default):</label>
+              <input type="text" class="form-control" id="p-headlineMain" placeholder="Crafting High-Converting Visual Media, Reels & AI Experiences.">
+            </div>
+            <div class="form-group">
+              <label>العنوان الرئيسي (العربية - اختياري):</label>
+              <input type="text" class="form-control" id="p-headlineMainAr" placeholder="صناعة محتوى بصري يحقق أعلى مبيعات، ريلز وتجارب الذكاء الاصطناعي.">
+            </div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 14px;">
+            <div class="form-group">
+              <label>Pitch Bio (English - Default):</label>
+              <textarea class="form-control" id="p-pitchText" rows="3" placeholder="10+ years directing visual identity packages..."></textarea>
+            </div>
+            <div class="form-group">
+              <label>النبذة التعريفية (العربية - اختياري):</label>
+              <textarea class="form-control" id="p-pitchTextAr" rows="3" placeholder="أكثر من 10 سنوات في قيادة وتصميم الهويات البصرية..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATS COUNTERS -->
+        <div class="form-panel-card">
+          <h3 style="font-size: 1.1rem; margin-bottom: 14px;"><i class="fa-solid fa-arrow-trend-up" style="color: var(--accent);"></i> عدادات الأرقام والإنجازات (Odometer Stats)</h3>
+          <div class="form-grid tri">
+            <div class="form-group">
+              <label>سنوات الخبرة (Years Experience):</label>
+              <input type="number" class="form-control" id="p-statYears">
+            </div>
+            <div class="form-group">
+              <label>عدد المشاريع والحملات (Campaigns):</label>
+              <input type="number" class="form-control" id="p-statCampaigns">
+            </div>
+            <div class="form-group">
+              <label>نسبة زيادة سرعة الإنتاج بالـ AI (% Speed Boost):</label>
+              <input type="number" class="form-control" id="p-statSpeed">
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT LINKS -->
+        <div class="form-panel-card">
+          <h3 style="font-size: 1.1rem; margin-bottom: 14px;"><i class="fa-solid fa-address-book" style="color: var(--accent);"></i> روابط التواصل وبياناتك الشخصية</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>البريد الإلكتروني (Email):</label>
+              <input type="email" class="form-control" id="p-email">
+            </div>
+            <div class="form-group">
+              <label>رقم الهاتف والواتساب (Phone / WhatsApp):</label>
+              <input type="text" class="form-control" id="p-phone">
+            </div>
+            <div class="form-group">
+              <label>رابط بيهانس (Behance Profile):</label>
+              <input type="url" class="form-control" id="p-behance">
+            </div>
+            <div class="form-group">
+              <label>رابط لينكد إن (LinkedIn Profile):</label>
+              <input type="url" class="form-control" id="p-linkedin">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           DYNAMIC SECTION MANAGER (Afareet, Travel, AI, Branding)
+           ===================================================== -->
+      <div id="dynamicSectionsContainer">
+        <!-- Will be populated dynamically via JavaScript -->
+      </div>
+
+    </main>
+  </div>
+
+  <!-- =========================================================
+       MODAL 1: ADD / EDIT VIDEO MODAL
+       ========================================================= -->
+  <div class="modal-backdrop" id="videoModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="videoModalTitle">إضافة فيديو جديد</h3>
+        <button class="modal-close" onclick="closeVideoModal()">&times;</button>
+      </div>
+
+      <input type="hidden" id="v-sectionKey">
+      <input type="hidden" id="v-editIndex">
+
+      <div class="form-group" style="margin-bottom: 14px;">
+        <label>رابط أو معرف فيديو Google Drive (Drive File ID / Link):</label>
+        <input type="text" class="form-control" id="v-driveId" placeholder="انسخ رابط المشاركة من جوجل درايف أو الـ File ID مباشرة">
+        <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">* سيتم استخراج المعرف (ID) تلقائياً لو وضعت الرابط كاملاً. تأكد من ضبط مشاركة الفيديو على "Anyone with the link".</span>
+      </div>
+
+      <div class="form-grid" style="margin-bottom: 14px;">
+        <div class="form-group">
+          <label>Video Title (English - Default):</label>
+          <input type="text" class="form-control" id="v-title" placeholder="e.g. Promo Reel #1 Eid Ad">
+        </div>
+        <div class="form-group">
+          <label>عنوان الفيديو (العربية - اختياري):</label>
+          <input type="text" class="form-control" id="v-titleAr" placeholder="مثال: ريلز عروض افتتاح الستور">
+        </div>
+      </div>
+
+      <div class="form-grid" style="margin-bottom: 14px;">
+        <div class="form-group">
+          <label>Short Description (English - Default):</label>
+          <textarea class="form-control" id="v-desc" placeholder="Fast paced motion cuts, SFX, dynamic transitions..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>وصف الفيديو (العربية - اختياري):</label>
+          <textarea class="form-control" id="v-descAr" placeholder="مونتاج سريع، مؤثرات صوتية وتصميم حركي..."></textarea>
+        </div>
+      </div>
+
+      <div class="form-grid" style="margin-bottom: 14px;">
+        <div class="form-group">
+          <label>مقاس عرض الفيديو (Aspect Ratio):</label>
+          <select class="form-control" id="v-ratio">
+            <option value="16-9">16:9 بالعرض (Widescreen)</option>
+            <option value="9-16">9:16 بالطول (Vertical Reel / TikTok)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label><i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--accent);"></i> رابط الكامبين الحي (Visit Campaign Link):</label>
+          <input type="url" class="form-control" id="v-link" placeholder="مثال: رابط Behance أو رابط الحملة المباشر">
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 18px;">
+        <label style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+          <span><i class="fa-regular fa-image" style="color: var(--accent);"></i> صورة الثامبنيل / البوستر (Thumbnail Image):</span>
+          <span style="font-size: 0.72rem; color: var(--accent); font-weight: normal;">رابط صورة مباشر أو رفع من الجهاز</span>
+        </label>
+        
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <input type="text" class="form-control" id="v-thumb" placeholder="ضع رابط صورة مباشر (أو اضغط رفع صورة من جهازك)" style="flex: 1; min-width: 240px;" oninput="onThumbInputChanged(this.value, 'v-thumbPreview', 'v-thumb')">
+          <input type="file" id="v-thumbFile" accept="image/*" style="display:none;" onchange="handleImageFileUpload(event, 'v-thumb', 'v-thumbPreview')">
+          <button type="button" class="btn btn-primary" style="padding: 9px 16px; font-size: 0.82rem; white-space: nowrap; font-weight: 600;" onclick="document.getElementById('v-thumbFile').click()" title="رفع صورة من جهازك وحفظها على السيرفر">
+            <i class="fa-solid fa-cloud-arrow-up"></i> رفع صورة من الجهاز
+          </button>
+        </div>
+
+        <!-- Live Preview Box -->
+        <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px; padding: 10px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px;">
+          <img id="v-thumbPreview" src="assets/images/default-video-poster.svg" alt="معاينة الثامبنيل" style="width: 80px; height: 50px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border); background: #000;" onerror="this.src='assets/images/default-video-poster.svg';">
+          <div style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.5;">
+            <div><strong>المعاينة الحية:</strong> تظهر الصورة فور لصق الرابط أو رفع الملف.</div>
+            <div style="font-size: 0.72rem; color: #888;">* يمكنك وضع رابط مباشر لأي صورة (أونلاين أو مسار محلي)، أو الضغط على "رفع صورة من الجهاز" ليتم حفظها مباشرة في مجلد صور الموقع.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px;">
+        <button class="btn btn-secondary" onclick="closeVideoModal()">إلغاء</button>
+        <button class="btn btn-primary" onclick="saveVideoItem()">حفظ الفيديو</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MODAL 2: ADD / EDIT GALLERY DESIGN ITEM
+       ========================================================= -->
+  <div class="modal-backdrop" id="galleryModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="galleryModalTitle">إضافة تصميم جديد للمعرض</h3>
+        <button class="modal-close" onclick="closeGalleryModal()">&times;</button>
+      </div>
+
+      <input type="hidden" id="g-sectionKey">
+      <input type="hidden" id="g-editIndex">
+
+      <div class="form-group" style="margin-bottom: 16px;">
+        <label style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+          <span><i class="fa-regular fa-image" style="color: var(--accent);"></i> صورة العمل أو التصميم (Image URL / Path):</span>
+          <span style="font-size: 0.72rem; color: var(--accent); font-weight: normal;">رابط صورة مباشر أو رفع من الجهاز</span>
+        </label>
+        
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <input type="text" class="form-control" id="g-img" placeholder="ضع رابط صورة مباشر أو مسار محلي أو اضغط رفع صورة" style="flex: 1; min-width: 240px;" oninput="onThumbInputChanged(this.value, 'g-imgPreview', 'g-img')">
+          <input type="file" id="g-imgFile" accept="image/*" style="display:none;" onchange="handleImageFileUpload(event, 'g-img', 'g-imgPreview')">
+          <button type="button" class="btn btn-primary" style="padding: 9px 16px; font-size: 0.82rem; white-space: nowrap; font-weight: 600;" onclick="document.getElementById('g-imgFile').click()" title="رفع صورة من جهازك وحفظها على السيرفر">
+            <i class="fa-solid fa-cloud-arrow-up"></i> رفع صورة من الجهاز
+          </button>
+        </div>
+
+        <!-- Live Preview Box -->
+        <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px; padding: 10px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px;">
+          <img id="g-imgPreview" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=300&q=80" alt="معاينة التصميم" style="width: 80px; height: 50px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border); background: #000;" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=300&q=80';">
+          <div style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.5;">
+            <div><strong>المعاينة الحية:</strong> تظهر الصورة فور لصق الرابط أو رفع الملف.</div>
+            <div style="font-size: 0.72rem; color: #888;">* يمكنك وضع رابط مباشر لأي تصميم أو رفع الصورة مباشرة من جهازك.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-grid" style="margin-bottom: 14px;">
+        <div class="form-group">
+          <label>Design Title (English - Default):</label>
+          <input type="text" class="form-control" id="g-title" placeholder="e.g. Flagship Launch Ad">
+        </div>
+        <div class="form-group">
+          <label>عنوان التصميم (العربية - اختياري):</label>
+          <input type="text" class="form-control" id="g-titleAr" placeholder="مثال: إعلان إطلاق الهاتف الرائد">
+        </div>
+      </div>
+
+      <div class="form-grid" style="margin-bottom: 14px;">
+        <div class="form-group">
+          <label>Tag Badge (English - Default):</label>
+          <input type="text" class="form-control" id="g-tag" placeholder="e.g. META ADS, TIKTOK">
+        </div>
+        <div class="form-group">
+          <label>التصنيف أو المنصة (العربية - اختياري):</label>
+          <input type="text" class="form-control" id="g-tagAr" placeholder="مثال: إعلانات ميتا">
+        </div>
+      </div>
+
+      <div class="form-grid" style="margin-bottom: 14px;">
+        <div class="form-group">
+          <label>Description (English - Default):</label>
+          <textarea class="form-control" id="g-desc" placeholder="High converting visual design for paid media..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>الوصف وتفاصيل العمل (العربية - اختياري):</label>
+          <textarea class="form-control" id="g-descAr" placeholder="تصميم عالي التباين للحملات الممولة..."></textarea>
+        </div>
+      </div>
+
+      <div class="form-grid" style="margin-bottom: 14px;">
+        <div class="form-group">
+          <label>المقياس أو الهدف (Metric / Goal):</label>
+          <input type="text" class="form-control" id="g-metric" placeholder="مثال: High ROAS أو CPL -28%">
+        </div>
+        <div class="form-group">
+          <label>الأداة أو البرنامج المستخدم (Tool):</label>
+          <input type="text" class="form-control" id="g-tool" placeholder="مثال: Photoshop أو Illustrator">
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 18px;">
+        <label><i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--accent);"></i> رابط زيارة الكامبين (Visit / Live Campaign Link):</label>
+        <input type="url" class="form-control" id="g-link" placeholder="مثال: رابط Behance أو رابط الحملة المباشر">
+        <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">* يظهر زر 'Visit Campaign' بجانب الكروت ليتوجه الزائر مباشرة لرؤية الكامبين على أرض الواقع.</span>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px;">
+        <button class="btn btn-secondary" onclick="closeGalleryModal()">إلغاء</button>
+        <button class="btn btn-primary" onclick="saveGalleryItem()">حفظ التصميم</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MODAL 3: ADD NEW SECTION MODAL
+       ========================================================= -->
+  <div class="modal-backdrop" id="addSectionModal">
+    <div class="modal-box" style="max-width: 620px;">
+      <div class="modal-header">
+        <h3 id="addSectionModalTitle"><i class="fa-solid fa-folder-plus" style="color: var(--accent);"></i> إضافة سيكشن جديد للبورتفوليو</h3>
+        <button class="modal-close" onclick="closeAddSectionModal()">&times;</button>
+      </div>
+
+      <div class="form-grid" style="margin-bottom: 14px;">
+        <div class="form-group">
+          <label>عنوان السيكشن الرئيسي:</label>
+          <input type="text" class="form-control" id="newSec-title" placeholder="مثال: حملات التسويق العقاري أو E-commerce Brands">
+        </div>
+        <div class="form-group">
+          <label>معرف السيكشن (ID فريد بالإنجليزية):</label>
+          <input type="text" class="form-control" id="newSec-key" placeholder="مثال: realestate أو ecommerce">
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 14px;">
+        <label>العنوان الفرعي (Subtitle):</label>
+        <input type="text" class="form-control" id="newSec-subtitle" placeholder="مثال: Real Estate Brand Campaigns & 3D Visuals">
+      </div>
+
+      <div class="form-grid" style="margin-bottom: 14px;">
+        <div class="form-group">
+          <label>المسمى الوظيفي والدور (Role Title):</label>
+          <input type="text" class="form-control" id="newSec-roleTitle" placeholder="مثال: Lead Visual Designer & Creative Producer">
+        </div>
+        <div class="form-group">
+          <label>الكلمات المفتاحية والتاجز (Tags مفصولة بفواصل):</label>
+          <input type="text" class="form-control" id="newSec-tags" placeholder="3D Mockups, Meta Ads, Video Production">
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 14px;">
+        <label>شرح الدور والمهام (Role Description):</label>
+        <textarea class="form-control" id="newSec-roleDesc" placeholder="نبذة عن طبيعة المشاريع والمهام المنجزة في هذا السيكشن..."></textarea>
+      </div>
+
+      <div class="form-grid tri" style="margin-bottom: 18px;">
+        <div class="form-group">
+          <label>أيقونة السيكشن (Icon):</label>
+          <select class="form-control" id="newSec-icon">
+            <option value="fa-building">🏢 عقارات ومعمار (Building)</option>
+            <option value="fa-cart-shopping">🛒 تجارة إلكترونية (E-Commerce)</option>
+            <option value="fa-film">🎬 مونتاج وفيديو (Film & Video)</option>
+            <option value="fa-camera">📸 فوتوسيشن واستوديو (Camera)</option>
+            <option value="fa-shirt">👕 أزياء وفاشون (Fashion)</option>
+            <option value="fa-utensils">🍔 مطاعم وكافيهات (Food & F&B)</option>
+            <option value="fa-gem">💎 مجوهرات وفخامة (Luxury)</option>
+            <option value="fa-laptop-code">💻 تكنولوجيا وبرمجة (Tech)</option>
+            <option value="fa-palette">🎨 فنون وتصاميم (Art)</option>
+            <option value="fa-folder">📁 مجلد عام (Folder)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>اللون المميز (Accent Color):</label>
+          <input type="color" class="form-control" id="newSec-color" value="#00BC91" style="height: 44px; padding: 4px; cursor: pointer;">
+        </div>
+        <div class="form-group">
+          <label>مشغل الفيديو (Google Drive):</label>
+          <select class="form-control" id="newSec-hasVideo">
+            <option value="true">نعم (يحتوي مشغل فيديو)</option>
+            <option value="false">لا (معرض صور وتصاميم فقط)</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px;">
+        <button class="btn btn-secondary" onclick="closeAddSectionModal()">إلغاء</button>
+        <button class="btn btn-primary" onclick="saveNewSection()">
+          <i class="fa-solid fa-plus-circle"></i> إنشاء وحفظ السيكشن
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-box" id="adminToast">تم الحفظ بنجاح!</div>
+
+  <!-- =========================================================
+       SCRIPTS: DATA ENGINE & DASHBOARD LOGIC
+       ========================================================= -->
+  <script src="assets/js/portfolio-data.js"></script>
+  
+  <script>
+    // Active Loaded Data in Memory
+    let currentData = getPortfolioData();
+
+    // Section Meta Configuration
+    const sectionConfigs = {
+      afareet: { name: "ستور العفاريت", icon: "fa-mobile-screen", color: "#F20101" },
+      travel: { name: "حملات السياحة (Sigma & Friday)", icon: "fa-plane-departure", color: "#4E92E3" },
+      aiMotion: { name: "الذكاء الاصطناعي والموشن", icon: "fa-wand-magic-sparkles", color: "#00BC91" },
+      branding: { name: "الهويات البصرية والشركات", icon: "fa-shapes", color: "#f59e0b" }
+    };
+
+    let activeTabKey = 'profile';
+
+    // 1. Render Sidebar Tabs dynamically
+    function renderSidebarTabs(currentActive = null) {
+      if (currentActive) activeTabKey = currentActive;
+      const tabsContainer = document.getElementById('dynamicSidebarTabs');
+      if (!tabsContainer) return;
+
+      if (!currentData.sectionOrder || !Array.isArray(currentData.sectionOrder)) {
+        currentData.sectionOrder = Object.keys(currentData.sections);
+      }
+
+      tabsContainer.innerHTML = '';
+      currentData.sectionOrder.forEach((secKey, idx) => {
+        const sec = currentData.sections[secKey];
+        if (!sec) return;
+
+        const isEnabled = sec.enabled !== false;
+        const icon = sec.icon || (sectionConfigs[secKey] ? sectionConfigs[secKey].icon : 'fa-folder');
+        const color = sec.color || (sectionConfigs[secKey] ? sectionConfigs[secKey].color : '#00BC91');
+        const name = sec.title || (sectionConfigs[secKey] ? sectionConfigs[secKey].name : secKey);
+
+        const btn = document.createElement('div');
+        btn.className = `nav-tab-btn draggable-tab ${activeTabKey === secKey ? 'active' : ''}`;
+        btn.id = 'tabBtn-' + secKey;
+        btn.setAttribute('draggable', 'true');
+        btn.setAttribute('data-key', secKey);
+
+        btn.onclick = (e) => {
+          if (!e.target.closest('.arrow-btn')) {
+            switchTab(secKey, btn);
+          }
+        };
+
+        const statusBadge = !isEnabled ? `<span class="sec-status-pill disabled" style="margin-right: auto;">مخفي</span>` : '';
+
+        btn.innerHTML = `
+          <i class="fa-solid fa-grip-vertical drag-handle" title="اسحب وأفلت لإعادة الترتيب"></i>
+          <i class="fa-solid ${icon}" style="color: ${color}; margin-left: 2px;"></i>
+          <span class="tab-label-text" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 130px;">${name}</span>
+          ${statusBadge}
+          <div class="tab-order-arrows">
+            <button type="button" class="arrow-btn" onclick="moveSectionOrder('${secKey}', -1, event)" title="تحريك لأعلى" ${idx === 0 ? 'disabled style="opacity:0.25;cursor:not-allowed;"' : ''}>▲</button>
+            <button type="button" class="arrow-btn" onclick="moveSectionOrder('${secKey}', 1, event)" title="تحريك لأسفل" ${idx === currentData.sectionOrder.length - 1 ? 'disabled style="opacity:0.25;cursor:not-allowed;"' : ''}>▼</button>
+          </div>
+        `;
+        tabsContainer.appendChild(btn);
+      });
+
+      initDragAndDrop();
+    }
+
+    // HTML5 Drag & Drop Listeners
+    let draggedKey = null;
+
+    function initDragAndDrop() {
+      const tabElems = document.querySelectorAll('.draggable-tab');
+      tabElems.forEach(tab => {
+        tab.ondragstart = (e) => {
+          draggedKey = tab.getAttribute('data-key');
+          tab.classList.add('dragging');
+          e.dataTransfer.effectAllowed = 'move';
+          e.dataTransfer.setData('text/plain', draggedKey);
+        };
+
+        tab.ondragover = (e) => {
+          e.preventDefault();
+          e.dataTransfer.dropEffect = 'move';
+          const currentKey = tab.getAttribute('data-key');
+          if (draggedKey && draggedKey !== currentKey) {
+            tab.classList.add('drag-over');
+          }
+        };
+
+        tab.ondragleave = () => {
+          tab.classList.remove('drag-over');
+        };
+
+        tab.ondrop = (e) => {
+          e.preventDefault();
+          tab.classList.remove('drag-over');
+          const targetKey = tab.getAttribute('data-key');
+          if (draggedKey && targetKey && draggedKey !== targetKey) {
+            reorderSections(draggedKey, targetKey);
+          }
+        };
+
+        tab.ondragend = () => {
+          tab.classList.remove('dragging');
+          document.querySelectorAll('.draggable-tab').forEach(t => t.classList.remove('drag-over'));
+          draggedKey = null;
+        };
+      });
+    }
+
+    function reorderSections(sourceKey, targetKey) {
+      if (!currentData.sectionOrder) {
+        currentData.sectionOrder = Object.keys(currentData.sections);
+      }
+      const order = currentData.sectionOrder;
+      const srcIdx = order.indexOf(sourceKey);
+      const tgtIdx = order.indexOf(targetKey);
+
+      if (srcIdx >= 0 && tgtIdx >= 0) {
+        order.splice(srcIdx, 1);
+        order.splice(tgtIdx, 0, sourceKey);
+        savePortfolioData(currentData);
+        renderSidebarTabs(activeTabKey);
+        showToast('✓ تم إعادة ترتيب السكاشن وتطبيق الترتيب فوراً بالموقع!');
+      }
+    }
+
+    function moveSectionOrder(secKey, direction, event) {
+      if (event) event.stopPropagation();
+      if (!currentData.sectionOrder) {
+        currentData.sectionOrder = Object.keys(currentData.sections);
+      }
+      const order = currentData.sectionOrder;
+      const idx = order.indexOf(secKey);
+      const newIdx = idx + direction;
+
+      if (idx >= 0 && newIdx >= 0 && newIdx < order.length) {
+        const [removed] = order.splice(idx, 1);
+        order.splice(newIdx, 0, removed);
+        savePortfolioData(currentData);
+        renderSidebarTabs(activeTabKey);
+        showToast('✓ تم إعادة ترتيب السكاشن وتطبيق الترتيب فوراً بالموقع!');
+      }
+    }
+
+    function updateTabLabel(secKey, newTitle) {
+      const btn = document.getElementById('tabBtn-' + secKey);
+      if (btn) {
+        const span = btn.querySelector('.tab-label-text');
+        if (span) span.textContent = newTitle || secKey;
+      }
+    }
+
+    // 2. Tab Switching
+    function switchTab(tabKey, btnElem) {
+      activeTabKey = tabKey;
+      document.querySelectorAll('.nav-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+
+      if (btnElem) {
+        btnElem.classList.add('active');
+      } else {
+        const targetBtn = document.getElementById('tabBtn-' + tabKey);
+        if (targetBtn) targetBtn.classList.add('active');
+      }
+
+      const targetSec = document.getElementById('tab-' + tabKey);
+      if (targetSec) targetSec.classList.add('active');
+    }
+
+    // 3. Toggle Section Enabled (مفعّل / مخفي)
+    function toggleSectionEnabled(secKey, isEnabled) {
+      if (currentData.sections[secKey]) {
+        currentData.sections[secKey].enabled = isEnabled;
+        savePortfolioData(currentData);
+        renderSidebarTabs(secKey);
+        const statusLabel = document.getElementById(`status-label-${secKey}`);
+        if (statusLabel) {
+          statusLabel.textContent = isEnabled ? 'مفعّل في الموقع' : 'مخفي من الموقع';
+        }
+        showToast(isEnabled ? '✓ تم تفعيل السيكشن وظهوره في الموقع!' : '✓ تم إخفاء السيكشن من الموقع بنجاح!');
+      }
+    }
+
+    // 4. Delete Section (حذف السيكشن نهائياً)
+    function deleteSection(secKey) {
+      const secTitle = currentData.sections[secKey]?.title || secKey;
+      if (confirm(`هل أنت متأكد من حذف سيكشن "${secTitle}" نهائياً من البورتفوليو ولوحة التحكم؟`)) {
+        delete currentData.sections[secKey];
+        if (currentData.sectionOrder) {
+          currentData.sectionOrder = currentData.sectionOrder.filter(k => k !== secKey);
+        }
+        savePortfolioData(currentData);
+        activeTabKey = 'profile';
+        renderSidebarTabs('profile');
+        renderAllDynamicSections();
+        switchTab('profile', document.getElementById('tabBtn-profile'));
+        showToast(`✓ تم حذف سيكشن "${secTitle}" بنجاح.`);
+      }
+    }
+
+    // 5. Add Section Modal Handlers
+    function openAddSectionModal() {
+      document.getElementById('newSec-title').value = '';
+      document.getElementById('newSec-key').value = '';
+      document.getElementById('newSec-subtitle').value = '';
+      document.getElementById('newSec-roleTitle').value = '';
+      document.getElementById('newSec-roleDesc').value = '';
+      document.getElementById('newSec-tags').value = '';
+      document.getElementById('newSec-color').value = '#00BC91';
+      document.getElementById('addSectionModal').classList.add('active');
+    }
+
+    function closeAddSectionModal() {
+      document.getElementById('addSectionModal').classList.remove('active');
+    }
+
+    function saveNewSection() {
+      const title = document.getElementById('newSec-title').value.trim();
+      let key = document.getElementById('newSec-key').value.trim().toLowerCase().replace(/[^a-z0-9_-]/g, '');
+
+      if (!title) {
+        alert('من فضلك اكتب عنوان السيكشن أولاً.');
+        return;
+      }
+
+      if (!key) {
+        key = 'sec_' + Date.now().toString(36);
+      }
+
+      if (currentData.sections[key]) {
+        alert('يوجد سيكشن مسجل بهذا الاسم أو المعرف (ID)، اختر معرفاً مختلفاً.');
+        return;
+      }
+
+      const subtitle = document.getElementById('newSec-subtitle').value.trim();
+      const roleTitle = document.getElementById('newSec-roleTitle').value.trim();
+      const roleDesc = document.getElementById('newSec-roleDesc').value.trim();
+      const tagsStr = document.getElementById('newSec-tags').value.trim();
+      const icon = document.getElementById('newSec-icon').value;
+      const color = document.getElementById('newSec-color').value;
+      const hasVideoPlayer = document.getElementById('newSec-hasVideo').value === 'true';
+
+      const tags = tagsStr ? tagsStr.split(',').map(s => s.trim()).filter(Boolean) : ['Visual Creative', 'Advertising'];
+      const totalCount = Object.keys(currentData.sections).length + 1;
+      const numberBadge = totalCount < 10 ? '0' + totalCount : '' + totalCount;
+
+      currentData.sections[key] = {
+        number: numberBadge,
+        enabled: true,
+        icon: icon,
+        color: color,
+        hasVideoPlayer: hasVideoPlayer,
+        title: title,
+        subtitle: subtitle || 'New Project Showcase',
+        roleTitle: roleTitle || 'Lead Designer & Creative Producer',
+        roleDesc: roleDesc || 'Visual campaigns, digital mockups and marketing deliverables.',
+        tags: tags,
+        videos: [],
+        gallery: []
+      };
+
+      if (!currentData.sectionOrder) currentData.sectionOrder = Object.keys(currentData.sections);
+      if (!currentData.sectionOrder.includes(key)) {
+        currentData.sectionOrder.push(key);
+      }
+
+      savePortfolioData(currentData);
+      closeAddSectionModal();
+      activeTabKey = key;
+      renderSidebarTabs(key);
+      renderAllDynamicSections();
+      switchTab(key, document.getElementById('tabBtn-' + key));
+      showToast(`✓ تم إنشاء سيكشن "${title}" بنجاح! يمكنك الآن إضافة الفيديوهات والتصاميم.`);
+    }
+
+    // 6. Populate Profile Tab
+    function populateProfileTab() {
+      const p = currentData.profile;
+      document.getElementById('p-heroImage').value = p.heroImage || '';
+      const previewEl = document.getElementById('p-heroPreview');
+      if (previewEl) previewEl.src = p.heroImage || 'assets/images/hero-portrait.png';
+      document.getElementById('p-name').value = p.name || '';
+      if (document.getElementById('p-nameAr')) document.getElementById('p-nameAr').value = p.nameAr || '';
+      document.getElementById('p-role').value = p.role || '';
+      if (document.getElementById('p-roleAr')) document.getElementById('p-roleAr').value = p.roleAr || '';
+      document.getElementById('p-greeting').value = p.greeting || '';
+      if (document.getElementById('p-greetingAr')) document.getElementById('p-greetingAr').value = p.greetingAr || '';
+      document.getElementById('p-headlineMain').value = p.headlineMain || '';
+      if (document.getElementById('p-headlineMainAr')) document.getElementById('p-headlineMainAr').value = p.headlineMainAr || '';
+      document.getElementById('p-pitchText').value = p.pitchText || '';
+      if (document.getElementById('p-pitchTextAr')) document.getElementById('p-pitchTextAr').value = p.pitchTextAr || '';
+      document.getElementById('p-statYears').value = p.stats.years || 10;
+      document.getElementById('p-statCampaigns').value = p.stats.campaigns || 500;
+      document.getElementById('p-statSpeed').value = p.stats.speedBoost || 50;
+      document.getElementById('p-email').value = p.contact.email || '';
+      document.getElementById('p-phone').value = p.contact.phone || '';
+      document.getElementById('p-behance').value = p.contact.behance || '';
+      document.getElementById('p-linkedin').value = p.contact.linkedin || '';
+    }
+
+    // 7. Render All Dynamic Sections (Afareet, Travel, Custom, etc.)
+    function renderAllDynamicSections() {
+      const container = document.getElementById('dynamicSectionsContainer');
+      container.innerHTML = '';
+
+      Object.keys(currentData.sections).forEach(secKey => {
+        const sec = currentData.sections[secKey];
+        const conf = sectionConfigs[secKey] || { name: sec.title, icon: sec.icon || "fa-folder", color: sec.color || "#00BC91" };
+        const icon = sec.icon || conf.icon;
+        const color = sec.color || conf.color;
+        const isEnabled = sec.enabled !== false;
+        const hasVideos = sec.hasVideoPlayer !== false;
+
+        const secElem = document.createElement('section');
+        secElem.className = `tab-section ${activeTabKey === secKey ? 'active' : ''}`;
+        secElem.id = 'tab-' + secKey;
+
+        secElem.innerHTML = `
+          <!-- Section Top Bar with Controls -->
+          <div class="section-header-box" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="width: 44px; height: 44px; border-radius: 10px; background: ${color}; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #000; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                <i class="fa-solid ${icon}"></i>
+              </div>
+              <div>
+                <h2 style="font-size: 1.25rem;">إدارة ${sec.title || conf.name}</h2>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">${sec.subtitle || 'إدارة الفيديوهات والمعارض لهذا السيكشن'}</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <!-- Toggle Enabled/Disabled Switch -->
+              <div class="switch-wrap">
+                <span id="status-label-${secKey}">${isEnabled ? 'مفعّل في الموقع' : 'مخفي من الموقع'}</span>
+                <label class="switch">
+                  <input type="checkbox" ${isEnabled ? 'checked' : ''} onchange="toggleSectionEnabled('${secKey}', this.checked)">
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <!-- Delete Section Button -->
+              <button class="btn btn-danger btn-sm" onclick="deleteSection('${secKey}')">
+                <i class="fa-solid fa-trash-can"></i> حذف السيكشن
+              </button>
+            </div>
+          </div>
+
+          <!-- Section Meta Info Panel -->
+          <div class="form-panel-card">
+            <h3 style="font-size: 1.1rem; margin-bottom: 14px;"><i class="fa-solid fa-pen-to-square"></i> بيانات ونصوص السيكشن</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Section Title (English - Default):</label>
+                <input type="text" class="form-control" value="${sec.title || ''}" oninput="updateSecField('${secKey}', 'title', this.value); updateTabLabel('${secKey}', this.value);">
+              </div>
+              <div class="form-group">
+                <label>عنوان السيكشن (العربية - اختياري):</label>
+                <input type="text" class="form-control" value="${sec.titleAr || ''}" placeholder="اتركه فارغاً لاعتماد الإنجليزي" oninput="updateSecField('${secKey}', 'titleAr', this.value);">
+              </div>
+            </div>
+
+            <div class="form-grid" style="margin-top: 14px;">
+              <div class="form-group">
+                <label>Subtitle (English - Default):</label>
+                <input type="text" class="form-control" value="${sec.subtitle || ''}" oninput="updateSecField('${secKey}', 'subtitle', this.value)">
+              </div>
+              <div class="form-group">
+                <label>العنوان الفرعي (العربية - اختياري):</label>
+                <input type="text" class="form-control" value="${sec.subtitleAr || ''}" placeholder="اتركه فارغاً لاعتماد الإنجليزي" oninput="updateSecField('${secKey}', 'subtitleAr', this.value)">
+              </div>
+            </div>
+
+            <div class="form-grid" style="margin-top: 14px;">
+              <div class="form-group">
+                <label>Role Title (English - Default):</label>
+                <input type="text" class="form-control" value="${sec.roleTitle || ''}" oninput="updateSecField('${secKey}', 'roleTitle', this.value)">
+              </div>
+              <div class="form-group">
+                <label>المسمى أو الدور (العربية - اختياري):</label>
+                <input type="text" class="form-control" value="${sec.roleTitleAr || ''}" placeholder="اتركه فارغاً لاعتماد الإنجليزي" oninput="updateSecField('${secKey}', 'roleTitleAr', this.value)">
+              </div>
+            </div>
+
+            <div class="form-grid" style="margin-top: 14px;">
+              <div class="form-group">
+                <label>Role Description (English - Default):</label>
+                <textarea class="form-control" oninput="updateSecField('${secKey}', 'roleDesc', this.value)">${sec.roleDesc || ''}</textarea>
+              </div>
+              <div class="form-group">
+                <label>شرح الدور والمهام (العربية - اختياري):</label>
+                <textarea class="form-control" placeholder="اتركه فارغاً لاعتماد الإنجليزي" oninput="updateSecField('${secKey}', 'roleDescAr', this.value)">${sec.roleDescAr || ''}</textarea>
+              </div>
+            </div>
+
+            <div class="form-grid full" style="margin-top: 14px;">
+              <div class="form-group">
+                <label>الكلمات المفتاحية والتاجز (Tags مفصولة بفواصل):</label>
+                <input type="text" class="form-control" value="${(sec.tags || []).join(', ')}" oninput="updateSecTags('${secKey}', this.value)">
+              </div>
+            </div>
+
+            <div class="form-grid tri" style="margin-top: 14px;">
+              <div class="form-group">
+                <label>أيقونة السيكشن (Icon):</label>
+                <select class="form-control" onchange="updateSecField('${secKey}', 'icon', this.value); renderSidebarTabs('${secKey}');">
+                  <option value="${icon}">الحالية: ${icon}</option>
+                  <option value="fa-mobile-screen">📱 موبايل وتطبيقات (Mobile)</option>
+                  <option value="fa-plane-departure">✈️ سياحة وسفر (Travel)</option>
+                  <option value="fa-wand-magic-sparkles">✨ ذكاء اصطناعي (AI)</option>
+                  <option value="fa-shapes">🔶 هويات وشعارات (Branding)</option>
+                  <option value="fa-building">🏢 عقارات ومعمار (Building)</option>
+                  <option value="fa-cart-shopping">🛒 إيكومرس وتسوق (E-Commerce)</option>
+                  <option value="fa-film">🎬 مونتاج وفيديو (Film)</option>
+                  <option value="fa-camera">📸 فوتوسيشن واستوديو (Camera)</option>
+                  <option value="fa-palette">🎨 فنون وتصاميم (Art)</option>
+                  <option value="fa-gem">💎 مجوهرات وفخامة (Luxury)</option>
+                  <option value="fa-folder">📁 مجلد عام (Folder)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>اللون المميز (Accent Color):</label>
+                <input type="color" class="form-control" value="${color}" style="height: 44px; padding: 4px; cursor: pointer;" onchange="updateSecField('${secKey}', 'color', this.value); renderSidebarTabs('${secKey}');">
+              </div>
+              <div class="form-group">
+                <label>مشغل الفيديو (Drive Player):</label>
+                <select class="form-control" onchange="updateSecField('${secKey}', 'hasVideoPlayer', this.value === 'true'); renderAllDynamicSections(); switchTab('${secKey}', document.getElementById('tabBtn-${secKey}'));">
+                  <option value="true" ${hasVideos ? 'selected' : ''}>مفعّل (يحتوي مشغل فيديو)</option>
+                  <option value="false" ${!hasVideos ? 'selected' : ''}>معطل (معرض صور وتصاميم فقط)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- VIDEOS MANAGER (Shown if enabled) -->
+          ${hasVideos ? `
+            <div class="items-header">
+              <h3><i class="fa-solid fa-video" style="color: var(--accent);"></i> فيديوهات السيكشن (${(sec.videos || []).length})</h3>
+              <button class="btn btn-primary btn-sm" onclick="openAddVideoModal('${secKey}')">
+                <i class="fa-solid fa-plus"></i> إضافة فيديو جديد
+              </button>
+            </div>
+            <div class="items-grid" id="videos-grid-${secKey}">
+              ${renderVideosList(secKey, sec.videos || [])}
+            </div>
+          ` : `
+            <div style="margin-bottom: 24px; padding: 14px 18px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px dashed var(--border); color: var(--text-muted); font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+              <span><i class="fa-solid fa-video-slash"></i> مشغل الفيديوهات معطل لهذا السيكشن (يعرض معرض الصور فقط).</span>
+              <button class="btn btn-secondary btn-sm" onclick="updateSecField('${secKey}', 'hasVideoPlayer', true); renderAllDynamicSections(); switchTab('${secKey}', document.getElementById('tabBtn-${secKey}'));">تفعيل مشغل الفيديو</button>
+            </div>
+          `}
+
+          <!-- GALLERY MANAGER -->
+          <div class="items-header">
+            <h3><i class="fa-solid fa-images" style="color: var(--accent);"></i> معرض التصاميم والصور (${(sec.gallery || []).length})</h3>
+            <button class="btn btn-primary btn-sm" onclick="openAddGalleryModal('${secKey}')">
+              <i class="fa-solid fa-plus"></i> إضافة تصميم جديد
+            </button>
+          </div>
+          <div class="items-grid" id="gallery-grid-${secKey}">
+            ${renderGalleryList(secKey, sec.gallery || [])}
+          </div>
+        `;
+
+        container.appendChild(secElem);
+      });
+    }
+
+    // Image Handling Helpers
+    function onThumbInputChanged(val, previewId, inputId) {
+      if (!val) {
+        const previewEl = document.getElementById(previewId);
+        if (previewEl) previewEl.src = 'https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=300&q=80';
+        return;
+      }
+      const formatted = formatDriveImageUrl(val);
+      const previewEl = document.getElementById(previewId);
+      if (previewEl) {
+        previewEl.src = formatted;
+      }
+      // If the user pasted a raw Drive share URL, update the input smoothly with the direct thumbnail link
+      if (formatted !== val && (val.includes('drive.google.com') || val.includes('docs.google.com'))) {
+        const inputEl = document.getElementById(inputId);
+        if (inputEl) inputEl.value = formatted;
+      }
+    }
+
+
+
+    function handleImageFileUpload(event, inputId, previewId) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const dataUrl = e.target.result;
+        const previewEl = document.getElementById(previewId);
+        if (previewEl) previewEl.src = dataUrl;
+
+        // Try uploading directly to server uploads folder
+        const uploadEndpoint = (window.location.protocol === 'file:')
+          ? 'http://127.0.0.1:8080/api/upload-image'
+          : '/api/upload-image';
+
+        const safeName = file.name.split('.')[0] || 'thumb';
+
+        fetch(uploadEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ dataUrl, fileName: safeName })
+        })
+        .then(r => r.json())
+        .then(res => {
+          if (res && res.success && res.url) {
+            document.getElementById(inputId).value = res.url;
+            showToast('✓ تم رفع الصورة وحفظها بنجاح في مجلد الموقع!');
+          } else {
+            document.getElementById(inputId).value = dataUrl;
+            showToast('✓ تم اختيار الصورة ومعاينتها بنجاح!');
+          }
+        })
+        .catch(() => {
+          document.getElementById(inputId).value = dataUrl;
+          showToast('✓ تم اختيار الصورة ومعاينتها بنجاح!');
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // Render Videos HTML List
+    function renderVideosList(secKey, videos) {
+      if (!videos || videos.length === 0) {
+        return `<div style="grid-column: 1/-1; padding: 24px; text-align: center; color: var(--text-muted); background: var(--bg-card); border-radius: 8px;">لا توجد فيديوهات مضافة بعد في هذا السيكشن. اضغط "إضافة فيديو جديد" لإضافة أول فيديو!</div>`;
+      }
+
+      return videos.map((vid, idx) => {
+        const thumbUrl = formatDriveImageUrl(vid.thumb) || 'assets/images/default-video-poster.svg';
+        return `
+        <div class="item-card">
+          <div class="item-thumb-box">
+            <img src="${thumbUrl}" alt="${vid.title}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=600&q=80';">
+            <span class="item-badge-pill">${vid.ratio === '9-16' ? '9:16 ريلز طولي' : '16:9 بالعرض'}</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>${vid.title}</h4>
+              <p>${vid.desc || ''}</p>
+            </div>
+            <div class="item-meta-info">
+              <span>Drive ID: ${vid.id}</span>
+              ${vid.link ? `<a href="${vid.link}" target="_blank" style="color: var(--accent); font-size: 0.73rem; text-decoration: underline;"><i class="fa-solid fa-arrow-up-right-from-square"></i> رابط الكامبين</a>` : ''}
+            </div>
+            <div class="item-actions-row">
+              <button class="btn btn-secondary btn-sm" onclick="openEditVideoModal('${secKey}', ${idx})">
+                <i class="fa-solid fa-pen"></i> تعديل
+              </button>
+              <button class="btn btn-danger btn-sm" onclick="deleteVideoItem('${secKey}', ${idx})">
+                <i class="fa-solid fa-trash"></i> حذف
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      }).join('');
+    }
+
+    // Render Gallery HTML List
+    function renderGalleryList(secKey, gallery) {
+      if (!gallery || gallery.length === 0) {
+        return `<div style="grid-column: 1/-1; padding: 24px; text-align: center; color: var(--text-muted); background: var(--bg-card); border-radius: 8px;">لا توجد تصاميم مضافة بعد. اضغط "إضافة تصميم جديد" لإضافة أول صورة!</div>`;
+      }
+
+      return gallery.map((item, idx) => {
+        const imgUrl = formatDriveImageUrl(item.img) || 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80';
+        return `
+        <div class="item-card">
+          <div class="item-thumb-box">
+            <img src="${imgUrl}" alt="${item.title}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80';">
+            <span class="item-badge-pill">${item.tag || 'تصميم'}</span>
+          </div>
+          <div class="item-body">
+            <div>
+              <h4>${item.title}</h4>
+              <p>${item.desc || ''}</p>
+            </div>
+            <div class="item-meta-info">
+              <span>${item.metric || ''} ${item.tool ? '• ' + item.tool : ''}</span>
+              ${item.link ? `<a href="${item.link}" target="_blank" style="color: var(--accent); font-size: 0.73rem; text-decoration: underline;"><i class="fa-solid fa-arrow-up-right-from-square"></i> رابط الكامبين</a>` : ''}
+            </div>
+            <div class="item-actions-row">
+              <button class="btn btn-secondary btn-sm" onclick="openEditGalleryModal('${secKey}', ${idx})">
+                <i class="fa-solid fa-pen"></i> تعديل
+              </button>
+              <button class="btn btn-danger btn-sm" onclick="deleteGalleryItem('${secKey}', ${idx})">
+                <i class="fa-solid fa-trash"></i> حذف
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      }).join('');
+    }
+
+    // Helpers to update section meta
+    function updateSecField(secKey, field, val) {
+      if (currentData.sections[secKey]) {
+        currentData.sections[secKey][field] = val;
+      }
+    }
+
+    function updateSecTags(secKey, val) {
+      if (currentData.sections[secKey]) {
+        currentData.sections[secKey].tags = val.split(',').map(s => s.trim()).filter(Boolean);
+      }
+    }
+
+    // =========================================================
+    // VIDEO MODAL HANDLERS
+    // =========================================================
+    function openAddVideoModal(secKey) {
+      document.getElementById('videoModalTitle').textContent = 'إضافة فيديو جديد';
+      document.getElementById('v-sectionKey').value = secKey;
+      document.getElementById('v-editIndex').value = '-1';
+      document.getElementById('v-driveId').value = '';
+      document.getElementById('v-title').value = '';
+      if (document.getElementById('v-titleAr')) document.getElementById('v-titleAr').value = '';
+      document.getElementById('v-desc').value = '';
+      if (document.getElementById('v-descAr')) document.getElementById('v-descAr').value = '';
+      document.getElementById('v-ratio').value = '16-9';
+      document.getElementById('v-link').value = '';
+      document.getElementById('v-thumb').value = '';
+      const previewEl = document.getElementById('v-thumbPreview');
+      if (previewEl) previewEl.src = 'assets/images/default-video-poster.svg';
+      document.getElementById('videoModal').classList.add('active');
+    }
+
+    function openEditVideoModal(secKey, idx) {
+      const vid = currentData.sections[secKey].videos[idx];
+      if (!vid) return;
+      document.getElementById('videoModalTitle').textContent = 'تعديل الفيديو';
+      document.getElementById('v-sectionKey').value = secKey;
+      document.getElementById('v-editIndex').value = idx;
+      document.getElementById('v-driveId').value = vid.id;
+      document.getElementById('v-title').value = vid.title || '';
+      if (document.getElementById('v-titleAr')) document.getElementById('v-titleAr').value = vid.titleAr || '';
+      document.getElementById('v-desc').value = vid.desc || '';
+      if (document.getElementById('v-descAr')) document.getElementById('v-descAr').value = vid.descAr || '';
+      document.getElementById('v-ratio').value = vid.ratio || '16-9';
+      document.getElementById('v-link').value = vid.link || vid.url || '';
+      const formattedThumb = formatDriveImageUrl(vid.thumb) || '';
+      document.getElementById('v-thumb').value = formattedThumb;
+      const previewEl = document.getElementById('v-thumbPreview');
+      if (previewEl) previewEl.src = formattedThumb || 'assets/images/default-video-poster.svg';
+      document.getElementById('videoModal').classList.add('active');
+    }
+
+    function closeVideoModal() {
+      document.getElementById('videoModal').classList.remove('active');
+    }
+
+    function saveVideoItem() {
+      const secKey = document.getElementById('v-sectionKey').value;
+      const editIdx = parseInt(document.getElementById('v-editIndex').value);
+      const rawInput = document.getElementById('v-driveId').value;
+      const cleanDriveId = extractDriveId(rawInput);
+      const title = document.getElementById('v-title').value.trim();
+      const titleAr = document.getElementById('v-titleAr') ? document.getElementById('v-titleAr').value.trim() : '';
+      const desc = document.getElementById('v-desc').value.trim();
+      const descAr = document.getElementById('v-descAr') ? document.getElementById('v-descAr').value.trim() : '';
+      const ratio = document.getElementById('v-ratio').value;
+      const link = document.getElementById('v-link').value.trim();
+      let rawThumb = document.getElementById('v-thumb').value.trim();
+
+      if (!cleanDriveId || !title) {
+        alert('من فضلك أدخل رابط أو معرف Google Drive وعنوان الفيديو.');
+        return;
+      }
+
+      let finalThumb = rawThumb ? formatDriveImageUrl(rawThumb) : 'assets/images/default-video-poster.svg';
+
+      const videoObj = { id: cleanDriveId, title, titleAr, desc, descAr, ratio, thumb: finalThumb, link };
+
+      if (!currentData.sections[secKey].videos) {
+        currentData.sections[secKey].videos = [];
+      }
+
+      if (editIdx >= 0) {
+        currentData.sections[secKey].videos[editIdx] = videoObj;
+      } else {
+        currentData.sections[secKey].videos.push(videoObj);
+      }
+
+      closeVideoModal();
+      document.getElementById(`videos-grid-${secKey}`).innerHTML = renderVideosList(secKey, currentData.sections[secKey].videos);
+      saveAllChanges(false);
+      showToast('✓ تم حفظ الفيديو بنجاح!');
+    }
+
+    function deleteVideoItem(secKey, idx) {
+      if (confirm('هل أنت متأكد من حذف هذا الفيديو؟')) {
+        currentData.sections[secKey].videos.splice(idx, 1);
+        document.getElementById(`videos-grid-${secKey}`).innerHTML = renderVideosList(secKey, currentData.sections[secKey].videos);
+        saveAllChanges(false);
+        showToast('تم حذف الفيديو.');
+      }
+    }
+
+    // =========================================================
+    // GALLERY MODAL HANDLERS
+    // =========================================================
+    function openAddGalleryModal(secKey) {
+      document.getElementById('galleryModalTitle').textContent = 'إضافة تصميم جديد';
+      document.getElementById('g-sectionKey').value = secKey;
+      document.getElementById('g-editIndex').value = '-1';
+      document.getElementById('g-img').value = '';
+      document.getElementById('g-title').value = '';
+      if (document.getElementById('g-titleAr')) document.getElementById('g-titleAr').value = '';
+      document.getElementById('g-tag').value = '';
+      if (document.getElementById('g-tagAr')) document.getElementById('g-tagAr').value = '';
+      document.getElementById('g-desc').value = '';
+      if (document.getElementById('g-descAr')) document.getElementById('g-descAr').value = '';
+      document.getElementById('g-metric').value = '';
+      document.getElementById('g-tool').value = '';
+      document.getElementById('g-link').value = '';
+      const previewEl = document.getElementById('g-imgPreview');
+      if (previewEl) previewEl.src = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=300&q=80';
+      document.getElementById('galleryModal').classList.add('active');
+    }
+
+    function openEditGalleryModal(secKey, idx) {
+      const item = currentData.sections[secKey].gallery[idx];
+      if (!item) return;
+      document.getElementById('galleryModalTitle').textContent = 'تعديل التصميم';
+      document.getElementById('g-sectionKey').value = secKey;
+      document.getElementById('g-editIndex').value = idx;
+      const formattedImg = formatDriveImageUrl(item.img);
+      document.getElementById('g-img').value = formattedImg;
+      document.getElementById('g-title').value = item.title || '';
+      if (document.getElementById('g-titleAr')) document.getElementById('g-titleAr').value = item.titleAr || '';
+      document.getElementById('g-tag').value = item.tag || '';
+      if (document.getElementById('g-tagAr')) document.getElementById('g-tagAr').value = item.tagAr || '';
+      document.getElementById('g-desc').value = item.desc || '';
+      if (document.getElementById('g-descAr')) document.getElementById('g-descAr').value = item.descAr || '';
+      document.getElementById('g-metric').value = item.metric || '';
+      document.getElementById('g-tool').value = item.tool || '';
+      document.getElementById('g-link').value = item.link || item.url || '';
+      const previewEl = document.getElementById('g-imgPreview');
+      if (previewEl) previewEl.src = formattedImg || 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=300&q=80';
+      document.getElementById('galleryModal').classList.add('active');
+    }
+
+    function closeGalleryModal() {
+      document.getElementById('galleryModal').classList.remove('active');
+    }
+
+    function saveGalleryItem() {
+      const secKey = document.getElementById('g-sectionKey').value;
+      const editIdx = parseInt(document.getElementById('g-editIndex').value);
+      const rawImg = document.getElementById('g-img').value.trim();
+      const title = document.getElementById('g-title').value.trim();
+      const titleAr = document.getElementById('g-titleAr') ? document.getElementById('g-titleAr').value.trim() : '';
+      const tag = document.getElementById('g-tag').value.trim();
+      const tagAr = document.getElementById('g-tagAr') ? document.getElementById('g-tagAr').value.trim() : '';
+      const desc = document.getElementById('g-desc').value.trim();
+      const descAr = document.getElementById('g-descAr') ? document.getElementById('g-descAr').value.trim() : '';
+      const metric = document.getElementById('g-metric').value.trim();
+      const tool = document.getElementById('g-tool').value.trim();
+      const link = document.getElementById('g-link').value.trim();
+
+      if (!rawImg || !title) {
+        alert('من فضلك أدخل مسار الصورة وعنوان التصميم.');
+        return;
+      }
+
+      const finalImg = formatDriveImageUrl(rawImg);
+      const itemObj = { img: finalImg, title, titleAr, tag, tagAr, desc, descAr, metric, tool, link };
+
+      if (!currentData.sections[secKey].gallery) {
+        currentData.sections[secKey].gallery = [];
+      }
+
+      if (editIdx >= 0) {
+        currentData.sections[secKey].gallery[editIdx] = itemObj;
+      } else {
+        currentData.sections[secKey].gallery.push(itemObj);
+      }
+
+      closeGalleryModal();
+      document.getElementById(`gallery-grid-${secKey}`).innerHTML = renderGalleryList(secKey, currentData.sections[secKey].gallery);
+      saveAllChanges(false);
+      showToast('✓ تم حفظ التصميم بنجاح!');
+    }
+
+    function deleteGalleryItem(secKey, idx) {
+      if (confirm('هل أنت متأكد من حذف هذا التصميم؟')) {
+        currentData.sections[secKey].gallery.splice(idx, 1);
+        document.getElementById(`gallery-grid-${secKey}`).innerHTML = renderGalleryList(secKey, currentData.sections[secKey].gallery);
+        saveAllChanges(false);
+        showToast('تم حذف التصميم.');
+      }
+    }
+
+    // =========================================================
+    // SAVE ALL CHANGES TO LOCALSTORAGE
+    // =========================================================
+    function saveAllChanges(notify = true) {
+      // Collect profile fields
+      currentData.profile.heroImage = formatDriveImageUrl(document.getElementById('p-heroImage').value.trim());
+      currentData.profile.name = document.getElementById('p-name').value.trim();
+      currentData.profile.nameAr = document.getElementById('p-nameAr') ? document.getElementById('p-nameAr').value.trim() : '';
+      currentData.profile.role = document.getElementById('p-role').value.trim();
+      currentData.profile.roleAr = document.getElementById('p-roleAr') ? document.getElementById('p-roleAr').value.trim() : '';
+      currentData.profile.greeting = document.getElementById('p-greeting').value.trim();
+      currentData.profile.greetingAr = document.getElementById('p-greetingAr') ? document.getElementById('p-greetingAr').value.trim() : '';
+      currentData.profile.headlineMain = document.getElementById('p-headlineMain').value.trim();
+      currentData.profile.headlineMainAr = document.getElementById('p-headlineMainAr') ? document.getElementById('p-headlineMainAr').value.trim() : '';
+      currentData.profile.pitchText = document.getElementById('p-pitchText').value.trim();
+      currentData.profile.pitchTextAr = document.getElementById('p-pitchTextAr') ? document.getElementById('p-pitchTextAr').value.trim() : '';
+      currentData.profile.stats.years = parseInt(document.getElementById('p-statYears').value) || 10;
+      currentData.profile.stats.campaigns = parseInt(document.getElementById('p-statCampaigns').value) || 500;
+      currentData.profile.stats.speedBoost = parseInt(document.getElementById('p-statSpeed').value) || 50;
+      currentData.profile.contact.email = document.getElementById('p-email').value.trim();
+      currentData.profile.contact.phone = document.getElementById('p-phone').value.trim();
+      currentData.profile.contact.behance = document.getElementById('p-behance').value.trim();
+      currentData.profile.contact.linkedin = document.getElementById('p-linkedin').value.trim();
+
+      savePortfolioData(currentData);
+
+      // Determine server API endpoint (supports file://, localhost, and LAN/tunnel)
+      const saveEndpoint = (window.location.protocol === 'file:')
+        ? 'http://127.0.0.1:8080/api/save-portfolio-data'
+        : '/api/save-portfolio-data';
+
+      try {
+        fetch(saveEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(currentData)
+        }).then(r => r.json()).then(res => {
+          if (res && res.success) {
+            console.log('✓ Successfully saved to physical files on disk.');
+          }
+        }).catch(err => {
+          console.warn('Server sync skipped:', err.message);
+        });
+      } catch(e) {}
+
+      if (notify) {
+        showToast('✓ تم حفظ التعديلات وتحديث العرض فوراً!');
+      }
+    }
+
+    function saveAndSyncAll() {
+      saveAllChanges(false);
+      const saveEndpoint = (window.location.protocol === 'file:')
+        ? 'http://127.0.0.1:8080/api/save-portfolio-data'
+        : '/api/save-portfolio-data';
+
+      showToast('⏳ جاري حفظ ونشر التعديلات...');
+
+      fetch(saveEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(currentData)
+      })
+      .then(r => r.json())
+      .then(res => {
+        if (res && res.success) {
+          showToast('🎉 تم حفظ التعديلات ونشرها بنجاح على السيرفر والموقع!');
+        } else {
+          showToast('✓ تم الحفظ محلياً في المتصفح!');
+        }
+      })
+      .catch(() => {
+        showToast('✓ تم الحفظ محلياً في المتصفح!');
+      });
+    }
+
+    function syncLocalDataToServer() {
+      saveAllChanges(false);
+      const saveEndpoint = (window.location.protocol === 'file:')
+        ? 'http://127.0.0.1:8080/api/save-portfolio-data'
+        : '/api/save-portfolio-data';
+
+      showToast('⏳ جاري ترحيل الداتا لملفات السيرفر...');
+
+      fetch(saveEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(currentData)
+      })
+      .then(r => r.json())
+      .then(res => {
+        if (res.success) {
+          showToast('🎉 تم ترحيل وحفظ الداتا بنجاح في ملفات السيرفر على الهارد!');
+          alert('✓ تم ترحيل وحفظ الداتا بنجاح في ملفات السيرفر على الهارد ديسك!\n(portfolio-data.json و portfolio-data.js)\nالآن أصبحت بياناتك جزءاً فعلياً من كود الموقع.');
+        } else {
+          alert('خطأ: ' + (res.error || 'فشل الحفظ'));
+        }
+      })
+      .catch(err => {
+        alert('تعذر الاتصال بالسيرفر. تأكد من تشغيل السيرفر على منفذ 8080.\nالخطأ: ' + err.message);
+      });
+    }
+
+    // =========================================================
+    // EXPORT & IMPORT BACKUPS
+    // =========================================================
+    function exportDataJSON() {
+      saveAllChanges(false);
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(currentData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `gamal_portfolio_backup_${new Date().toISOString().slice(0,10)}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      showToast('✓ تم تحميل النسخة الاحتياطية بنجاح!');
+    }
+
+    function importDataJSON(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const imported = JSON.parse(e.target.result);
+          if (imported.profile && imported.sections) {
+            currentData = imported;
+            savePortfolioData(currentData);
+            populateProfileTab();
+            renderSidebarTabs();
+            renderAllDynamicSections();
+            showToast('✓ تم استيراد البيانات وتطبيقها بنجاح!');
+          } else {
+            alert('ملف البيانات غير صالح أو لا يحتوي على بنية البورتفوليو المطلوبة.');
+          }
+        } catch (err) {
+          alert('خطأ في قراءة ملف JSON: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function confirmResetDefaults() {
+      if (confirm('تحذير: هل أنت متأكد من استعادة البيانات الافتراضية؟ سيتم مسح أي تعديلات قمت بحفظها.')) {
+        currentData = resetPortfolioData();
+        populateProfileTab();
+        renderSidebarTabs();
+        renderAllDynamicSections();
+        showToast('تمت استعادة البيانات الافتراضية.');
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('adminToast');
+      toast.textContent = msg;
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 2800);
+    }
+
+    // =========================================================
+    // INITIALIZE DASHBOARD ON LOAD
+    // =========================================================
+    function initDashboard() {
+      populateProfileTab();
+      renderSidebarTabs();
+      renderAllDynamicSections();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initDashboard);
+    } else {
+      initDashboard();
+    }
+  </script>
+</body>
+</html>

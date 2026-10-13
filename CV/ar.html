@@ -1,0 +1,5624 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جمال صبيح — مصمم جرافيك، خبير هويات بصرية ومبتكر بالذكاء الاصطناعي</title>
+  <meta name="description" content="البورتفوليو الرسمي لجمال الدين صبيح محمود: تصميم الهويات البصرية، إعلانات السوشيال ميديا عالية المبيعات، مونتاج فيديوهات الريلز، وحلول الذكاء الاصطناعي.">
+
+  <!-- Google Fonts: Cairo & Tajawal (Arabic), plus Sora, Kumbh Sans & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&family=Kumbh+Sans:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* =========================================================
+       CSS TOKENS (xFolio Dark Default & Clean Light Mode)
+       ========================================================= */
+    :root {
+      --bg-deep: #060606;           /* Authentic xFolio deep black */
+      --bg-surface: #0e0e11;        /* Elevated surface */
+      --bg-card: #141418;           /* Glass card surface */
+      --bg-card-hover: #1a1a20;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(0, 188, 145, 0.4);
+      --text-white: #FFFFFF;
+      --text-muted: #A1A1AA;
+      --text-dim: #606068;
+
+      /* xFolio Accents */
+      --accent-mint: #00BC91;       /* Primary xFolio Emerald/Mint */
+      --accent-mint-glow: rgba(0, 188, 145, 0.35);
+      --accent-coral: #F20101;      /* xFolio Red Accent */
+      --accent-blue: #4E92E3;       /* Electric Blue */
+      --accent-gradient: linear-gradient(135deg, #00BC91 0%, #4E92E3 100%);
+      --header-bg: rgba(6, 6, 6, 0.88);
+
+      --font-display: 'Cairo', 'Sora', sans-serif;
+      --font-body: 'Tajawal', 'Plus Jakarta Sans', sans-serif;
+      --font-ui: 'Cairo', 'Kumbh Sans', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 24px;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* =========================================================
+       LIGHT MODE TOKENS (نسخة نقية بيضاء مريحة للعين وفخمة)
+       ========================================================= */
+    [data-theme="light"] {
+      --bg-deep: #f8fafc;           /* Crisp clean off-white */
+      --bg-surface: #ffffff;        /* Pure white */
+      --bg-card: #ffffff;           /* Elevated white cards */
+      --bg-card-hover: #f1f5f9;
+      --border-subtle: rgba(15, 23, 42, 0.09);
+      --border-hover: rgba(0, 168, 129, 0.55);
+      --text-white: #0f172a;        /* High-contrast deep slate */
+      --text-muted: #475569;        /* Medium slate text */
+      --text-dim: #94a3b8;
+      --accent-mint: #00a881;       /* Refined emerald */
+      --accent-mint-glow: rgba(0, 168, 129, 0.22);
+      --accent-blue: #2563eb;
+      --accent-gradient: linear-gradient(135deg, #00a881 0%, #2563eb 100%);
+      --header-bg: rgba(255, 255, 255, 0.94);
+    }
+
+    /* RTL Typography Defaults */
+    html[lang="ar"],
+    html[dir="rtl"],
+    body[dir="rtl"] {
+      direction: rtl;
+      text-align: right;
+    }
+
+    html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] h4, html[lang="ar"] h5,
+    [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5 {
+      font-family: 'Cairo', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+    }
+
+    html[lang="ar"] body,
+    [dir="rtl"] body {
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Lenis Smooth Scrolling */
+    html.lenis, html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    .lenis.lenis-scrolling iframe {
+      pointer-events: none;
+    }
+
+    html {
+      scroll-behavior: auto;
+      background-color: var(--bg-deep);
+    }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-white);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      font-size: 15px;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* =========================================================
+       TYPOGRAPHY
+       ========================================================= */
+    h1, h2, h3, h4, h5 {
+      font-family: var(--font-display);
+      color: var(--text-white);
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    /* =========================================================
+       HEADER & NAVIGATION (xFolio Sleek Transparent Style)
+       ========================================================= */
+    .header-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--header-bg);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 14px 0;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-white);
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      background: var(--accent-gradient);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #060606;
+      box-shadow: 0 4px 18px var(--accent-mint-glow);
+      flex-shrink: 0;
+    }
+
+    .brand-text h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: var(--text-white);
+    }
+
+    .brand-text p {
+      font-size: 0.75rem;
+      color: var(--accent-mint);
+      font-family: var(--font-ui);
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-family: var(--font-ui);
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-white);
+    }
+
+    .nav-links a:hover::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent-mint);
+    }
+
+    .nav-actions-cluster {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Theme Toggle & Language Switcher Buttons */
+    .theme-toggle-btn, .lang-switch-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-white);
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+      line-height: 1;
+    }
+
+    .theme-toggle-btn:hover, .lang-switch-btn:hover {
+      background: rgba(0, 188, 145, 0.15);
+      border-color: var(--accent-mint);
+      color: var(--accent-mint);
+      transform: translateY(-1px);
+    }
+
+    .nav-cta-btn {
+      background: var(--accent-mint);
+      color: #060606 !important;
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-family: var(--font-ui);
+      font-weight: 800;
+      font-size: 0.82rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: 0 4px 18px var(--accent-mint-glow);
+      transition: var(--transition);
+    }
+
+    .nav-cta-btn:hover {
+      transform: translateY(-2px);
+      background: #05d4a4;
+      box-shadow: 0 8px 25px rgba(0, 188, 145, 0.45);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-white);
+      padding: 7px 11px;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       HERO BANNER (FAITHFUL TO xFolio'S PANORAMIC ASYMMETRIC HERO)
+       ========================================================= */
+    .hero-banner {
+      position: relative;
+      padding: 50px 0 0;
+      overflow: hidden;
+      min-height: 820px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Giant Ambient Glow Behind the Character */
+    .hero-aura-glow {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(0, 188, 145, 0.22) 0%, rgba(78, 146, 227, 0.12) 50%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Centered Top Headline */
+    .hero-top-intro {
+      text-align: center;
+      max-width: 950px;
+      margin: 0 auto 40px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .hero-greeting-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-ui);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent-mint);
+      margin-bottom: 16px;
+    }
+
+    .hero-greeting-pill i {
+      animation: waveHand 2.2s infinite;
+      transform-origin: 70% 70%;
+      display: inline-block;
+    }
+
+    @keyframes waveHand {
+      0%, 100% { transform: rotate(0deg); }
+      20% { transform: rotate(14deg); }
+      40% { transform: rotate(-8deg); }
+      60% { transform: rotate(14deg); }
+      80% { transform: rotate(-4deg); }
+    }
+
+    .hero-main-title {
+      font-size: 3.8rem;
+      font-weight: 800;
+      letter-spacing: -1.2px;
+      line-height: 1.12;
+    }
+
+    .hero-main-title .gradient-word {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-main-title .outlined-word {
+      color: transparent;
+      -webkit-text-stroke: 1.5px #fff;
+    }
+
+    /* Asymmetric 3-Column Content Layout */
+    .hero-stage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr 1fr;
+      align-items: end;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* Left Column: Any Time Hire Me */
+    .hero-col-left {
+      padding-bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .hero-label-tag {
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #fff;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-label-tag::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-mint);
+      box-shadow: 0 0 10px var(--accent-mint);
+    }
+
+    .hero-pitch-text {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 320px;
+    }
+
+    .btn-view-works {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      transition: var(--transition);
+    }
+
+    .btn-view-works:hover {
+      background: #fff;
+      color: #060606;
+      border-color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    /* Center Column: Cutout Silhouette Portrait with Ambient Arch */
+    .hero-col-center {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      z-index: 3;
+    }
+
+    /* Stylized Geometric Arch Background Behind Character (Like xFolio span) */
+    .hero-arch-shape {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 440px;
+      height: 540px;
+      background: linear-gradient(180deg, rgba(0, 188, 145, 0.25) 0%, rgba(14, 14, 17, 0.8) 100%);
+      border: 1px solid rgba(0, 188, 145, 0.35);
+      border-radius: 300px 300px 0 0;
+      z-index: 1;
+    }
+
+    .hero-portrait-cutout {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 460px;
+      height: 580px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .hero-portrait-cutout img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      /* Soft bottom gradient fade so it seamlessly merges with background without any box frame */
+      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      filter: contrast(105%) brightness(100%);
+      transition: transform 0.4s ease;
+    }
+
+    .hero-portrait-cutout:hover img {
+      transform: scale(1.02);
+    }
+
+
+    /* Right Column: Dynamic Odometer Counters & Action Buttons */
+    .hero-col-right {
+      padding-bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 20px;
+      text-align: right;
+    }
+
+    .hero-stat-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hero-stat-item h3 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .hero-stat-item h3 span {
+      color: var(--accent-mint);
+    }
+
+    .hero-stat-item p {
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+      text-align: left;
+    }
+
+    .hero-action-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .btn-pill-main {
+      background: var(--accent-mint);
+      color: #060606;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-family: var(--font-ui);
+      font-weight: 800;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px var(--accent-mint-glow);
+      transition: var(--transition);
+    }
+
+    .btn-pill-main:hover {
+      background: #05d4a4;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 188, 145, 0.45);
+    }
+
+    .btn-pill-glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 40px;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .btn-pill-glass:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       INFINITE STROKE-TEXT MARQUEE (xFolio Signature Ticker)
+       ========================================================= */
+    .marquee-section {
+      background: #0a0a0d;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 22px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .marquee-content {
+      display: inline-flex;
+      animation: tickerAnimation 25s linear infinite;
+    }
+
+    .ticker-phrase {
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 28px;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .ticker-phrase.filled-text {
+      color: #fff;
+    }
+
+    .ticker-phrase.stroke-text {
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .ticker-phrase.stroke-text:hover {
+      color: var(--accent-mint);
+      -webkit-text-stroke-color: var(--accent-mint);
+    }
+
+    .ticker-dot {
+      color: var(--accent-mint);
+      font-size: 1rem;
+    }
+
+    @keyframes tickerAnimation {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* =========================================================
+       CASE STUDY SECTION ARCHITECTURE (Structured, Inspiring & Modern)
+       ========================================================= */
+    .case-block-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .case-block-section:nth-child(even) {
+      background: rgba(14, 14, 18, 0.5);
+    }
+
+    /* Header for each section */
+    .section-headline-box {
+      margin-bottom: 45px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .section-counter-badge {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.15);
+      margin-bottom: 6px;
+    }
+
+    .section-main-heading {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 10px;
+    }
+
+    .section-main-heading span {
+      color: var(--accent-mint);
+    }
+
+    .section-lead-paragraph {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 680px;
+      line-height: 1.65;
+    }
+
+    /* Case Overview Card */
+    .case-role-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px 34px;
+      margin-bottom: 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .role-info h4 {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+
+    .role-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 650px;
+    }
+
+    .role-tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .role-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: #cbd5e1;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: var(--font-ui);
+    }
+
+    /* =========================================================
+       EMBEDDED GOOGLE DRIVE VIDEO PLAYER (Interactive & Sleek)
+       ========================================================= */
+    .video-hub-container {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 45px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-hub-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .video-hub-title h3 {
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .video-hub-title h3 i {
+      color: var(--accent-mint);
+    }
+
+    .video-hub-title p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Format Switcher Pills */
+    .aspect-switch-group {
+      display: flex;
+      gap: 8px;
+      background: var(--bg-deep);
+      border: 1px solid var(--border-subtle);
+      padding: 4px;
+      border-radius: 30px;
+    }
+
+    .aspect-switch-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 7px 18px;
+      border-radius: 20px;
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .aspect-switch-btn.active, .aspect-switch-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .aspect-switch-btn.active {
+      color: var(--accent-mint);
+      background: rgba(0, 188, 145, 0.12);
+    }
+
+    /* Dynamic Video Display: Centered Cinema Screen + 3D Cards Deck */
+    .video-display-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .video-display-grid.vertical-mode {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .drive-iframe-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      background: #000;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 188, 145, 0.15);
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+    }
+
+    .drive-iframe-wrapper.widescreen-16-9 {
+      aspect-ratio: 16 / 9;
+      max-width: 860px;
+    }
+
+    .drive-iframe-wrapper.vertical-9-16 {
+      aspect-ratio: 9 / 16;
+      max-width: 380px;
+      max-height: 580px;
+      margin: 0 auto;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 45px rgba(0, 188, 145, 0.25);
+    }
+
+    .drive-iframe-element {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .playlist-items-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* =========================================================
+       3D PLAYING CARDS DECK & SPLIT SHOWCASE (كروت الكوتشينة + لوحة التفاصيل)
+       ========================================================= */
+    .deck-split-showcase {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.95fr);
+      gap: 36px;
+      align-items: center;
+      width: 100%;
+      margin: 15px 0 35px 0;
+    }
+
+    .deck-stage-column {
+      position: relative;
+      width: 100%;
+      min-width: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .deck-info-column {
+      position: relative;
+      width: 100%;
+      min-width: 0;
+    }
+
+    /* Active Details Panel Card (المساحة الفاضية بجانب الكروت) */
+    .deck-info-panel-card {
+      position: relative;
+      background: rgba(18, 19, 26, 0.92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 32px 28px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(0, 188, 145, 0.08);
+      overflow: hidden;
+      transition: all 0.35s ease;
+    }
+
+    .deck-info-panel-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(0, 188, 145, 0.14) 0%, transparent 70%);
+      pointer-events: none;
+      border-radius: 50%;
+    }
+
+    .deck-info-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      gap: 12px;
+    }
+
+    .deck-info-tag {
+      background: rgba(0, 188, 145, 0.12);
+      color: var(--accent-mint);
+      border: 1px solid rgba(0, 188, 145, 0.35);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-family: var(--font-ui);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .deck-info-counter {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.45);
+      letter-spacing: 1px;
+    }
+
+    .deck-info-title {
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.35;
+      margin: 0 0 14px 0;
+      transition: all 0.25s ease;
+    }
+
+    .deck-info-desc {
+      font-size: 0.94rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin: 0 0 22px 0;
+      min-height: 52px;
+      transition: all 0.25s ease;
+    }
+
+    .deck-info-chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .deck-info-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .deck-info-chip.metric {
+      background: rgba(0, 188, 145, 0.1);
+      color: var(--accent-mint);
+      border: 1px solid rgba(0, 188, 145, 0.25);
+    }
+
+    .deck-info-chip.tool {
+      background: rgba(255, 255, 255, 0.06);
+      color: #f1f5f9;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .deck-info-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Visit Campaign Button (الزر المطلوب لزيارة رابط الكامبين) */
+    .deck-btn-visit {
+      background: linear-gradient(135deg, #00BC91 0%, #00936e 100%);
+      color: #060606 !important;
+      font-family: var(--font-ui);
+      font-size: 0.9rem;
+      font-weight: 800;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 18px rgba(0, 188, 145, 0.45);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+    }
+
+    .deck-btn-visit:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 25px rgba(0, 188, 145, 0.65);
+      color: #000 !important;
+    }
+
+    .deck-btn-action {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-family: var(--font-ui);
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 12px 22px;
+      border-radius: 30px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .deck-btn-action:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .deck-showcase-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+      perspective: 1400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    .deck-cards-stage {
+      position: relative;
+      width: 100%;
+      max-width: 640px;
+      height: 330px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-style: preserve-3d;
+      margin: 10px 0 20px 0;
+      touch-action: pan-y;
+      cursor: grab;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .deck-cards-stage.is-dragging {
+      cursor: grabbing;
+    }
+
+    .deck-cards-stage.is-dragging .deck-card {
+      user-select: none;
+      -webkit-user-select: none;
+      pointer-events: none;
+    }
+
+    /* Individual Card (كارت كوتشينة) */
+    .deck-card {
+      position: absolute;
+      width: 200px;
+      height: 295px;
+      border-radius: 18px;
+      background: rgba(18, 18, 20, 0.95);
+      backdrop-filter: blur(14px);
+      border: 1.5px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.75);
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.1),
+                  box-shadow 0.35s ease,
+                  border-color 0.35s ease,
+                  opacity 0.45s ease,
+                  filter 0.45s ease;
+      will-change: transform, opacity;
+      top: 15px;
+      transform: translate3d(var(--tx, 0px), var(--ty, 0px), 0px) rotate(var(--rot, 0deg)) scale(var(--scale, 1));
+    }
+
+    /* Instagram Slide Counter Pill (1/6, 2/6...) */
+    .deck-card-corner-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.76);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-family: var(--font-ui);
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.45);
+      letter-spacing: 0.3px;
+    }
+
+    .deck-card-format-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.76);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      padding: 4px 9px;
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-mint);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.45);
+    }
+
+    /* Thumbnail Media Area */
+    .deck-card-media {
+      position: relative;
+      width: 100%;
+      height: 185px;
+      background: #08080a;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .deck-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    /* Square or Horizontal Full View (Zero Crop) */
+    .deck-card-media.media-fit-full img {
+      object-fit: contain !important;
+      background: #09090d;
+    }
+
+    /* Tall / Reel Image: Square section from top */
+    .deck-card-media.media-tall-reel img {
+      object-fit: cover !important;
+      object-position: top center !important;
+    }
+
+    .deck-card-media-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(18, 18, 20, 0.85) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .deck-card-play-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(0, 188, 145, 0.92);
+      color: #060606;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      box-shadow: 0 0 20px rgba(0, 188, 145, 0.6);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    /* Details Area */
+    .deck-card-content {
+      padding: 12px 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: rgba(18, 18, 22, 0.96);
+    }
+
+    .deck-card-title {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 4px;
+    }
+
+    .deck-card-desc {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-top: 3px;
+      transition: color 0.3s ease;
+    }
+
+    .deck-card.active .deck-card-desc {
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .deck-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.72rem;
+    }
+
+    .deck-card-meta-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--accent-mint);
+      background: rgba(0, 188, 145, 0.12);
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+
+    .deck-now-playing-tag {
+      color: var(--accent-mint);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .deck-click-prompt {
+      color: var(--text-muted);
+      font-size: 0.68rem;
+    }
+
+    /* Active / Selected State */
+    .deck-card.active {
+      border-color: var(--accent-mint) !important;
+      border-width: 2px !important;
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.85), 0 0 30px var(--accent-mint-glow) !important;
+    }
+
+    .deck-card.active .deck-card-corner-badge {
+      background: var(--accent-mint);
+      color: #060606;
+      border-color: var(--accent-mint);
+    }
+
+    /* Selection Pulse Animation on Side Info Panel */
+    .panel-pulse {
+      animation: panelPulseAnim 0.55s ease-out;
+    }
+    @keyframes panelPulseAnim {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 188, 145, 0.6), 0 25px 60px rgba(0, 0, 0, 0.75);
+        border-color: var(--accent-mint);
+      }
+      50% {
+        box-shadow: 0 0 35px 6px rgba(0, 188, 145, 0.4), 0 25px 60px rgba(0, 0, 0, 0.75);
+        border-color: #ffffff;
+      }
+      100% {
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(0, 188, 145, 0.08);
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    /* Hovered Card: Enlarges in place and lifts forward in 3D without shifting or swapping slots */
+    .deck-card:not(.deck-card-stacked):hover {
+      transform: translate3d(var(--tx, 0px), calc(var(--ty, 0px) - 22px), 55px) rotate(var(--rot, 0deg)) scale(calc(var(--scale, 1) * 1.09)) !important;
+      z-index: 100 !important;
+      opacity: 1 !important;
+      filter: brightness(1.15) !important;
+      border-color: var(--accent-mint) !important;
+      box-shadow: 0 30px 65px rgba(0, 0, 0, 0.95), 0 0 35px rgba(0, 188, 145, 0.55) !important;
+    }
+
+    .deck-card.deck-card-stacked:hover {
+      opacity: 0.65 !important;
+      filter: brightness(0.85) !important;
+      transform: translate3d(var(--tx, 0px), calc(var(--ty, 0px) - 8px), 15px) rotate(var(--rot, 0deg)) scale(calc(var(--scale, 1) * 1.04)) !important;
+    }
+
+    .deck-card:hover .deck-card-media img {
+      transform: scale(1.06);
+    }
+
+    .deck-card:hover .deck-card-play-icon {
+      transform: scale(1.2);
+      background: #fff;
+    }
+
+    .deck-card:hover .deck-click-prompt {
+      color: var(--accent-mint);
+      font-weight: 700;
+    }
+
+    /* Side Hover / Advance Zones ("لو جيت فى احد جنبين الكروت يقلب بينهم") */
+    .deck-side-zone {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 60;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .deck-zone-left {
+      left: -25px;
+    }
+
+    .deck-zone-right {
+      right: -25px;
+    }
+
+    .deck-paddle-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(18, 18, 20, 0.9);
+      border: 1.5px solid rgba(255, 255, 255, 0.22);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .deck-side-zone:hover .deck-paddle-btn {
+      background: var(--accent-mint);
+      color: #060606;
+      border-color: var(--accent-mint);
+      transform: scale(1.18);
+      box-shadow: 0 0 25px rgba(0, 188, 145, 0.65);
+    }
+
+    .deck-pending-badge {
+      position: absolute;
+      bottom: -24px;
+      background: rgba(0, 0, 0, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: var(--accent-mint);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 12px;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .deck-side-zone:hover .deck-pending-badge {
+      background: var(--accent-mint);
+      color: #060606;
+      border-color: var(--accent-mint);
+    }
+
+    /* Deck Controls & Dots */
+    .deck-controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 880px;
+      margin-top: 10px;
+      padding: 8px 18px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px dashed var(--border-subtle);
+      border-radius: var(--radius-sm);
+    }
+
+    .deck-dots-container {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .deck-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .deck-dot.active {
+      width: 24px;
+      background: var(--accent-mint);
+      box-shadow: 0 0 10px rgba(0, 188, 145, 0.5);
+    }
+
+    .deck-hint-text {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hint-mobile {
+      display: none;
+    }
+
+    .hint-desktop {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* =========================================================
+       INSTAGRAM CAROUSEL STYLES (MOBILE & TABLET <= 992px)
+       ========================================================= */
+    @media (max-width: 992px) {
+      .deck-split-showcase {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 22px !important;
+        width: 100% !important;
+        margin: 10px 0 30px 0 !important;
+      }
+      .deck-stage-column {
+        width: 100% !important;
+        overflow: hidden !important;
+      }
+      .deck-showcase-wrapper {
+        perspective: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        position: relative !important;
+        padding: 4px 0 10px 0 !important;
+      }
+      .deck-cards-stage {
+        perspective: none !important;
+        transform-style: flat !important;
+        height: 380px !important;
+        margin: 5px 0 12px 0 !important;
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: visible !important;
+        touch-action: pan-y !important;
+      }
+      .deck-card {
+        width: 280px !important;
+        height: 360px !important;
+        border-radius: 18px !important;
+        top: 10px !important;
+        position: absolute !important;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.65) !important;
+        background: rgba(18, 18, 22, 0.96) !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+      }
+      .deck-card.active {
+        border-color: var(--accent-mint) !important;
+        box-shadow: 0 16px 42px rgba(0, 0, 0, 0.75), 0 0 25px rgba(0, 188, 145, 0.22) !important;
+      }
+      .deck-card-media {
+        height: 220px !important;
+      }
+      .deck-side-zone {
+        display: none !important;
+      }
+      .hint-desktop {
+        display: none !important;
+      }
+      .hint-mobile {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.82rem;
+        color: var(--text-muted);
+      }
+      .deck-controls-bar {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        padding: 8px 12px !important;
+        border: none !important;
+        background: transparent !important;
+      }
+      .deck-dots-container {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 7px !important;
+      }
+      .deck-dot {
+        width: 7px !important;
+        height: 7px !important;
+        border-radius: 50% !important;
+        background: rgba(255, 255, 255, 0.25) !important;
+        transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+      }
+      .deck-dot.active {
+        width: 22px !important;
+        border-radius: 10px !important;
+        background: var(--accent-mint) !important;
+        box-shadow: 0 0 12px rgba(0, 188, 145, 0.6) !important;
+      }
+      [data-theme="light"] .deck-dot {
+        background: rgba(0, 0, 0, 0.2) !important;
+      }
+      [data-theme="light"] .deck-dot.active {
+        background: var(--accent-mint) !important;
+      }
+      .deck-info-column {
+        width: 100% !important;
+      }
+      .deck-info-panel-card {
+        padding: 24px 20px !important;
+        border-radius: 20px !important;
+      }
+      .deck-info-actions {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+      }
+      .deck-btn-visit, .deck-btn-action {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 14px !important;
+        font-size: 0.88rem !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .deck-showcase-wrapper {
+        perspective: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+      }
+      .deck-cards-stage {
+        height: 440px !important;
+        margin: 5px 0 10px 0 !important;
+        width: 100% !important;
+      }
+      .deck-card {
+        width: calc(100vw - 32px) !important;
+        max-width: 440px !important;
+        height: 420px !important;
+        border-radius: 20px !important;
+        top: 6px !important;
+        position: absolute !important;
+        display: flex !important;
+        flex-direction: column !important;
+        background: rgba(18, 18, 22, 0.98) !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7) !important;
+        overflow: hidden !important;
+      }
+      .deck-card.active {
+        border-color: var(--accent-mint) !important;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 188, 145, 0.28) !important;
+      }
+
+      /* Media area sizing on Mobile */
+      .deck-card-media {
+        width: 100% !important;
+        background: #08080a !important;
+        position: relative !important;
+        flex-shrink: 0 !important;
+      }
+
+      /* 1. Square or Landscape Photos: Appear in FULL, never cropped! */
+      .deck-card-media.media-fit-full {
+        height: 240px !important;
+      }
+      .deck-card-media.media-fit-full img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        background: #09090d !important;
+      }
+
+      /* 2. Tall / Reel Photos: Top square section shown! */
+      .deck-card-media.media-tall-reel {
+        height: 250px !important;
+      }
+      .deck-card-media.media-tall-reel img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: top center !important;
+      }
+
+      /* Fallback media */
+      .deck-card-media:not(.media-fit-full):not(.media-tall-reel) {
+        height: 240px !important;
+      }
+      .deck-card-media:not(.media-fit-full):not(.media-tall-reel) img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+      }
+
+      /* Card Content underneath image: displays full description & data */
+      .deck-card-content {
+        padding: 14px 16px !important;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        background: rgba(18, 18, 22, 0.98) !important;
+      }
+      .deck-card-title {
+        font-size: 0.98rem !important;
+        font-weight: 800 !important;
+        line-height: 1.35 !important;
+        margin-bottom: 5px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+      }
+      .deck-card-desc {
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        font-size: 0.84rem !important;
+        line-height: 1.55 !important;
+        color: var(--text-muted) !important;
+        margin-bottom: 6px !important;
+      }
+      .deck-card-footer {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding-top: 8px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+      }
+      .deck-card-meta-tag {
+        font-size: 0.76rem !important;
+        font-weight: 700 !important;
+        color: var(--accent-mint) !important;
+        background: rgba(0, 188, 145, 0.12) !important;
+        padding: 3px 8px !important;
+        border-radius: 6px !important;
+      }
+
+      .deck-info-panel-card {
+        padding: 20px 16px !important;
+        border-radius: 18px !important;
+      }
+      .deck-info-title {
+        font-size: 1.25rem !important;
+        margin-bottom: 8px !important;
+      }
+      .deck-info-desc {
+        font-size: 0.88rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 14px !important;
+      }
+      .deck-info-actions {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .deck-cards-stage {
+        height: 425px !important;
+      }
+      .deck-card {
+        width: calc(100vw - 24px) !important;
+        height: 410px !important;
+      }
+      .deck-card-media.media-fit-full {
+        height: 230px !important;
+      }
+      .deck-card-media.media-tall-reel {
+        height: 240px !important;
+      }
+      .deck-card-title {
+        font-size: 0.94rem !important;
+      }
+      .deck-card-desc {
+        font-size: 0.82rem !important;
+      }
+      .deck-info-title {
+        font-size: 1.15rem !important;
+      }
+      .deck-info-chips-row {
+        gap: 6px !important;
+        margin-bottom: 12px !important;
+        padding-bottom: 10px !important;
+      }
+      .deck-info-chip {
+        font-size: 0.74rem !important;
+        padding: 4px 10px !important;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .deck-cards-stage {
+        height: 410px !important;
+      }
+      .deck-card {
+        width: calc(100vw - 20px) !important;
+        height: 395px !important;
+      }
+      .deck-card-media.media-fit-full {
+        height: 215px !important;
+      }
+      .deck-card-media.media-tall-reel {
+        height: 225px !important;
+      }
+    }
+
+    .drive-how-to-link {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px dashed var(--border-subtle);
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .drive-how-to-link a {
+      color: var(--accent-mint);
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       PHOTO & DESIGN GALLERY (Modern Card Overlays & Lightbox)
+       ========================================================= */
+    .gallery-cards-grid, .gallery-deck-container {
+      display: block;
+      width: 100%;
+    }
+
+    .gallery-item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .gallery-item-card:hover {
+      border-color: var(--accent-mint);
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    }
+
+    .card-thumb-container {
+      height: 230px;
+      overflow: hidden;
+      position: relative;
+      background: #111;
+    }
+
+    .card-thumb-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item-card:hover .card-thumb-container img {
+      transform: scale(1.08);
+    }
+
+    .card-tag-pill {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(6, 6, 6, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-subtle);
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--accent-mint);
+      font-family: var(--font-ui);
+      text-transform: uppercase;
+    }
+
+    .card-content-area {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .card-content-area h4 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .card-content-area p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .card-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    .card-meta-row span i {
+      color: var(--accent-mint);
+      margin-right: 4px;
+    }
+
+    /* =========================================================
+       SKILLS & CREATIVE STACK SECTION
+       ========================================================= */
+    .skills-stack-section {
+      padding: 80px 0;
+      background: #0a0a0d;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .skills-cards-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .skill-box-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px 16px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+    }
+
+    .skill-box-card:hover {
+      border-color: var(--accent-mint);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 188, 145, 0.2);
+    }
+
+    .skill-box-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent-mint);
+    }
+
+    .skill-box-card h4 {
+      font-size: 0.95rem;
+    }
+
+    .skill-box-card span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* =========================================================
+       CV & RESUME ACCESS HUB
+       ========================================================= */
+    .cv-access-section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background: linear-gradient(180deg, var(--bg-deep) 0%, #0c0c10 100%);
+    }
+
+    .cv-banner-container {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+
+    .cv-banner-info h2 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .cv-banner-info p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 600px;
+    }
+
+    .cv-buttons-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-cv-tab {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-family: var(--font-ui);
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+    }
+
+    .btn-cv-tab:hover {
+      border-color: var(--accent-mint);
+      background: rgba(0, 188, 145, 0.1);
+      color: var(--accent-mint);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       CONTACT SECTION & GIANT WHATSAPP CALLOUT
+       ========================================================= */
+    .contact-wrap-section {
+      padding: 90px 0;
+    }
+
+    .contact-columns-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .contact-details-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+
+    .contact-details-box h2 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-items-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .contact-row-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: #fff;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .contact-row-card:hover {
+      border-color: var(--accent-mint);
+      background: rgba(0, 188, 145, 0.08);
+      transform: translateX(4px);
+    }
+
+    .contact-icon-bubble {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-mint);
+      font-size: 1.15rem;
+    }
+
+    .contact-card-text h5 {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: var(--font-ui);
+      text-transform: uppercase;
+    }
+
+    .contact-card-text p {
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+
+    /* Giant WhatsApp Card */
+    .whatsapp-giant-box {
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.15) 0%, rgba(14, 14, 18, 0.95) 100%);
+      border: 1px solid rgba(37, 211, 102, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .whatsapp-giant-bubble {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+      color: #060606;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    }
+
+    .whatsapp-giant-box h3 {
+      font-size: 2rem;
+    }
+
+    .whatsapp-giant-box p {
+      color: var(--text-muted);
+      max-width: 440px;
+      font-size: 0.95rem;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    footer {
+      background: #040405;
+      border-top: 1px solid var(--border-subtle);
+      padding: 30px 0;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* =========================================================
+       MODALS: LIGHTBOX & GOOGLE DRIVE GUIDE
+       ========================================================= */
+    .modal-overlay-bg {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal-overlay-bg.active {
+      display: flex;
+    }
+
+    .modal-window-content {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      max-width: 920px;
+      width: 100%;
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.85);
+    }
+
+    .btn-close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      z-index: 10;
+    }
+
+    .btn-close-modal:hover {
+      background: var(--accent-coral);
+    }
+
+    .lightbox-image-container {
+      width: 100%;
+      max-height: 520px;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: #000;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-image-container img {
+      width: 100%;
+      height: 100%;
+      max-height: 520px;
+      object-fit: contain;
+    }
+
+    .lightbox-text-meta h2 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .lightbox-text-meta p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       CINEMA VIDEO MODAL POPUP (نافذة مشغل الفيديو السينمائية المنبثقة)
+       ========================================================= */
+    .video-cinema-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100000;
+      background: rgba(4, 4, 6, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.32s ease, visibility 0.32s ease;
+    }
+
+    .video-cinema-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .video-cinema-dialog {
+      background: #0f1015;
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 960px;
+      box-shadow: 0 35px 85px rgba(0, 0, 0, 0.95), 0 0 50px rgba(0, 188, 145, 0.22);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transform: scale(0.92) translateY(24px);
+      transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+    }
+
+    .video-cinema-modal-overlay.active .video-cinema-dialog {
+      transform: scale(1) translateY(0);
+    }
+
+    .video-cinema-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 22px;
+      background: rgba(22, 23, 29, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      gap: 15px;
+    }
+
+    .video-cinema-title-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .video-cinema-badge {
+      background: rgba(0, 188, 145, 0.15);
+      color: var(--accent-mint);
+      border: 1px solid rgba(0, 188, 145, 0.35);
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .video-cinema-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0;
+    }
+
+    .video-cinema-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .cinema-ratio-switch .aspect-switch-btn {
+      padding: 5px 12px;
+      font-size: 0.78rem;
+    }
+
+    .video-cinema-close-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      line-height: 1;
+    }
+
+    .video-cinema-close-btn:hover {
+      background: #ef4444;
+      border-color: #ef4444;
+      transform: rotate(90deg) scale(1.08);
+    }
+
+    .video-cinema-screen-wrap {
+      position: relative;
+      width: 100%;
+      background: #000;
+      margin: 0 auto;
+      transition: all 0.35s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-cinema-screen-wrap.widescreen-16-9 {
+      aspect-ratio: 16 / 9;
+      max-width: 960px;
+      max-height: 65vh;
+    }
+
+    .video-cinema-screen-wrap.vertical-9-16 {
+      aspect-ratio: 9 / 16;
+      max-width: 380px;
+      max-height: 68vh;
+    }
+
+    .cinema-iframe-element {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .video-cinema-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px;
+      background: rgba(22, 23, 29, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      gap: 15px;
+    }
+
+    .video-cinema-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .video-cinema-nav-btns {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .cinema-nav-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .cinema-nav-btn:hover:not(:disabled) {
+      background: var(--accent-mint);
+      color: #060606;
+      border-color: var(--accent-mint);
+    }
+
+    .cinema-nav-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 768px) {
+      .video-cinema-dialog {
+        max-height: 94vh;
+      }
+      .video-cinema-footer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .video-cinema-nav-btns {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    /* Toast Notification */
+    .toast-alert {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent-mint);
+      color: #060606;
+      font-weight: 800;
+      padding: 12px 26px;
+      border-radius: 40px;
+      box-shadow: 0 10px 25px var(--accent-mint-glow);
+      display: none;
+      z-index: 10001;
+      animation: toastIn 0.3s ease;
+    }
+
+    @keyframes toastIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Floating Dashboard Quick Access Button */
+    .floating-dashboard-btn {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(14, 14, 18, 0.95);
+      border: 1px solid var(--accent-mint);
+      color: var(--accent-mint);
+      padding: 10px 20px;
+      border-radius: 40px;
+      font-family: var(--font-ui);
+      font-weight: 800;
+      font-size: 0.88rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 8px 30px rgba(0, 188, 145, 0.35);
+      z-index: 9999;
+      transition: var(--transition);
+      backdrop-filter: blur(12px);
+    }
+
+    .floating-dashboard-btn:hover {
+      background: var(--accent-mint);
+      color: #060606;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(0, 188, 145, 0.55);
+    }
+
+    /* =========================================================
+       LIGHT MODE COMPONENT OVERRIDES (ألوان بيضاء نقية وفخمة)
+       ========================================================= */
+    [data-theme="light"] .header-nav {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+    [data-theme="light"] .brand-logo {
+      color: #0f172a;
+    }
+    [data-theme="light"] .brand-text h2 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .nav-links a {
+      color: #475569;
+    }
+    [data-theme="light"] .nav-links a:hover {
+      color: #0f172a;
+    }
+    [data-theme="light"] .theme-toggle-btn,
+    [data-theme="light"] .lang-switch-btn {
+      background: #f1f5f9;
+      border-color: rgba(15, 23, 42, 0.12);
+      color: #0f172a;
+    }
+    [data-theme="light"] .theme-toggle-btn:hover,
+    [data-theme="light"] .lang-switch-btn:hover {
+      background: rgba(0, 168, 129, 0.12);
+      border-color: var(--accent-mint);
+      color: var(--accent-mint);
+    }
+    [data-theme="light"] .menu-toggle {
+      color: #0f172a;
+      border-color: rgba(15, 23, 42, 0.15);
+    }
+    [data-theme="light"] .nav-links.open {
+      background: #ffffff;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    /* Hero Light Mode */
+    [data-theme="light"] .hero-main-title .outlined-word {
+      -webkit-text-stroke: 1.5px #0f172a;
+      color: transparent;
+    }
+    [data-theme="light"] .hero-aura-glow {
+      background: radial-gradient(circle, rgba(0, 168, 129, 0.14) 0%, rgba(37, 99, 235, 0.06) 50%, transparent 70%);
+    }
+    [data-theme="light"] .hero-arch-shape {
+      background: linear-gradient(180deg, rgba(0, 168, 129, 0.15) 0%, rgba(248, 250, 252, 0.02) 100%);
+      border-color: rgba(0, 168, 129, 0.25);
+    }
+    [data-theme="light"] .hero-label-tag {
+      color: #0f172a;
+    }
+    [data-theme="light"] .btn-pill-glass {
+      background: rgba(15, 23, 42, 0.05);
+      border-color: rgba(15, 23, 42, 0.15);
+      color: #0f172a;
+    }
+    [data-theme="light"] .btn-pill-glass:hover {
+      background: rgba(15, 23, 42, 0.1);
+      color: #0f172a;
+    }
+    [data-theme="light"] .btn-view-works {
+      background: #f1f5f9;
+      border-color: rgba(15, 23, 42, 0.12);
+      color: #0f172a;
+    }
+    [data-theme="light"] .btn-view-works:hover {
+      background: var(--accent-mint);
+      color: #ffffff;
+    }
+
+    /* Marquee Light Mode */
+    [data-theme="light"] .marquee-section {
+      background: #f1f5f9;
+      border-top-color: rgba(15, 23, 42, 0.08);
+      border-bottom-color: rgba(15, 23, 42, 0.08);
+    }
+    [data-theme="light"] .ticker-phrase.filled-text {
+      color: #0f172a;
+    }
+    [data-theme="light"] .ticker-phrase.stroke-text {
+      -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.25);
+      color: transparent;
+    }
+
+    /* Case Block & Role Card */
+    [data-theme="light"] .case-role-card {
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+    }
+    [data-theme="light"] .role-tag {
+      background: #f1f5f9;
+      border-color: rgba(15, 23, 42, 0.1);
+      color: #334155;
+    }
+
+    /* 3D Playing Cards Deck in Light Mode */
+    [data-theme="light"] .deck-card {
+      background: #ffffff;
+      border: 1.5px solid rgba(15, 23, 42, 0.12);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+    }
+    [data-theme="light"] .deck-card-content {
+      background: #ffffff;
+    }
+    [data-theme="light"] .deck-card-title {
+      color: #0f172a;
+    }
+    [data-theme="light"] .deck-card-corner-badge {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: rgba(15, 23, 42, 0.12);
+      color: #0f172a;
+    }
+    [data-theme="light"] .deck-card-format-badge {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: rgba(15, 23, 42, 0.12);
+      color: #0f172a;
+    }
+    [data-theme="light"] .deck-click-prompt {
+      color: #64748b;
+    }
+
+    /* Active Details Panel Card (المساحة الفاضية بجانب الكروت) */
+    [data-theme="light"] .deck-info-panel-card {
+      background: #ffffff;
+      border: 1.5px solid rgba(15, 23, 42, 0.1);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06), 0 0 35px rgba(0, 168, 129, 0.08);
+    }
+    [data-theme="light"] .deck-info-counter {
+      color: #64748b;
+    }
+    [data-theme="light"] .deck-info-title {
+      color: #0f172a;
+    }
+    [data-theme="light"] .deck-info-desc {
+      color: #475569;
+    }
+    [data-theme="light"] .deck-info-chips-row {
+      border-bottom-color: rgba(15, 23, 42, 0.08);
+    }
+    [data-theme="light"] .deck-info-chip.tool {
+      background: #f1f5f9;
+      border-color: rgba(15, 23, 42, 0.12);
+      color: #334155;
+    }
+    [data-theme="light"] .deck-btn-action {
+      background: #f1f5f9;
+      border-color: rgba(15, 23, 42, 0.12);
+      color: #0f172a;
+    }
+    [data-theme="light"] .deck-btn-action:hover {
+      background: #e2e8f0;
+    }
+    [data-theme="light"] .deck-paddle-btn {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: rgba(15, 23, 42, 0.15);
+      color: #0f172a;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+    [data-theme="light"] .deck-paddle-btn:hover {
+      background: var(--accent-mint);
+      color: #ffffff;
+    }
+    [data-theme="light"] .deck-dot {
+      background: rgba(15, 23, 42, 0.2);
+    }
+    [data-theme="light"] .deck-dot.active {
+      background: var(--accent-mint);
+    }
+    [data-theme="light"] .deck-hint-text {
+      color: #64748b;
+    }
+
+    /* Gallery Cards Light Mode */
+    [data-theme="light"] .gallery-item-card {
+      background: #ffffff;
+      border-color: rgba(15, 23, 42, 0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+    [data-theme="light"] .gallery-item-card:hover {
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    }
+    [data-theme="light"] .card-content-area h4 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .card-content-area p {
+      color: #475569;
+    }
+    [data-theme="light"] .card-meta-row {
+      color: #64748b;
+      border-top-color: rgba(15, 23, 42, 0.06);
+    }
+
+    /* Video Hub Container */
+    [data-theme="light"] .video-hub-container {
+      background: #ffffff;
+      border-color: rgba(15, 23, 42, 0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+    [data-theme="light"] .video-hub-title h3 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .video-hub-title p {
+      color: #475569;
+    }
+
+    /* Skills Cards Light Mode */
+    [data-theme="light"] .skill-box-card {
+      background: #ffffff;
+      border-color: rgba(15, 23, 42, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+    [data-theme="light"] .skill-box-card h4 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .skill-box-card span {
+      color: #64748b;
+    }
+    [data-theme="light"] .skill-box-icon {
+      background: #f1f5f9;
+      border-color: rgba(15, 23, 42, 0.08);
+      color: var(--accent-mint);
+    }
+
+    /* CV Banner Light Mode */
+    [data-theme="light"] .cv-banner-container {
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      border-color: rgba(15, 23, 42, 0.1);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    }
+    [data-theme="light"] .cv-banner-info h2 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .cv-banner-info p {
+      color: #475569;
+    }
+    [data-theme="light"] .btn-cv-tab {
+      background: #ffffff;
+      border-color: rgba(15, 23, 42, 0.12);
+      color: #0f172a;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    }
+    [data-theme="light"] .btn-cv-tab:hover {
+      background: #f8fafc;
+      border-color: var(--accent-mint);
+    }
+
+    /* Contact Cards Light Mode */
+    [data-theme="light"] .contact-row-card {
+      background: #ffffff;
+      border-color: rgba(15, 23, 42, 0.08);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    }
+    [data-theme="light"] .contact-card-text h5 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .contact-card-text p {
+      color: #64748b;
+    }
+    [data-theme="light"] .contact-icon-bubble {
+      background: #f1f5f9;
+      border-color: rgba(15, 23, 42, 0.08);
+      color: var(--accent-mint);
+    }
+    [data-theme="light"] .whatsapp-giant-box {
+      background: linear-gradient(135deg, rgba(0, 168, 129, 0.08) 0%, #ffffff 100%);
+      border-color: rgba(0, 168, 129, 0.25);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    }
+    [data-theme="light"] .whatsapp-giant-box h3 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .whatsapp-giant-box p {
+      color: #475569;
+    }
+
+    /* Footer Light Mode */
+    [data-theme="light"] footer {
+      background: #f1f5f9;
+      border-top-color: rgba(15, 23, 42, 0.08);
+      color: #475569;
+    }
+    [data-theme="light"] footer strong {
+      color: #0f172a;
+    }
+
+    /* Floating dashboard button */
+    [data-theme="light"] .floating-dashboard-btn {
+      background: #ffffff;
+      color: var(--accent-mint);
+      border-color: var(--accent-mint);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    /* RTL Layout Fixes */
+    [dir="rtl"] .hero-stat-item {
+      direction: rtl;
+    }
+    [dir="rtl"] .card-tag-pill {
+      left: auto;
+      right: 14px;
+    }
+    [dir="rtl"] .floating-dashboard-btn {
+      left: auto;
+      right: 24px;
+    }
+    [dir="rtl"] .toast-alert {
+      right: auto;
+      left: 24px;
+    }
+
+    /* =========================================================
+       RESPONSIVE DESIGN & MOBILE OVERHAUL
+       ========================================================= */
+    .hero-stats-row-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-stage-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        align-items: center;
+      }
+      .hero-col-left, .hero-col-right {
+        align-items: center;
+        text-align: center;
+        padding-bottom: 0;
+      }
+      .hero-pitch-text {
+        max-width: 520px;
+      }
+      .hero-stat-item {
+        justify-content: center;
+      }
+      .hero-col-center {
+        order: -1;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .skills-cards-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .video-display-grid, .video-display-grid.vertical-mode {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mobile-drawer-cta-item {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      /* Header & Navigation on Mobile - Completely Clean, No-Overlap */
+      .header-nav {
+        padding: 8px 0;
+      }
+      .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 8px;
+        width: 100%;
+      }
+      .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+        flex-shrink: 0;
+      }
+      .brand-badge {
+        width: 35px;
+        height: 35px;
+        font-size: 0.95rem;
+        border-radius: 9px;
+        flex-shrink: 0;
+      }
+      .brand-text {
+        min-width: 0;
+      }
+      .brand-text h2 {
+        font-size: 1.02rem;
+        margin: 0;
+        white-space: nowrap;
+      }
+      .brand-text p {
+        display: none !important; /* Hide long subtitle to prevent overlap completely */
+      }
+      .nav-links {
+        display: none;
+      }
+      .nav-actions-cluster {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-shrink: 0;
+      }
+      .nav-actions-cluster .hire-nav-btn {
+        display: none !important; /* Moved inside the open mobile drawer */
+      }
+      .nav-actions-cluster .admin-nav-btn {
+        display: none !important;
+      }
+      .theme-toggle-btn, .lang-switch-btn {
+        padding: 6px 10px;
+        font-size: 0.76rem;
+        border-radius: 20px;
+        line-height: 1;
+        gap: 4px;
+      }
+      .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        padding: 0;
+        border-radius: 9px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-white);
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-surface);
+        padding: 20px;
+        border-bottom: 1px solid var(--border-subtle);
+        box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+        gap: 14px;
+        z-index: 1002;
+      }
+      .nav-links.open a {
+        font-size: 1rem;
+        padding: 6px 0;
+      }
+      .mobile-drawer-cta-item {
+        display: block !important;
+        width: 100%;
+        margin-top: 8px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border-subtle);
+      }
+      .mobile-drawer-hire-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 12px 20px !important;
+        background: var(--accent-mint) !important;
+        color: #060606 !important;
+        border-radius: 40px !important;
+        font-family: var(--font-ui) !important;
+        font-weight: 800 !important;
+        font-size: 0.95rem !important;
+        text-align: center;
+        box-shadow: 0 4px 18px var(--accent-mint-glow);
+        text-decoration: none;
+      }
+      .mobile-drawer-hire-btn:hover {
+        color: #060606 !important;
+        transform: translateY(-2px);
+      }
+      .mobile-drawer-hire-btn::after {
+        display: none !important;
+      }
+
+      /* Hero Mobile Sizing Overhaul */
+      .hero-banner {
+        padding: 25px 0 10px;
+        min-height: auto;
+      }
+      .hero-top-intro {
+        margin: 0 auto 20px;
+      }
+      .hero-greeting-pill {
+        font-size: 0.78rem;
+        margin-bottom: 10px;
+      }
+      .hero-main-title {
+        font-size: 1.85rem !important;
+        line-height: 1.25 !important;
+        letter-spacing: -0.4px !important;
+      }
+      .hero-stage-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+      }
+      .hero-col-center {
+        order: 1 !important;
+        margin-bottom: 0 !important;
+      }
+      .hero-portrait-cutout {
+        height: 290px !important;
+      }
+      .hero-arch-shape {
+        width: 240px !important;
+        height: 280px !important;
+      }
+      .hero-col-left {
+        order: 2 !important;
+        padding-bottom: 0 !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px !important;
+      }
+      .hero-label-tag {
+        font-size: 0.78rem;
+      }
+      .hero-pitch-text {
+        font-size: 0.92rem !important;
+        max-width: 480px;
+        line-height: 1.6;
+      }
+      .btn-view-works {
+        padding: 10px 22px;
+        font-size: 0.85rem;
+      }
+      .hero-col-right {
+        order: 3 !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 16px !important;
+      }
+
+      /* 3-Column Compact Stats Row on Mobile */
+      .hero-stats-row-mobile {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 440px !important;
+      }
+      .hero-stat-item {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 12px 6px !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        justify-content: center !important;
+        gap: 4px !important;
+      }
+      .hero-stat-item h3 {
+        font-size: 1.35rem !important;
+      }
+      .hero-stat-item p {
+        font-size: 0.72rem !important;
+        line-height: 1.25 !important;
+      }
+      .hero-action-buttons {
+        width: 100% !important;
+        max-width: 440px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 10px !important;
+      }
+      .hero-action-buttons a {
+        flex: 1 !important;
+        text-align: center !important;
+        justify-content: center !important;
+        padding: 12px 14px !important;
+        font-size: 0.88rem !important;
+        min-height: 48px !important;
+      }
+
+      /* Skills Grid: 2 clean balanced columns */
+      .skills-cards-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+      .skill-box-card {
+        padding: 18px 12px !important;
+      }
+
+      /* Sections & Galleries */
+      .section-main-heading {
+        font-size: 1.7rem !important;
+      }
+      .section-lead-paragraph {
+        font-size: 0.9rem !important;
+      }
+      .gallery-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-columns-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Floating Button on Mobile */
+      .floating-dashboard-btn {
+        bottom: 16px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+      }
+      [dir="rtl"] .floating-dashboard-btn {
+        right: 16px;
+      }
+      [dir="ltr"] .floating-dashboard-btn {
+        left: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-main-title {
+        font-size: 1.62rem !important;
+      }
+      .hero-portrait-cutout {
+        height: 260px !important;
+      }
+      .hero-arch-shape {
+        width: 210px !important;
+        height: 250px !important;
+      }
+      .hero-stats-row-mobile {
+        gap: 6px !important;
+      }
+      .hero-stat-item {
+        padding: 10px 4px !important;
+      }
+      .hero-stat-item h3 {
+        font-size: 1.2rem !important;
+      }
+      .hero-stat-item p {
+        font-size: 0.68rem !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================
+       HEADER / NAVIGATION (متوافق بالكامل عربي + أزرار التبديل)
+       ========================================================= -->
+  <header class="header-nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand-logo">
+        <div class="brand-badge">GS</div>
+        <div class="brand-text">
+          <h2>جمال صبيح</h2>
+          <p>خبير الهويات البصرية والذكاء الاصطناعي</p>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#el-afareet" onclick="closeNavMenu()">متجر العفاريت</a></li>
+        <li><a href="#travel-ads" onclick="closeNavMenu()">حملات السياحة</a></li>
+        <li><a href="#ai-motion" onclick="closeNavMenu()">فيديو وذكاء اصطناعي</a></li>
+        <li><a href="#branding" onclick="closeNavMenu()">الهويات التجارية</a></li>
+        <li><a href="#cv-hub" onclick="closeNavMenu()">السيرة الذاتية</a></li>
+        <li><a href="#contact" onclick="closeNavMenu()">تواصل معي</a></li>
+        <li class="mobile-drawer-cta-item">
+          <a href="https://wa.me/201066439963?text=مرحباً%20جمال،%20أود%20بدء%20مشروع%20معك." target="_blank" class="mobile-drawer-hire-btn">
+            <i class="fa-brands fa-whatsapp"></i> وظفني الآن!
+          </a>
+        </li>
+      </ul>
+
+      <!-- Action Cluster: Theme Toggle, Language Switcher & Hire CTA -->
+      <div class="nav-actions-cluster">
+        <!-- Theme Switcher (نهاري / ليلي) -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="تغيير المظهر (نهاري / ليلي)" aria-label="تغيير المظهر">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+
+        <!-- Language Switcher (1-click to English) -->
+        <a href="index.html" class="lang-switch-btn" title="English Edition">
+          <i class="fa-solid fa-globe"></i> English
+        </a>
+
+        <!-- Hire CTA (Visible on Desktop & Tablet, moved inside drawer on Mobile) -->
+        <a href="https://wa.me/201066439963?text=مرحباً%20جمال،%20أود%20بدء%20مشروع%20معك." target="_blank" class="nav-cta-btn hire-nav-btn">
+          <i class="fa-brands fa-whatsapp"></i> وظفني!
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" onclick="toggleNavMenu()" aria-label="فتح القائمة"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       HERO BANNER (FAITHFUL TO xFolio'S PANORAMIC ASYMMETRIC HERO)
+       ========================================================= -->
+  <section class="hero-banner" id="hero">
+    
+    <!-- Ambient Radial Glow Behind Center -->
+    <div class="hero-aura-glow"></div>
+
+    <div class="container" style="position: relative; z-index: 5;">
+      
+      <!-- 1. Centered Top Headline -->
+      <div class="hero-top-intro">
+        <div class="hero-greeting-pill" id="heroGreetingText">
+          أهلاً بك! <i class="fa-solid fa-hand"></i> أنا جمال صبيح
+        </div>
+        <h1 class="hero-main-title" id="heroHeadlineText">
+          صناعة <span class="gradient-word">محتوى بصري</span> يحقق أعلى مبيعات، <span class="outlined-word">ريلز</span> وتجارب الذكاء الاصطناعي.
+        </h1>
+      </div>
+
+      <!-- 2. Asymmetric 3-Column Stage Grid (Left Pitch / Center Cutout Portrait / Right Stats) -->
+      <div class="hero-stage-grid">
+        
+        <!-- Left Column: Any Time Hire Me -->
+        <div class="hero-col-left">
+          <div class="hero-label-tag">متاح للمشاريع الجديدة !</div>
+          <p class="hero-pitch-text" id="heroPitchText">
+            أكثر من 10 سنوات في قيادة وتصميم الهويات البصرية، إعلانات السوشيال ميديا عالية العائد (High ROAS) لمنصات Meta و TikTok، مونتاج فيديوهات الريلز الديناميكية، وحلول التصميم المتسارعة بالذكاء الاصطناعي.
+          </p>
+          <a href="#el-afareet" class="btn-view-works">
+            <i class="fa-solid fa-arrow-down"></i> استعرض أعمالي
+          </a>
+        </div>
+
+        <!-- Center Column: Cutout Silhouette with Background Ambient Arch (NO BOXED FRAME!) -->
+        <div class="hero-col-center">
+          
+          <!-- Background Arch Aura -->
+          <div class="hero-arch-shape"></div>
+
+          <!-- Cutout Portrait with Soft Gradient Bottom Fade -->
+          <div class="hero-portrait-cutout">
+            <img 
+              id="heroPortraitImg"
+              src="assets/images/hero-portrait.png" 
+              alt="جمال الدين صبيح"
+            >
+          </div>
+        </div>
+
+        <!-- Right Column: Odometer Numbers & Action CTAs -->
+        <div class="hero-col-right">
+          
+          <!-- Responsive 3-Box Stats Row -->
+          <div class="hero-stats-row-mobile">
+            <div class="hero-stat-item">
+              <h3><span id="statYears">10</span><span>+</span></h3>
+              <p>سنوات<br>الخبرة</p>
+            </div>
+
+            <div class="hero-stat-item">
+              <h3><span id="statCampaigns">500</span><span>+</span></h3>
+              <p>حملة إعلانية<br>منجزة</p>
+            </div>
+
+            <div class="hero-stat-item">
+              <h3><span id="statSpeed">50</span><span>%</span></h3>
+              <p>تسريع الإنتاج<br>بالذكاء الاصطناعي</p>
+            </div>
+          </div>
+
+          <div class="hero-action-buttons">
+            <a href="https://wa.me/201066439963?text=مرحباً%20جمال،%20أود%20بدء%20مشروع%20معك." target="_blank" class="btn-pill-main">
+              <i class="fa-brands fa-whatsapp"></i> وظفني الآن!
+            </a>
+            <a href="#cv-hub" class="btn-pill-glass">
+              <i class="fa-solid fa-file-pdf"></i> تحميل الـ CV
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================
+       INFINITE STROKE-TEXT MARQUEE (شريط التمرير اللانهائي بالعربي)
+       ========================================================= -->
+  <section class="marquee-section">
+    <div class="marquee-content">
+      <div class="ticker-phrase stroke-text">إعلانات متجر العفاريت موبايل</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+      <div class="ticker-phrase filled-text">مونتاج فيديوهات ريلز وتيك توك</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+      <div class="ticker-phrase stroke-text">تصاميم الذكاء الاصطناعي التوليدي</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+      <div class="ticker-phrase filled-text">هويات بصرية وشعارات تجارية</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+      <div class="ticker-phrase stroke-text">إعلانات عالية المبيعات META &amp; TIKTOK</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+      <div class="ticker-phrase filled-text">تسويق قطاع السياحة والسفر</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+
+      <!-- Loop repetition -->
+      <div class="ticker-phrase stroke-text">إعلانات متجر العفاريت موبايل</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+      <div class="ticker-phrase filled-text">مونتاج فيديوهات ريلز وتيك توك</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+      <div class="ticker-phrase stroke-text">تصاميم الذكاء الاصطناعي التوليدي</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+      <div class="ticker-phrase filled-text">هويات بصرية وشعارات تجارية</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+      <div class="ticker-phrase stroke-text">إعلانات عالية المبيعات META &amp; TIKTOK</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+      <div class="ticker-phrase filled-text">تسويق قطاع السياحة والسفر</div>
+      <div class="ticker-dot"><i class="fa-solid fa-star"></i></div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ALL CASE SECTIONS WRAPPER (Ordered dynamically)
+       ========================================================= -->
+  <div id="allCaseSectionsContainer">
+
+    <!-- SECTION 1: EL-AFAREET MOBILE STORE SHOWCASE -->
+    <section class="case-block-section" id="el-afareet">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-headline-box">
+        <div>
+          <div class="section-counter-badge">01</div>
+          <h2 class="section-main-heading">متجر العفاريت موبايل <span>دراسة حالة</span></h2>
+          <p class="section-lead-paragraph">
+            قيادة الهوية البصرية الرقمية، تصاميم إعلانات السوشيال ميديا عالية المبيعات، فيديوهات الريلز الترويجية، وإدارة الحملات الإعلانية من 2021 حتى 2026.
+          </p>
+        </div>
+      </div>
+
+      <!-- Role Overview Bar -->
+      <div class="case-role-card">
+        <div class="role-info">
+          <h4>كبير مصممي الجرافيك، مدير الميديا باينج ومدير الفريق الإبداعي</h4>
+          <p>
+            إدارة الهوية البصرية عبر كافة نقاط الاتصال الرقمية، وإطلاق حملات Meta و TikTok Ads، ودمج أدوات الذكاء الاصطناعي التوليدي لتقليص وقت الإنتاج بنسبة 50%.
+          </p>
+        </div>
+        <div class="role-tags-wrap">
+          <span class="role-tag">إعلانات Meta</span>
+          <span class="role-tag">إعلانات TikTok</span>
+          <span class="role-tag">Premiere Pro</span>
+          <span class="role-tag">After Effects</span>
+          <span class="role-tag">Photoshop</span>
+          <span class="role-tag">حلول الذكاء الاصطناعي</span>
+        </div>
+      </div>
+
+      <!-- 1. Interactive 3D Video Cards Deck Showcase -->
+      <div class="video-hub-container">
+        <div class="video-hub-header">
+          <div class="video-hub-title">
+            <h3><i class="fa-solid fa-circle-play"></i> مشغل فيديوهات الريلز والمونتاج</h3>
+            <p>اضغط على أي كارت لعرضه في المنتصف وتشغيله في سينما العرض المنبثقة مباشرة</p>
+          </div>
+        </div>
+
+        <!-- 3D Video Playing Cards Deck Container -->
+        <div class="playlist-items-list" id="playlist_afareet"></div>
+      </div>
+
+      <!-- 2. Campaign Graphics Gallery -->
+      <div style="margin-bottom: 24px;">
+        <h3 style="font-size: 1.4rem;">
+          <i class="fa-solid fa-images" style="color: var(--accent-mint); margin-left: 8px;"></i>
+          معرض تصاميم وحملات العفاريت الإعلانية
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">اضغط على أي تصميم لمشاهدته بالحجم الكامل وبدقة فائقة.</p>
+      </div>
+
+      <div class="gallery-cards-grid" id="gallery_afareet">
+        
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=1200&q=80', 'إطلاق الموبايلات الرائدة في متجر العفاريت', 'بانر إعلاني عالي التحويل تم تصميمه لحملات Meta واللوحات الرقمية.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">إعلانات META</span>
+            <img src="https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=600&q=80" alt="إطلاق هواتف رائدة">
+          </div>
+          <div class="card-content-area">
+            <h4>إطلاق الهواتف الرائدة</h4>
+            <p>إبراز المنتجات بتباين بصري عالي لإعلانات إنستغرام وفيسبوك.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-bullseye"></i> مبيعات مرتفعة</span>
+              <span>Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=1200&q=80', 'باقة خصومات الإكسسوارات', 'حزمة تصاميم ترويجية لإكسسوارات الموبايل وعروض المواسم السريعة.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">إعلانات TIKTOK</span>
+            <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=600&q=80" alt="خصومات الإكسسوارات">
+          </div>
+          <div class="card-content-area">
+            <h4>عروض الإكسسوارات الخاطفة</h4>
+            <p>تصاميم كاروسيل ديناميكية لإبراز الأسعار لحملات تيك توك.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-bullseye"></i> تفاعل استثنائي</span>
+              <span>Illustrator</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80', 'بوستر عروض استبدال الأجهزة القديمة', 'تصميم ترويجي جذاب لخدمة استبدال الهواتف مخصص للستوري والمطبوعات.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">سوشيال ميديا</span>
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="عروض استبدال الأجهزة">
+          </div>
+          <div class="card-content-area">
+            <h4>عروض استبدال الأجهزة</h4>
+            <p>تسلسل كتابي واضح ومباشر مصمم لقراءة سريعة على الموبايل.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-bullseye"></i> جذب عملاء</span>
+              <span>Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=1200&q=80', 'حزمة الأجهزة الصوتية الذكية', 'تصاميم تسويقية تسلط الضوء على السماعات والأجهزة الصوتية الحديثة.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">حزمة تسويقية</span>
+            <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=600&q=80" alt="الأجهزة الصوتية">
+          </div>
+          <div class="card-content-area">
+            <h4>الأجهزة الصوتية والذكية</h4>
+            <p>هوية بصرية مريحة بألوان جذابة لإبراز ميزات السماعات.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-bullseye"></i> زيادة التحويل</span>
+              <span>Adobe Suite</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 2: TRAVEL & PERFORMANCE ADS (SIGMA & FRIDAY TOURS)
+       ========================================================= -->
+  <section class="case-block-section" id="travel-ads">
+    <div class="container">
+      
+      <div class="section-headline-box">
+        <div>
+          <div class="section-counter-badge">02</div>
+          <h2 class="section-main-heading">حملات السياحة <span>والسفر</span></h2>
+          <p class="section-lead-paragraph">
+            شركتي سيجما تورز وفرايداي تورز (2021 – 2024): صناعة المواد الإعلانية السياحية وتطبيق اختبارات A/B Testing لخفض تكلفة العميل المحتمل (CPL).
+          </p>
+        </div>
+      </div>
+
+      <div class="case-role-card">
+        <div class="role-info">
+          <h4>أخصائي المحتوى البصري للأداء التسويقي (Performance Creative)</h4>
+          <p>
+            تصميم المواد الإعلانية عبر Meta و TikTok وشبكة Google الإعلانية، مع اختبار دقيق لرسائل ونصوص الإعلانات لرفع معدلات حجز الرحلات.
+          </p>
+        </div>
+        <div class="role-tags-wrap">
+          <span class="role-tag">اختبارات A/B</span>
+          <span class="role-tag">تقليل تكلفة الحجز</span>
+          <span class="role-tag">إعلانات Google Display</span>
+          <span class="role-tag">برامج سياحية متكاملة</span>
+        </div>
+      </div>
+
+      <!-- Interactive 3D Video Cards Deck Showcase for Travel -->
+      <div class="video-hub-container">
+        <div class="video-hub-header">
+          <div class="video-hub-title">
+            <h3><i class="fa-solid fa-plane-departure" style="color: var(--accent-blue);"></i> ريلز وفيديوهات العروض السياحية</h3>
+            <p>اضغط على أي كارت لعرضه في المنتصف وتشغيله في سينما العرض المنبثقة مباشرة</p>
+          </div>
+        </div>
+
+        <!-- 3D Video Playing Cards Deck Container -->
+        <div class="playlist-items-list" id="playlist_travel"></div>
+      </div>
+
+      <!-- Travel Photo Gallery -->
+      <div class="gallery-cards-grid" id="gallery_travel">
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1200&q=80', 'إعلان رحلات الصيف - سيجما تورز', 'حملة إعلانية بصرية متكاملة للترويج لرحلات الشواطئ والمصايف.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill" style="color: var(--accent-blue);">SIGMA TOURS</span>
+            <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=600&q=80" alt="إعلان سيجما تورز">
+          </div>
+          <div class="card-content-area">
+            <h4>حملة باقات الصيف</h4>
+            <p>بانر ترويجي يبرز الخصومات والمزايا الحصرية للحجز المبكر.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-check"></i> خفض CPL بنسبة 28%</span>
+              <span>Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1200&q=80', 'حملة العطلات الموسمية - فرايداي تورز', 'كاروسيل سوشيال ميديا مخصص لاختبارات A/B على إعلانات Meta.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill" style="color: var(--accent-blue);">FRIDAY TOURS</span>
+            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=600&q=80" alt="حملة فرايداي تورز">
+          </div>
+          <div class="card-content-area">
+            <h4>كاروسيل الرحلات الموسمية</h4>
+            <p>سلسلة كروت تستعرض تفاصيل برامج الرحلات والفنادق.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-check"></i> معدل تحويل مرتفع</span>
+              <span>Meta Ads</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80', 'بروشور ومجلة البرامج السياحية', 'كتالوج ومطبوعات سياحية متكاملة للمعارض السياحية والتوزيع المباشر.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill" style="color: var(--accent-blue);">مطبوعات</span>
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=80" alt="بروشور سياحي">
+          </div>
+          <div class="card-content-area">
+            <h4>كتالوج الوجهات السياحية</h4>
+            <p>تنسيق تحريري يدمج التصوير الفوتوغرافي عالي الدقة مع التايبوجرافي.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-check"></i> جاهز للطباعة</span>
+              <span>InDesign</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80', 'بانرات إعلانات جوجل للرحلات الفاخرة', 'حزمة بانرات شبكة Google Display بجميع المقاسات القياسية IAB.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill" style="color: var(--accent-blue);">إعلانات GOOGLE</span>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="بانر جوجل">
+          </div>
+          <div class="card-content-area">
+            <h4>حزمة إعلانات شبكة جوجل</h4>
+            <p>مقاسات إعلانية متجاوبة مصممة لتحقيق أعلى نسبة نقر (CTR).</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-check"></i> CTR استثنائي</span>
+              <span>Photoshop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 3: GENERATIVE AI & MOTION GRAPHICS
+       ========================================================= -->
+  <section class="case-block-section" id="ai-motion">
+    <div class="container">
+      
+      <div class="section-headline-box">
+        <div>
+          <div class="section-counter-badge">03</div>
+          <h2 class="section-main-heading">الذكاء الاصطناعي <span>وفنون الموشن</span></h2>
+          <p class="section-lead-paragraph">
+            دمج هندسة الأوامر المتقدمة (Midjourney v6, Flux.1) مع تصاميم الموشن في After Effects لإنتاج تصاميم تجارية مبهرة في أوقات قياسية.
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-cards-grid" id="gallery_aiMotion">
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80', 'تصاميم سريالية سيبرانية بالذكاء الاصطناعي', 'استكشاف الهويات المفاهيمية التجريدية المنشأة عبر هندسة أوامر Midjourney v6.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">MIDJOURNEY v6</span>
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="فن الذكاء الاصطناعي">
+          </div>
+          <div class="card-content-area">
+            <h4>خلفيات ورسومات سيبرانية</h4>
+            <p>تجريد ثلاثي الأبعاد مصمم كخلفيات وبصريات للشركات التقنية.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-brain"></i> أوامر متقدمة</span>
+              <span>دمج Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80', 'سلسلة التايبوجرافي الحركي Kinetic Typography', 'حزمة موشن تايبوجرافي في After Effects مصممة لرفع مدة المشاهدة في الريلز.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">AFTER EFFECTS</span>
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80" alt="تايبوجرافي حركي">
+          </div>
+          <div class="card-content-area">
+            <h4>التايبوجرافي الحركي والإيقاع</h4>
+            <p>تتابع حركي سريع وملفت للأنظار مخصص للتفاعل على الموبايل.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-play"></i> ريلز وتيك توك</span>
+              <span>After Effects</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1200&q=80', 'نماذج ومفاهيم المنتجات المستقبلية', 'نماذج وتغليف منتجات تقنية مستقبلية تم إنتاجها بالذكاء الاصطناعي التوليدي.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">FLUX.1</span>
+            <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=600&q=80" alt="منتج مستقبلي">
+          </div>
+          <div class="card-content-area">
+            <h4>مفاهيم المنتجات والتغليف</h4>
+            <p>توليد خيارات متنوعة للتغليف والإضاءة التجارية في ثوانٍ.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-bolt"></i> تسريع 50%</span>
+              <span>Generative AI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=1200&q=80', 'ملمس وتدرجات هولوجرافية تجريدية', 'عناصر بصرية وملمس تجريدي مخصص لأنظمة الهوية وتطبيقات الواجهات الرقمية.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">ملامس AI</span>
+            <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=600&q=80" alt="ملامس هولوجرافية">
+          </div>
+          <div class="card-content-area">
+            <h4>ملامس بصرية هولوجرافية</h4>
+            <p>خامات وتدرجات لونية فريدة مصممة لتطعيم الواجهات الرقمية الحديثة.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-palette"></i> Textures</span>
+              <span>Midjourney</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 4: BRAND IDENTITY & CORPORATE KITS
+       ========================================================= -->
+  <section class="case-block-section" id="branding">
+    <div class="container">
+      
+      <div class="section-headline-box">
+        <div>
+          <div class="section-counter-badge">04</div>
+          <h2 class="section-main-heading">الهويات التجارية <span>والأنظمة البصرية</span></h2>
+          <p class="section-lead-paragraph">
+            بناء الهويات المتكاملة للشركات، تصميم الشعارات الفيكتور، المطبوعات الرسمية وتغليف المنتجات الموجه لترسيخ العلامة التجارية في السوق.
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-cards-grid" id="gallery_branding">
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80', 'الهوية البصرية المتكاملة لشركة RMS 4 IT', 'هوية بصرية شاملة، شعار فيكتور، ومطبوعات رسمية لشركة حلول تقنية المعلومات.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">RMS 4 IT</span>
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="هوية RMS 4 IT">
+          </div>
+          <div class="card-content-area">
+            <h4>نظام هوية RMS 4 IT</h4>
+            <p>شعار هندسي بسيط، قواعد تايبوجرافي، وأوراق رسمية متناسقة.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-fingerprint"></i> هوية شركات</span>
+              <span>Illustrator</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80', 'الهوية البصرية لكلية هارلم للغة الإنجليزية', 'مواد تسويقية تعليمية، بروشورات، تصاميم مطبوعة، ولافتات إعلانية للفعاليات.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">HARLEM COLLEGE</span>
+            <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="هوية كلية هارلم">
+          </div>
+          <div class="card-content-area">
+            <h4>أصول كلية هارلم التعليمية</h4>
+            <p>تصاميم ترويجية ومطبوعات مصممة للتواصل التعليمي الفعّال.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-graduation-cap"></i> قطاع تعليمي</span>
+              <span>Photoshop / Print</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1200&q=80', 'شعار هندسي لشركة ناشئة تقنية', 'شعار فيكتور هندسي وتطبيقات متغيرة تناسب مختلف المقاسات.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">تصميم شعار</span>
+            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="شعار تقني">
+          </div>
+          <div class="card-content-area">
+            <h4>شعار هندسي حديث</h4>
+            <p>أيقونة معيارية تتدرج بنقاء من أيقونة التطبيق وحتى اللوحات الإعلانية الضخمة.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-vector-square"></i> فيكتور</span>
+              <span>Illustrator</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item-card" onclick="showLightbox('https://images.unsplash.com/photo-1586717799252-bd134ad00e26?auto=format&fit=crop&w=1200&q=80', 'نماذج تغليف وعلب إلكترونيات فاخرة', 'تصميم علب تغليف فاخرة وملصقات منتجات إلكترونية استهلاكية راقية.')">
+          <div class="card-thumb-container">
+            <span class="card-tag-pill">تغليف منتجات</span>
+            <img src="https://images.unsplash.com/photo-1586717799252-bd134ad00e26?auto=format&fit=crop&w=600&q=80" alt="تغليف منتجات">
+          </div>
+          <div class="card-content-area">
+            <h4>هندسة تغليف المنتجات</h4>
+            <p>قوالب طباعة دقيقة، بصمات رقائق معدنية، ونماذج 3D واقعية.</p>
+            <div class="card-meta-row">
+              <span><i class="fa-solid fa-box"></i> تغليف تجاري</span>
+              <span>Adobe Suite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CUSTOM DYNAMIC SECTIONS CONTAINER (Added via Admin Dashboard)
+       ========================================================= -->
+  <div id="customSectionsContainer"></div>
+
+  </div> <!-- /allCaseSectionsContainer -->
+
+  <!-- =========================================================
+       CREATIVE TOOLKIT & SKILLS (الترسانة الإبداعية والمهارات)
+       ========================================================= -->
+  <section class="skills-stack-section">
+    <div class="container">
+      <div style="text-align: center;">
+        <span style="color: var(--accent-mint); font-family: var(--font-ui); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">الترسانة الإبداعية</span>
+        <h2 style="font-size: 2.2rem; margin-top: 6px;">المهارات والأدوات الاحترافية</h2>
+      </div>
+
+      <div class="skills-cards-row">
+        <div class="skill-box-card">
+          <div class="skill-box-icon"><i class="fa-solid fa-image"></i></div>
+          <h4>Photoshop</h4>
+          <span>إتقان تام • +10 سنوات</span>
+        </div>
+        <div class="skill-box-card">
+          <div class="skill-box-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+          <h4>Illustrator</h4>
+          <span>فيكتور وهوية بصرية</span>
+        </div>
+        <div class="skill-box-card">
+          <div class="skill-box-icon"><i class="fa-solid fa-video"></i></div>
+          <h4>Premiere Pro</h4>
+          <span>مونتاج ريلز وفيديوهات</span>
+        </div>
+        <div class="skill-box-card">
+          <div class="skill-box-icon"><i class="fa-solid fa-film"></i></div>
+          <h4>After Effects</h4>
+          <span>موشن جرافيك ومؤثرات</span>
+        </div>
+        <div class="skill-box-card">
+          <div class="skill-box-icon"><i class="fa-solid fa-brain"></i></div>
+          <h4>Midjourney &amp; Flux</h4>
+          <span>فن الذكاء الاصطناعي</span>
+        </div>
+        <div class="skill-box-card">
+          <div class="skill-box-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h4>Meta &amp; TikTok Ads</h4>
+          <span>إعلانات مدفوعة عالية العائد</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CV / RESUME ACCESS HUB (مركز السيرة الذاتية)
+       ========================================================= -->
+  <section class="cv-access-section" id="cv-hub">
+    <div class="container">
+      <div class="cv-banner-container">
+        <div class="cv-banner-info">
+          <span style="color: var(--accent-mint); font-family: var(--font-ui); font-weight: 700; text-transform: uppercase;">السيرة الذاتية الرسمية</span>
+          <h2>استكشف السيرة الذاتية المهنية الكاملة</h2>
+          <p>
+            اختر بين السيرة الذاتية التنفيذية المتوافقة مع أنظمة الفرز الآلي (ATS) أو السيرة الذاتية البصرية الحديثة. تتضمن كامل التفاصيل عن دراستي بكلية الحاسبات والمعلومات والإحصاء بجامعة حلوان، ودبلومة تطوير الواجهات من ALX، واعتمادات يوداسيتي.
+          </p>
+        </div>
+
+        <div class="cv-buttons-row">
+          <a href="classic.html" target="_blank" class="btn-cv-tab">
+            <i class="fa-solid fa-file-lines" style="color: var(--accent-blue);"></i>
+            السيرة الكلاسيكية ATS
+          </a>
+          <a href="modern.html" target="_blank" class="btn-cv-tab">
+            <i class="fa-solid fa-palette" style="color: var(--accent-mint);"></i>
+            السيرة البصرية الحديثة
+          </a>
+          <a href="cv-hub.html" class="btn-cv-tab">
+            <i class="fa-solid fa-sliders" style="color: #facc15;"></i>
+            مركز السيرة الذاتية ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CONTACT SECTION (تواصل معي)
+       ========================================================= -->
+  <section class="contact-wrap-section" id="contact">
+    <div class="container contact-columns-grid">
+      
+      <!-- Contact Info Box -->
+      <div class="contact-details-box">
+        <span style="color: var(--accent-mint); font-family: var(--font-ui); font-weight: 700; text-transform: uppercase;">تواصل مباشر</span>
+        <h2>دعنا نصنع محتوى بصرياً استثنائياً معاً</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          متاح للحملات الإعلانية التجارية، تصميم الهويات البصرية، مونتاج فيديوهات الريلز السريعة، وحلول الإنتاج المتسارعة بالذكاء الاصطناعي.
+        </p>
+
+        <div class="contact-items-stack">
+          
+          <div class="contact-row-card" onclick="copyClipText('gamalsob@gmail.com', 'تم نسخ البريد الإلكتروني للحافظة!')">
+            <div class="contact-icon-bubble"><i class="fa-regular fa-envelope"></i></div>
+            <div class="contact-card-text">
+              <h5>البريد الإلكتروني (اضغط للنسخ)</h5>
+              <p>gamalsob@gmail.com</p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/201066439963?text=مرحباً%20جمال،%20أود%20بدء%20مشروع%20معك." target="_blank" class="contact-row-card">
+            <div class="contact-icon-bubble"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="contact-card-text">
+              <h5>واتساب وهاتف مباشر</h5>
+              <p>+20 106 643 9963</p>
+            </div>
+          </a>
+
+          <a href="https://www.behance.net/gamalsobih" target="_blank" class="contact-row-card">
+            <div class="contact-icon-bubble"><i class="fa-brands fa-behance"></i></div>
+            <div class="contact-card-text">
+              <h5>معرض أعمال Behance</h5>
+              <p>behance.net/gamalsobih</p>
+            </div>
+          </a>
+
+          <a href="https://eg.linkedin.com/in/gamalsobih" target="_blank" class="contact-row-card">
+            <div class="contact-icon-bubble"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="contact-card-text">
+              <h5>الملف المهني LinkedIn</h5>
+              <p>linkedin.com/in/gamalsobih</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Giant WhatsApp Card -->
+      <div class="whatsapp-giant-box">
+        <div class="whatsapp-giant-bubble"><i class="fa-brands fa-whatsapp"></i></div>
+        <h3>هل تحتاج تسليماً سريعاً لمشروعك؟</h3>
+        <p>أرسل رسالة مباشرة على واتساب لبدء نقاش فوري حول مشروعك، ومناقشة المقترحات الإبداعية ومواعيد التسليم.</p>
+        <a href="https://wa.me/201066439963?text=مرحباً%20جمال،%20شاهدت%20معرض%20أعمالك%20وأود%20مناقشة%20مشروع%20جديد." target="_blank" class="btn-pill-main" style="padding: 14px 36px; font-size: 1rem;">
+          <i class="fa-brands fa-whatsapp"></i> تحدث معي عبر واتساب الآن
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer>
+    <div class="container footer-container">
+      <div>
+        <strong>جمال الدين صبيح محمود</strong> &copy; 2026. جميع الحقوق محفوظة.
+      </div>
+      <div>
+        القاهرة، مصر • مصمم جرافيك أول وخبير صناعة المحتوى البصري
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       MODAL: FULLSCREEN CINEMA VIDEO PLAYER
+       ========================================================= -->
+  <div class="video-cinema-modal-overlay" id="videoCinemaModal" onclick="closeCinemaModalOnBackdrop(event)">
+    <div class="video-cinema-dialog" onclick="event.stopPropagation()">
+      <!-- Header -->
+      <div class="video-cinema-header">
+        <div class="video-cinema-title-box">
+          <span class="video-cinema-badge" id="cinemaVideoIndexBadge">فيديو 1 من 6</span>
+          <h3 id="cinemaVideoTitle" class="video-cinema-title">عنوان الفيديو</h3>
+        </div>
+        <div class="video-cinema-actions">
+          <div class="aspect-switch-group cinema-ratio-switch">
+            <button class="aspect-switch-btn active" id="cinemaBtn169" onclick="setCinemaRatio('16-9')">
+              <i class="fa-solid fa-desktop"></i> 16:9
+            </button>
+            <button class="aspect-switch-btn" id="cinemaBtn916" onclick="setCinemaRatio('9-16')">
+              <i class="fa-solid fa-mobile-screen"></i> 9:16
+            </button>
+          </div>
+          <button class="video-cinema-close-btn" onclick="closeVideoCinemaModal()" title="إغلاق (Esc)">&times;</button>
+        </div>
+      </div>
+
+      <!-- Player Frame -->
+      <div class="video-cinema-screen-wrap widescreen-16-9" id="cinemaScreenWrap">
+        <iframe 
+          id="cinemaIframe" 
+          class="cinema-iframe-element" 
+          src="" 
+          allow="autoplay; fullscreen"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Footer -->
+      <div class="video-cinema-footer">
+        <p id="cinemaVideoDesc" class="video-cinema-desc">وصف الفيديو المعروض...</p>
+        <div class="video-cinema-nav-btns">
+          <button class="cinema-nav-btn" id="cinemaPrevBtn" onclick="cinemaStepVideo(-1)" title="الفيديو السابق">
+            <i class="fa-solid fa-chevron-right"></i> السابق
+          </button>
+          <button class="cinema-nav-btn" id="cinemaNextBtn" onclick="cinemaStepVideo(1)" title="الفيديو التالي">
+            التالي <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MODAL: FULLSCREEN PHOTO LIGHTBOX
+       ========================================================= -->
+  <div class="modal-overlay-bg" id="photoModalOverlay" onclick="closeLightboxOnBackdrop(event)">
+    <div class="modal-window-content">
+      <button class="btn-close-modal" onclick="closePhotoModal()">&times;</button>
+      <div class="lightbox-image-container">
+        <img id="lightboxTargetImg" src="" alt="Project Preview">
+      </div>
+      <div class="lightbox-text-meta">
+        <h2 id="lightboxTargetTitle">Project Title</h2>
+        <p id="lightboxTargetDesc">Detailed project description.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MODAL: GOOGLE DRIVE EMBED HELPER INSTRUCTIONS
+       ========================================================= -->
+  <div class="modal-overlay-bg" id="driveModalOverlay" onclick="closeDriveModalOnBackdrop(event)">
+    <div class="modal-window-content" style="max-width: 680px;">
+      <button class="btn-close-modal" onclick="closeDriveModal()">&times;</button>
+      <h2 style="font-size: 1.5rem; margin-bottom: 14px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-brands fa-google-drive" style="color: var(--accent-mint);"></i>
+        طريقة وضع فيديوهاتك من Google Drive في 3 خطوات بسيطة:
+      </h2>
+      <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.7; display: flex; flex-direction: column; gap: 12px;">
+        <ol style="padding-left: 20px; display: flex; flex-direction: column; gap: 10px;">
+          <li><strong>ارفع الفيديو على Google Drive:</strong> (بصيغة MP4 أو MOV).</li>
+          <li><strong>اجعل صلاحية الرابط عامة:</strong> اضغط كليك يمين على الفيديو ➔ <em>Share (مشاركة)</em> ➔ واجعل الصلاحية: <em>"Anyone with the link can view" (أي شخص لديه الرابط يمكنه العرض)</em>.</li>
+          <li><strong>انسخ الـ File ID من رابط الفيديو:</strong><br>
+          <code style="background: #000; padding: 4px 8px; border-radius: 4px; color: var(--accent-mint); font-size: 0.85rem;">https://drive.google.com/file/d/<b>1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs</b>/view</code><br>
+          الكود المكتوب بالأزرق العريض هو الـ ID.</li>
+          <li><strong>استبدله في كود الصفحة:</strong> في ملف <code>index.html</code> داخل دالة <code>switchVideo('afareet', 'YOUR_ID_HERE', ...)</code> وسيعمل الفيديو فوراً!</li>
+        </ol>
+      </div>
+      <div style="margin-top: 24px; text-align: right;">
+        <button class="btn-pill-main" onclick="closeDriveModal()">فهمت، شكراً!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Message -->
+  <div class="toast-alert" id="toastBox">Copied!</div>
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+  <script>
+    // =========================================================
+    // THEME MANAGEMENT ENGINE (DARK / LIGHT MODE)
+    // =========================================================
+    function initTheme() {
+      const saved = localStorage.getItem('portfolio_theme') || 'dark';
+      setTheme(saved);
+    }
+
+    function setTheme(theme) {
+      const targetTheme = (theme === 'light') ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', targetTheme);
+      localStorage.setItem('portfolio_theme', targetTheme);
+      const btn = document.getElementById('themeToggleBtn');
+      if (btn) {
+        btn.innerHTML = (targetTheme === 'light') ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
+        btn.title = (targetTheme === 'light') ? 'تفعيل الوضع الليلي' : 'تفعيل الوضع النهاري';
+      }
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      setTheme(current === 'light' ? 'dark' : 'light');
+    }
+
+    // Run theme initialization immediately
+    initTheme();
+
+    // =========================================================
+    // CINEMA VIDEO MODAL ENGINE (نافذة مشغل الفيديو السينمائية المنبثقة)
+    // =========================================================
+    let cinemaState = {
+      secKey: '',
+      videos: [],
+      currentIndex: 0,
+      ratio: '16-9'
+    };
+
+    function openVideoCinemaModal(secKey, index) {
+      const data = getPortfolioData();
+      const secData = data.sections && data.sections[secKey];
+      if (!secData || !secData.videos || secData.videos.length === 0) return;
+
+      cinemaState.secKey = secKey;
+      cinemaState.videos = secData.videos;
+      cinemaState.currentIndex = Math.max(0, Math.min(secData.videos.length - 1, index || 0));
+
+      loadCinemaVideo(cinemaState.currentIndex);
+
+      document.getElementById('videoCinemaModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function loadCinemaVideo(index) {
+      if (!cinemaState.videos || cinemaState.videos.length === 0) return;
+      cinemaState.currentIndex = Math.max(0, Math.min(cinemaState.videos.length - 1, index));
+      const vid = cinemaState.videos[cinemaState.currentIndex];
+      if (!vid) return;
+
+      const total = cinemaState.videos.length;
+      const driveId = extractDriveId(vid.id || vid.url);
+
+      const idxBadge = document.getElementById('cinemaVideoIndexBadge');
+      const titleEl = document.getElementById('cinemaVideoTitle');
+      const descEl = document.getElementById('cinemaVideoDesc');
+      const iframe = document.getElementById('cinemaIframe');
+      const prevBtn = document.getElementById('cinemaPrevBtn');
+      const nextBtn = document.getElementById('cinemaNextBtn');
+
+      if (idxBadge) idxBadge.textContent = `فيديو ${cinemaState.currentIndex + 1} من ${total}`;
+      if (titleEl) titleEl.textContent = vid.title || `فيديو ${cinemaState.currentIndex + 1}`;
+      if (descEl) descEl.textContent = vid.desc || '';
+
+      const targetRatio = vid.ratio || '16-9';
+      setCinemaRatio(targetRatio);
+
+      if (iframe) {
+        iframe.src = driveId ? `https://drive.google.com/file/d/${driveId}/preview` : (vid.url || '');
+      }
+
+      if (prevBtn) prevBtn.disabled = (cinemaState.currentIndex <= 0);
+      if (nextBtn) nextBtn.disabled = (cinemaState.currentIndex >= total - 1);
+
+      // Keep deck centered on this video in background
+      if (cinemaState.secKey) {
+        setDeckCenter('video_' + cinemaState.secKey, cinemaState.currentIndex);
+      }
+    }
+
+    function setCinemaRatio(ratio) {
+      cinemaState.ratio = ratio;
+      const wrap = document.getElementById('cinemaScreenWrap');
+      const btn169 = document.getElementById('cinemaBtn169');
+      const btn916 = document.getElementById('cinemaBtn916');
+
+      if (wrap) {
+        if (ratio === '9-16') {
+          wrap.classList.remove('widescreen-16-9');
+          wrap.classList.add('vertical-9-16');
+        } else {
+          wrap.classList.remove('vertical-9-16');
+          wrap.classList.add('widescreen-16-9');
+        }
+      }
+
+      if (btn169 && btn916) {
+        btn169.classList.toggle('active', ratio !== '9-16');
+        btn916.classList.toggle('active', ratio === '9-16');
+      }
+    }
+
+    function cinemaStepVideo(dir) {
+      const next = cinemaState.currentIndex + dir;
+      if (next >= 0 && next < cinemaState.videos.length) {
+        loadCinemaVideo(next);
+      }
+    }
+
+    function closeVideoCinemaModal() {
+      const modal = document.getElementById('videoCinemaModal');
+      if (modal) modal.classList.remove('active');
+      const iframe = document.getElementById('cinemaIframe');
+      if (iframe) iframe.src = ''; // immediately stop audio/video playback
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeCinemaModalOnBackdrop(e) {
+      if (e.target.id === 'videoCinemaModal') {
+        closeVideoCinemaModal();
+      }
+    }
+
+    // Backwards-compatibility helpers
+    function switchVideo(sectionKey, driveId, elem, ratio) {
+      openVideoCinemaModal(sectionKey, 0);
+    }
+    function changePlayerRatio(sectionKey, ratio) {
+      setCinemaRatio(ratio);
+    }
+
+    // 3. Photo Lightbox
+    function showLightbox(imgSrc, title, desc) {
+      document.getElementById('lightboxTargetImg').src = formatDriveImageUrl(imgSrc);
+      document.getElementById('lightboxTargetTitle').textContent = title || 'Project Preview';
+      document.getElementById('lightboxTargetDesc').textContent = desc || '';
+      document.getElementById('photoModalOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePhotoModal() {
+      document.getElementById('photoModalOverlay').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeLightboxOnBackdrop(e) {
+      if (e.target.id === 'photoModalOverlay') closePhotoModal();
+    }
+
+    // 4. Drive Helper Modal
+    function showDriveModal() {
+      document.getElementById('driveModalOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDriveModal() {
+      document.getElementById('driveModalOverlay').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeDriveModalOnBackdrop(e) {
+      if (e.target.id === 'driveModalOverlay') closeDriveModal();
+    }
+
+    // 5. Copy Clipboard Text
+    function copyClipText(text, msg) {
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toastBox');
+        toast.textContent = msg || 'Copied to clipboard!';
+        toast.style.display = 'block';
+        setTimeout(() => { toast.style.display = 'none'; }, 2400);
+      });
+    }
+
+    // 6. Mobile Navigation
+    toggleNavMenu = function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    };
+
+    function closeNavMenu() {
+      document.getElementById('navLinks').classList.remove('open');
+    }
+
+    // Keyboard navigation (ESC, Arrow keys)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePhotoModal();
+        closeDriveModal();
+        closeVideoCinemaModal();
+      }
+      const cinemaModal = document.getElementById('videoCinemaModal');
+      if (cinemaModal && cinemaModal.classList.contains('active')) {
+        if (e.key === 'ArrowRight') {
+          cinemaStepVideo(-1); // In Arabic RTL, right is previous
+        } else if (e.key === 'ArrowLeft') {
+          cinemaStepVideo(1);  // In Arabic RTL, left is next
+        }
+      }
+    });
+  </script>
+
+  <!-- =========================================================
+       DYNAMIC PORTFOLIO DATA ENGINE
+       ========================================================= -->
+  <script src="assets/js/portfolio-data.js"></script>
+
+  <!-- =========================================================
+       SMOOTH SCROLL & SCROLL ANIMATION LIBRARIES (xFolio Stack)
+       ========================================================= -->
+  <script src="assets/js/lenis.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+
+  <script>
+    // =========================================================
+    // 1. LENIS BUTTERY SMOOTH INERTIA SCROLL ("بيتزحلق")
+    // =========================================================
+    let lenis;
+    if (typeof Lenis !== 'undefined') {
+      lenis = new Lenis({
+        duration: 1.35,  // Smooth gliding momentum
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        wheelMultiplier: 0.95,
+        touchMultiplier: 1.5,
+        infinite: false
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+      // Connect Lenis to GSAP ScrollTrigger
+      if (typeof ScrollTrigger !== 'undefined' && typeof gsap !== 'undefined') {
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+          lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+      }
+    }
+
+    // =========================================================
+    // 2. SCROLL ANIMATIONS FOR HERO IMAGE & BACKGROUND ARCH
+    // =========================================================
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Subtle 3D parallax on the hero photo cutout
+      gsap.to('.hero-portrait-cutout img', {
+        scrollTrigger: {
+          trigger: '.hero-banner',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1.2,
+        },
+        y: 65,
+        scale: 1.05,
+        ease: 'none'
+      });
+
+      // Ambient background arch reacts to scroll
+      gsap.to('.hero-arch-shape', {
+        scrollTrigger: {
+          trigger: '.hero-banner',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1.5,
+        },
+        y: 35,
+        scale: 0.96,
+        opacity: 0.45,
+        ease: 'none'
+      });
+
+
+      // =========================================================
+      // 3. TEXT & HEADLINE REVEALS ON SCROLL
+      // =========================================================
+      // Section Headlines
+      gsap.utils.toArray('.section-headline-box').forEach((box) => {
+        const numberBadge = box.querySelector('.section-counter-badge');
+        const heading = box.querySelector('.section-main-heading');
+        const lead = box.querySelector('.section-lead-paragraph');
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: box,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          }
+        });
+
+        if (numberBadge) {
+          tl.from(numberBadge, { x: -35, opacity: 0, duration: 0.8, ease: 'power3.out' });
+        }
+        if (heading) {
+          tl.from(heading, { y: 35, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5');
+        }
+        if (lead) {
+          tl.from(lead, { y: 25, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5');
+        }
+      });
+
+      // Gallery Cards Staggered Reveal
+      gsap.utils.toArray('.gallery-cards-grid').forEach((grid) => {
+        const cards = grid.querySelectorAll('.gallery-item-card');
+        gsap.from(cards, {
+          scrollTrigger: {
+            trigger: grid,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+          y: 45,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.12,
+          ease: 'power3.out'
+        });
+      });
+
+      // Video Hub Box Entrance
+      gsap.utils.toArray('.video-hub-container').forEach((box) => {
+        gsap.from(box, {
+          scrollTrigger: {
+            trigger: box,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+          y: 40,
+          opacity: 0,
+          duration: 0.85,
+          ease: 'power3.out'
+        });
+      });
+
+      // Role Cards Entrance
+      gsap.utils.toArray('.case-role-card').forEach((card) => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 88%',
+            toggleActions: 'play none none none',
+          },
+          y: 30,
+          opacity: 0,
+          duration: 0.75,
+          ease: 'power3.out'
+        });
+      });
+
+      // =========================================================
+      // 4. STATS COUNTER ODIMETER ROLL-UP ON SCROLL
+      // =========================================================
+      let numbersTriggered = false;
+      ScrollTrigger.create({
+        trigger: '.hero-col-right',
+        start: 'top 85%',
+        onEnter: () => {
+          if (!numbersTriggered) {
+            numbersTriggered = true;
+            animateDigit('statYears', 10, 1600);
+            animateDigit('statCampaigns', 500, 2200);
+            animateDigit('statSpeed', 50, 1800);
+          }
+        }
+      });
+    }
+
+    function animateDigit(id, target, duration) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const startTime = performance.now();
+
+      function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+        el.textContent = Math.floor(target * ease);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = target;
+        }
+      }
+      requestAnimationFrame(update);
+    }
+
+    // =========================================================
+    // 5. 3D PERSPECTIVE TILT ON GALLERY CARDS
+    // =========================================================
+    function initTiltEffect() {
+      document.querySelectorAll('.gallery-item-card').forEach((card) => {
+        card.onmousemove = (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -7;
+          const rotateY = ((x - centerX) / centerX) * 7;
+          card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+        };
+        card.onmouseleave = () => {
+          card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        };
+      });
+    }
+
+    // =========================================================
+    // 6. DYNAMIC PORTFOLIO LIVE RENDER ENGINE
+    // =========================================================
+    function renderLivePortfolio() {
+      if (typeof getPortfolioData !== 'function') return;
+      const data = getPortfolioData();
+      if (!data) return;
+
+      // 1. Profile & Hero Data
+      if (data.profile) {
+        const p = data.profile;
+        const isAr = (document.documentElement.lang === 'ar');
+        const greetEl = document.getElementById('heroGreetingText');
+        if (greetEl) {
+          if (isAr) {
+            greetEl.innerHTML = (p.greetingAr || 'أهلاً بك! <i class="fa-solid fa-hand"></i> أنا جمال صبيح');
+          } else if (p.greeting) {
+            greetEl.innerHTML = `${p.greeting} <i class="fa-solid fa-hand"></i>`;
+          }
+        }
+        const headEl = document.getElementById('heroHeadlineText');
+        if (headEl) {
+          if (isAr) {
+            headEl.innerHTML = (p.headlineMainAr || 'صناعة <span class="gradient-word">محتوى بصري</span> يحقق أعلى مبيعات، <span class="outlined-word">ريلز</span> وتجارب الذكاء الاصطناعي.');
+          } else if (p.headlineMain) {
+            headEl.innerHTML = p.headlineMain;
+          }
+        }
+        const pitchEl = document.getElementById('heroPitchText');
+        if (pitchEl) {
+          if (isAr) {
+            pitchEl.textContent = (p.pitchTextAr || 'أكثر من 10 سنوات في قيادة وتصميم الهويات البصرية، إعلانات السوشيال ميديا عالية العائد (High ROAS) لمنصات Meta و TikTok، مونتاج فيديوهات الريلز الديناميكية، وحلول التصميم المتسارعة بالذكاء الاصطناعي.');
+          } else if (p.pitchText) {
+            pitchEl.textContent = p.pitchText;
+          }
+        }
+        const imgEl = document.getElementById('heroPortraitImg');
+        if (imgEl && p.heroImage) {
+          imgEl.src = formatDriveImageUrl(p.heroImage);
+        }
+        if (p.stats) {
+          const sYears = document.getElementById('statYears');
+          const sCamp = document.getElementById('statCampaigns');
+          const sSpeed = document.getElementById('statSpeed');
+          if (sYears && p.stats.years !== undefined) sYears.textContent = p.stats.years;
+          if (sCamp && p.stats.campaigns !== undefined) sCamp.textContent = p.stats.campaigns;
+          if (sSpeed && p.stats.speedBoost !== undefined) sSpeed.textContent = p.stats.speedBoost;
+        }
+      }
+
+      // 2. Render Custom Sections (Newly Created by User) into DOM
+      renderCustomSections(data);
+
+      // 3. Handle 4 Core Sections Visibility & Data (Afareet, Travel, AI, Branding)
+      const coreMap = {
+        afareet: 'el-afareet',
+        travel: 'travel-ads',
+        aiMotion: 'ai-motion',
+        branding: 'branding'
+      };
+
+      Object.keys(coreMap).forEach(secKey => {
+        const domId = coreMap[secKey];
+        const domSec = document.getElementById(domId);
+        const secData = data.sections && data.sections[secKey];
+
+        if (!domSec) return;
+
+        // If section is deleted from data OR disabled, hide it completely!
+        if (!secData || secData.enabled === false) {
+          domSec.style.display = 'none';
+          return;
+        }
+
+        // Show section
+        domSec.style.display = '';
+
+        const isAr = (document.documentElement.lang === 'ar');
+        const color = secData.color || '#00BC91';
+
+        // Update Title dynamically
+        const headingEl = domSec.querySelector('.section-main-heading');
+        if (headingEl) {
+          const title = (isAr && secData.titleAr) ? secData.titleAr : (secData.title || '');
+          if (title) headingEl.textContent = title;
+        }
+
+        // Update Subtitle dynamically
+        const subEl = domSec.querySelector('.section-lead-paragraph');
+        if (subEl) {
+          const subtitle = (isAr && secData.subtitleAr) ? secData.subtitleAr : (secData.subtitle || '');
+          if (subtitle) subEl.textContent = subtitle;
+        }
+
+        // Update or inject Case Role Card
+        let roleCard = domSec.querySelector('.case-role-card');
+        const hasRoleInfo = secData.roleTitle || secData.roleDesc || (secData.tags && secData.tags.length > 0);
+        if (hasRoleInfo) {
+          if (!roleCard) {
+            roleCard = document.createElement('div');
+            roleCard.className = 'case-role-card';
+            const headlineBox = domSec.querySelector('.section-headline-box');
+            if (headlineBox && headlineBox.nextSibling) {
+              headlineBox.parentNode.insertBefore(roleCard, headlineBox.nextSibling);
+            } else if (headlineBox) {
+              headlineBox.parentNode.appendChild(roleCard);
+            }
+          }
+          const tagsHtml = (secData.tags || []).map(t => `<span class="role-tag">${t}</span>`).join('');
+          roleCard.innerHTML = `
+            <div class="role-info">
+              <h4>${secData.roleTitleAr || secData.roleTitle || 'Creative Production'}</h4>
+              <p>${secData.roleDescAr || secData.roleDesc || ''}</p>
+            </div>
+            <div class="role-tags-wrap">
+              ${tagsHtml}
+            </div>
+          `;
+          roleCard.style.display = '';
+        } else if (roleCard) {
+          roleCard.style.display = 'none';
+        }
+
+        // Update or inject Video Hub (hasVideoPlayer)
+        const hasVideos = secData.hasVideoPlayer !== false && (secData.videos && secData.videos.length > 0);
+        let videoHub = domSec.querySelector('.video-hub-container');
+        if (hasVideos) {
+          if (!videoHub) {
+            videoHub = document.createElement('div');
+            videoHub.className = 'video-hub-container';
+            videoHub.innerHTML = `
+              <div class="video-hub-header">
+                <div class="video-hub-title">
+                  <h3><i class="fa-solid fa-circle-play" style="color: ${color};"></i> ${isAr ? 'مشغل الفيديوهات والريلز' : 'Video & Reels Player'}</h3>
+                  <p>${isAr ? 'اضغط على أي كارت لعرضه في المنتصف وتشغيله في سينما العرض مباشرة' : 'Click any card to center and play in the cinema modal'}</p>
+                </div>
+              </div>
+              <div class="playlist-items-list" id="playlist_${secKey}"></div>
+            `;
+            const containerBox = domSec.querySelector('.container');
+            const galleryCards = domSec.querySelector('.gallery-cards-grid, [id^="gallery_"]');
+            if (containerBox && galleryCards) {
+              containerBox.insertBefore(videoHub, galleryCards.previousElementSibling || galleryCards);
+            } else if (containerBox) {
+              containerBox.appendChild(videoHub);
+            }
+          } else {
+            videoHub.style.display = '';
+          }
+
+          const playlistEl = domSec.querySelector('#playlist_' + secKey);
+          if (playlistEl) {
+            renderPlaylistInto(secKey, secData.videos || [], playlistEl);
+          }
+        } else if (videoHub) {
+          videoHub.style.display = 'none';
+        }
+
+        // Render gallery
+        const galleryEl = document.getElementById('gallery_' + secKey);
+        if (galleryEl) {
+          renderGalleryInto(secKey, secData.gallery || [], galleryEl);
+        }
+      });
+
+      // 4. REORDER ALL SECTIONS IN THE DOM MATCHING sectionOrder!
+      const allCaseWrapper = document.getElementById('allCaseSectionsContainer');
+      const order = data.sectionOrder || Object.keys(data.sections);
+      let visibleCounter = 1;
+
+      order.forEach(secKey => {
+        const domId = coreMap[secKey] || `sec-${secKey}`;
+        const domSec = document.getElementById(domId);
+        const secData = data.sections && data.sections[secKey];
+
+        if (!domSec) return;
+
+        if (!secData || secData.enabled === false) {
+          domSec.style.display = 'none';
+          return;
+        }
+
+        domSec.style.display = '';
+
+        // Move element in DOM to reflect new order
+        if (allCaseWrapper) {
+          allCaseWrapper.appendChild(domSec);
+        }
+
+        // Re-index section counter badge (01, 02, 03, ...)
+        const counterBadge = domSec.querySelector('.section-counter-badge');
+        if (counterBadge) {
+          counterBadge.textContent = visibleCounter < 10 ? '0' + visibleCounter : '' + visibleCounter;
+          if (secData.color) {
+            counterBadge.style.color = secData.color;
+            counterBadge.style.borderColor = secData.color + '44';
+          }
+        }
+        visibleCounter++;
+      });
+
+      // 5. Dynamic Navigation Bar Links (Sync with enabled sections in exact order)
+      renderDynamicNavLinks(data);
+
+      // Refresh 3D tilt effects on cards
+      initTiltEffect();
+    }
+
+    // Helper: Build Navigation Links based on active/enabled sections in exact order
+    function renderDynamicNavLinks(data) {
+      const navList = document.getElementById('navLinks');
+      if (!navList || !data.sections) return;
+
+      const isAr = (document.documentElement.lang === 'ar');
+      const coreMap = {
+        afareet: 'el-afareet',
+        travel: 'travel-ads',
+        aiMotion: 'ai-motion',
+        branding: 'branding'
+      };
+
+      const order = data.sectionOrder || Object.keys(data.sections);
+      let html = '';
+
+      order.forEach(secKey => {
+        const sec = data.sections[secKey];
+        if (!sec || sec.enabled === false) return;
+
+        const targetId = coreMap[secKey] || `sec-${secKey}`;
+        let title = (isAr && sec.titleAr) ? sec.titleAr : (sec.title || targetId);
+        html += `<li><a href="#${targetId}" onclick="closeNavMenu()">${title}</a></li>`;
+      });
+
+      html += `
+        <li><a href="#cv-hub" onclick="closeNavMenu()">${isAr ? 'السيرة الذاتية' : 'CV Hub'}</a></li>
+        <li><a href="#contact" onclick="closeNavMenu()">${isAr ? 'تواصل معي' : 'Contact'}</a></li>
+        <li class="mobile-drawer-cta-item">
+          <a href="https://wa.me/201066439963?text=مرحباً%20جمال،%20أود%20بدء%20مشروع%20معك." target="_blank" class="mobile-drawer-hire-btn">
+            <i class="fa-brands fa-whatsapp"></i> ${isAr ? 'وظفني الآن!' : 'Hire Me Now!'}
+          </a>
+        </li>
+      `;
+      navList.innerHTML = html;
+    }
+
+    // Helper: Render Video Playlist into a container
+    // =========================================================
+    // 3D PLAYING CARDS DECK ENGINE (كروت الكوتشينة التفاعلية)
+    // =========================================================
+    // =========================================================
+    // 3D PLAYING CARDS DECK & SPLIT SHOWCASE ENGINE
+    // =========================================================
+    window.deckRegistry = window.deckRegistry || {};
+
+    // Helper: Dynamic Aspect Ratio Handler for Cards
+    function onDeckImageLoad(imgEl) {
+      if (!imgEl) return;
+      const mediaWrap = imgEl.closest('.deck-card-media');
+      if (!mediaWrap) return;
+      const w = imgEl.naturalWidth || imgEl.width;
+      const h = imgEl.naturalHeight || imgEl.height;
+      if (!w || !h) return;
+      const aspect = h / w;
+      // Tall / Reel / Vertical image (aspect ratio > 1.15)
+      if (aspect > 1.15) {
+        mediaWrap.classList.add('media-tall-reel');
+        mediaWrap.classList.remove('media-fit-full');
+      } else {
+        // Square (1:1) or Landscape / Horizontal image -> 100% full contain
+        mediaWrap.classList.add('media-fit-full');
+        mediaWrap.classList.remove('media-tall-reel');
+      }
+    }
+
+    function initDeckSystem(deckId, items, containerEl, renderCardHtmlFn, onCardSelectFn) {
+      if (!containerEl) return;
+      if (!items || items.length === 0) {
+        containerEl.innerHTML = `
+          <div style="padding: 30px; text-align: center; color: var(--text-muted); background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--border-subtle); width: 100%;">
+            <i class="fa-solid fa-clone" style="font-size: 2rem; margin-bottom: 10px; display: block; color: var(--accent-mint);"></i>
+            لا توجد عناصر مضافة حالياً.
+          </div>
+        `;
+        return;
+      }
+
+      // Initialize or preserve state
+      let state = window.deckRegistry[deckId];
+      if (!state) {
+        state = {
+          centerIndex: 0,
+          total: items.length,
+          items: items,
+          autoTimer: null,
+          suppressHoverUntil: 0
+        };
+        window.deckRegistry[deckId] = state;
+      } else {
+        state.total = items.length;
+        state.items = items;
+        if (state.centerIndex >= items.length) state.centerIndex = 0;
+      }
+
+      const total = items.length;
+      const hasExtra = total > 5;
+
+      containerEl.innerHTML = `
+        <div class="deck-split-showcase" id="split_${deckId}">
+          <!-- Left Column: 3D Playing Cards Stage -->
+          <div class="deck-stage-column">
+            <div class="deck-showcase-wrapper" id="wrap_${deckId}" data-lenis-prevent>
+              <!-- Left Edge Advance Zone (Desktop) -->
+              <div class="deck-side-zone deck-zone-left" title="الكارت السابق" style="${total <= 1 ? 'display:none;' : ''}">
+                <div class="deck-paddle-btn">
+                  <i class="fa-solid fa-chevron-left"></i>
+                  <span class="deck-pending-badge" id="badge_left_${deckId}"></span>
+                </div>
+              </div>
+
+              <!-- 3D Playing Cards Stage with Touch & Drag -->
+              <div class="deck-cards-stage" id="stage_${deckId}" data-lenis-prevent>
+                ${items.map((item, idx) => `
+                  <div class="deck-card ${idx === state.centerIndex ? 'active' : ''}" data-index="${idx}" id="card_${deckId}_${idx}">
+                    ${renderCardHtmlFn(item, idx, total)}
+                  </div>
+                `).join('')}
+              </div>
+
+              <!-- Right Edge Advance Zone (Desktop) -->
+              <div class="deck-side-zone deck-zone-right" title="الكارت التالي" style="${total <= 1 ? 'display:none;' : ''}">
+                <div class="deck-paddle-btn">
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <span class="deck-pending-badge" id="badge_right_${deckId}"></span>
+                </div>
+              </div>
+
+              <!-- Deck Navigation Controls & Dots -->
+              <div class="deck-controls-bar">
+                <div class="deck-hint-text">
+                  <span class="hint-desktop"><i class="fa-solid fa-arrows-left-right" style="color: var(--accent-mint);"></i> اسحب بالماوس أو حرك للتنقل • اضغط للعرض ${hasExtra ? '• كروت إضافية بالجانب' : ''}</span>
+                  <span class="hint-mobile"><i class="fa-solid fa-hand-pointer" style="color: var(--accent-mint);"></i> اسحب بصباعك يميناً أو يساراً للتنقل 👈👉</span>
+                </div>
+                <div class="deck-dots-container" id="dots_${deckId}">
+                  ${items.map((_, idx) => `<span class="deck-dot ${idx === state.centerIndex ? 'active' : ''}" onclick="setDeckCenter('${deckId}', ${idx})" title="الكارت ${idx + 1}"></span>`).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Active Item Details & Visit Campaign Panel (المساحة الفاضية جنب الكروت) -->
+          <div class="deck-info-column" id="info_col_${deckId}">
+            <div class="deck-info-panel-card" id="info_card_${deckId}">
+              <div class="deck-info-header">
+                <span class="deck-info-tag" id="info_tag_${deckId}"></span>
+                <span class="deck-info-counter" id="info_count_${deckId}"></span>
+              </div>
+
+              <h3 class="deck-info-title" id="info_title_${deckId}"></h3>
+              <p class="deck-info-desc" id="info_desc_${deckId}"></p>
+
+              <div class="deck-info-chips-row" id="info_chips_${deckId}">
+                <span class="deck-info-chip metric" id="info_chip_metric_${deckId}">
+                  <i class="fa-solid fa-chart-line"></i> <span id="info_metric_text_${deckId}"></span>
+                </span>
+                <span class="deck-info-chip tool" id="info_chip_tool_${deckId}">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i> <span id="info_tool_text_${deckId}"></span>
+                </span>
+              </div>
+
+              <div class="deck-info-actions">
+                <!-- Requested Visit Campaign Button -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="deck-btn-visit" id="info_btn_visit_${deckId}">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> زيارة الكامبين
+                </a>
+                <!-- Action Button (Cinema / Lightbox) -->
+                <button type="button" class="deck-btn-action" id="info_btn_action_${deckId}">
+                  <i class="fa-solid fa-expand"></i> معاينة كاملة
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      const stageEl = containerEl.querySelector(`#stage_${deckId}`);
+      const wrapEl = containerEl.querySelector(`#wrap_${deckId}`);
+
+      // Apply initial 3D transforms & info panel
+      updateDeckTransforms(deckId);
+
+      // Run aspect ratio detection for cached images
+      stageEl.querySelectorAll('.deck-card-media img').forEach(img => {
+        if (img.complete && img.naturalWidth) {
+          onDeckImageLoad(img);
+        }
+      });
+
+      // Card Click Handler (Protected from dragging mis-clicks)
+      stageEl.querySelectorAll('.deck-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (state.suppressClick) {
+            e.preventDefault();
+            e.stopPropagation();
+            return;
+          }
+          const idx = parseInt(card.dataset.index);
+          const wasCenter = (idx === state.centerIndex);
+          if (!wasCenter) {
+            // First click on side card: Bring to center and visibly select with pulse animation!
+            setDeckCenter(deckId, idx);
+          } else if (onCardSelectFn) {
+            // Second click on center active card: Open modal/cinema/lightbox
+            onCardSelectFn(items[idx], idx, card);
+          }
+        });
+
+        // Hover updates preview in info panel smoothly (Desktop mouse only)
+        card.addEventListener('mouseenter', () => {
+          if (state.isDragging || (state.suppressHoverUntil && Date.now() < state.suppressHoverUntil)) return;
+          const idx = parseInt(card.dataset.index);
+          updateDeckInfoPanel(deckId, idx, false);
+        });
+        card.addEventListener('mouseleave', () => {
+          if (state.isDragging || (state.suppressHoverUntil && Date.now() < state.suppressHoverUntil)) return;
+          updateDeckInfoPanel(deckId, state.centerIndex, false);
+        });
+      });
+
+      // =========================================================
+      // TOUCH & MOUSE REAL-TIME DRAG ENGINE (التحريك بالسحب بالأصابع والماوس)
+      // =========================================================
+      let startX = 0;
+      let startY = 0;
+      let currentX = 0;
+      let currentY = 0;
+      let startTime = 0;
+      let isPointerDown = false;
+      let isDragging = false;
+      let gestureLock = null; // null | 'horizontal' | 'vertical'
+      let activePointerId = null;
+
+      function onPointerStart(e) {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        isPointerDown = true;
+        isDragging = false;
+        gestureLock = null;
+        activePointerId = e.pointerId;
+        startX = e.clientX;
+        startY = e.clientY;
+        currentX = e.clientX;
+        currentY = e.clientY;
+        startTime = Date.now();
+        state.suppressClick = false;
+      }
+
+      function onPointerMove(e) {
+        if (!isPointerDown) return;
+        if (activePointerId !== null && e.pointerId !== activePointerId) return;
+
+        currentX = e.clientX;
+        currentY = e.clientY;
+        const dx = currentX - startX;
+        const dy = currentY - startY;
+
+        if (gestureLock === null) {
+          const dist = Math.hypot(dx, dy);
+          if (dist >= 6) {
+            if (Math.abs(dx) > Math.abs(dy)) {
+              gestureLock = 'horizontal';
+              isDragging = true;
+              state.isDragging = true;
+              state.suppressClick = true;
+              stageEl.classList.add('is-dragging');
+              try { stageEl.setPointerCapture(e.pointerId); } catch(err) {}
+            } else {
+              gestureLock = 'vertical';
+              // Vertical scroll: allow normal page scrolling naturally
+              return;
+            }
+          } else {
+            return;
+          }
+        }
+
+        if (gestureLock === 'horizontal' && isDragging) {
+          if (e.cancelable) e.preventDefault();
+          state.suppressClick = true;
+          // Real-time smooth transform follow finger/cursor
+          updateDeckTransforms(deckId, dx);
+        }
+      }
+
+      function onPointerEnd(e) {
+        if (!isPointerDown) return;
+        isPointerDown = false;
+
+        try {
+          if (activePointerId !== null) stageEl.releasePointerCapture(activePointerId);
+        } catch(err) {}
+        activePointerId = null;
+
+        stageEl.classList.remove('is-dragging');
+        state.isDragging = false;
+
+        if (gestureLock === 'horizontal' && isDragging) {
+          const dx = currentX - startX;
+          const dt = Math.max(1, Date.now() - startTime);
+          const velocity = Math.abs(dx) / dt;
+          const isMobile = window.innerWidth <= 768;
+          const threshold = isMobile ? 32 : 48;
+          const isFlick = (velocity > 0.28 && Math.abs(dx) > 16);
+
+          if (dx < -threshold || (isFlick && dx < 0)) {
+            // Dragged left -> advance to next card
+            stepDeck(deckId, 1);
+          } else if (dx > threshold || (isFlick && dx > 0)) {
+            // Dragged right -> advance to previous card
+            stepDeck(deckId, -1);
+          } else {
+            // Snap back smoothly
+            updateDeckTransforms(deckId, 0);
+          }
+
+          setTimeout(() => {
+            state.suppressClick = false;
+          }, 160);
+        } else {
+          updateDeckTransforms(deckId, 0);
+          state.suppressClick = false;
+        }
+      }
+
+      stageEl.addEventListener('pointerdown', onPointerStart, { passive: true });
+      stageEl.addEventListener('pointermove', onPointerMove, { passive: false });
+      stageEl.addEventListener('pointerup', onPointerEnd);
+      stageEl.addEventListener('pointercancel', onPointerEnd);
+
+      // Bind Side Zones Hover & Click (For Desktop)
+      const leftZone = wrapEl.querySelector('.deck-zone-left');
+      const rightZone = wrapEl.querySelector('.deck-zone-right');
+
+      function startStep(dir) {
+        stepDeck(deckId, dir);
+        clearInterval(state.autoTimer);
+        state.autoTimer = setInterval(() => {
+          stepDeck(deckId, dir);
+        }, 650);
+      }
+
+      function stopStep() {
+        clearInterval(state.autoTimer);
+        state.autoTimer = null;
+      }
+
+      if (leftZone) {
+        leftZone.addEventListener('mouseenter', () => startStep(-1));
+        leftZone.addEventListener('mouseleave', stopStep);
+        leftZone.addEventListener('click', (e) => { e.stopPropagation(); stepDeck(deckId, -1); });
+      }
+
+      if (rightZone) {
+        rightZone.addEventListener('mouseenter', () => startStep(1));
+        rightZone.addEventListener('mouseleave', stopStep);
+        rightZone.addEventListener('click', (e) => { e.stopPropagation(); stepDeck(deckId, 1); });
+      }
+
+      // Mouse Wheel Support (Card-by-card advance)
+      wrapEl.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaX) > 20 || Math.abs(e.deltaY) > 30) {
+          e.preventDefault();
+          const dir = (e.deltaX > 0 || e.deltaY > 0) ? 1 : -1;
+          stepDeck(deckId, dir);
+        }
+      }, { passive: false });
+    }
+
+    function getInstagramMetrics() {
+      const w = window.innerWidth;
+      if (w <= 768) {
+        const cardW = Math.min(w - 32, 440);
+        const gap = 14;
+        return { cardW, gap, stride: cardW + gap };
+      }
+      return { cardW: 300, gap: 16, stride: 316 }; // 769px - 992px (Tablet)
+    }
+
+    function getResponsiveDeckMetrics() {
+      const w = window.innerWidth;
+      if (w <= 480) {
+        return {
+          step1: 56,
+          step2: 108,
+          stackBase: 124,
+          stackStep: 4,
+          rot1: 3,
+          rot2: 6,
+          rotStack: 10,
+          y1: 6,
+          y2: 12,
+          yStack: 16,
+          scale1: 0.90,
+          scale2: 0.81,
+          scaleStack: 0.70
+        };
+      } else if (w <= 768) {
+        return {
+          step1: 76,
+          step2: 145,
+          stackBase: 162,
+          stackStep: 5,
+          rot1: 3.5,
+          rot2: 7,
+          rotStack: 12,
+          y1: 7,
+          y2: 14,
+          yStack: 20,
+          scale1: 0.91,
+          scale2: 0.82,
+          scaleStack: 0.71
+        };
+      } else {
+        return {
+          step1: 115,
+          step2: 215,
+          stackBase: 230,
+          stackStep: 8,
+          rot1: 4,
+          rot2: 8,
+          rotStack: 14,
+          y1: 8,
+          y2: 18,
+          yStack: 24,
+          scale1: 0.92,
+          scale2: 0.84,
+          scaleStack: 0.72
+        };
+      }
+    }
+
+    function updateDeckTransforms(deckId, liveDragOffset) {
+      const state = window.deckRegistry[deckId];
+      if (!state) return;
+      const stageEl = document.getElementById('stage_' + deckId);
+      if (!stageEl) return;
+
+      const center = state.centerIndex;
+      const cards = stageEl.querySelectorAll('.deck-card');
+      const total = cards.length;
+      const isDragging = (typeof liveDragOffset === 'number' && liveDragOffset !== 0);
+      const dragPx = liveDragOffset || 0;
+      const isMobileTablet = (window.innerWidth <= 992);
+
+      if (isMobileTablet) {
+        // =========================================================
+        // INSTAGRAM CAROUSEL MODE (Mobile & Tablet <= 992px)
+        // Flat horizontal card strip, centered active card, peeking sides, zero 3D tilts
+        // =========================================================
+        const ig = getInstagramMetrics();
+
+        cards.forEach(card => {
+          const idx = parseInt(card.dataset.index);
+          const offset = idx - center;
+          const absOff = Math.abs(offset);
+
+          const baseTx = offset * ig.stride;
+          const finalTx = baseTx + dragPx;
+
+          let scale = 1.0;
+          let opacity = 1.0;
+          let zIndex = 25;
+          let pointerEvents = 'auto';
+
+          if (offset === 0) {
+            scale = 1.0;
+            opacity = 1.0;
+            zIndex = 30;
+          } else if (absOff === 1) {
+            scale = 0.94;
+            opacity = 0.76;
+            zIndex = 20;
+          } else if (absOff === 2) {
+            scale = 0.88;
+            opacity = 0.35;
+            zIndex = 15;
+          } else {
+            scale = 0.82;
+            opacity = 0;
+            zIndex = 5;
+            pointerEvents = 'none';
+          }
+
+          card.style.setProperty('--tx', `${baseTx}px`);
+          card.style.setProperty('--ty', '0px');
+          card.style.setProperty('--rot', '0deg');
+          card.style.setProperty('--scale', `${scale}`);
+
+          if (isDragging) {
+            card.style.transition = 'none';
+          } else {
+            card.style.transition = 'transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease';
+          }
+
+          card.style.transform = `translateX(${finalTx}px) translateY(0px) scale(${scale}) rotate(0deg)`;
+          card.style.zIndex = zIndex;
+          card.style.opacity = opacity;
+          card.style.filter = (offset === 0) ? 'none' : 'brightness(0.85)';
+          card.style.pointerEvents = pointerEvents;
+          card.classList.toggle('deck-card-stacked', absOff > 1);
+          card.classList.toggle('active', offset === 0);
+        });
+      } else {
+        // =========================================================
+        // LUXURY 3D CARD DECK MODE (Desktop > 992px)
+        // 3D arc curve, fan stack, side zone advance
+        // =========================================================
+        const m = getResponsiveDeckMetrics();
+
+        cards.forEach(card => {
+          const idx = parseInt(card.dataset.index);
+          const offset = idx - center;
+
+          let tx = 0, ty = 0, rot = 0, scale = 1, zIndex = 35, opacity = 1, brightness = 1, pointerEvents = 'auto', isStacked = false;
+
+          if (offset === 0) {
+            tx = 0; ty = 0; rot = 0; scale = 1.0;
+            zIndex = 40; opacity = 1; brightness = 1;
+          } else if (offset === -1) {
+            tx = -m.step1; ty = m.y1; rot = -m.rot1; scale = m.scale1;
+            zIndex = 30; opacity = 0.95; brightness = 0.92;
+          } else if (offset === 1) {
+            tx = m.step1; ty = m.y1; rot = m.rot1; scale = m.scale1;
+            zIndex = 30; opacity = 0.95; brightness = 0.92;
+          } else if (offset === -2) {
+            tx = -m.step2; ty = m.y2; rot = -m.rot2; scale = m.scale2;
+            zIndex = 20; opacity = 0.85; brightness = 0.82;
+          } else if (offset === 2) {
+            tx = m.step2; ty = m.y2; rot = m.rot2; scale = m.scale2;
+            zIndex = 20; opacity = 0.85; brightness = 0.82;
+          } else if (offset < -2) {
+            const stackDepth = Math.abs(offset) - 2;
+            tx = -m.stackBase - Math.min(stackDepth * m.stackStep, 35);
+            ty = m.yStack; rot = -m.rotStack; scale = m.scaleStack;
+            zIndex = Math.max(1, 10 - stackDepth);
+            opacity = stackDepth <= 2 ? 0.3 : 0;
+            brightness = 0.5;
+            pointerEvents = stackDepth <= 2 ? 'auto' : 'none';
+            isStacked = true;
+          } else {
+            const stackDepth = offset - 2;
+            tx = m.stackBase + Math.min(stackDepth * m.stackStep, 35);
+            ty = m.yStack; rot = m.rotStack; scale = m.scaleStack;
+            zIndex = Math.max(1, 10 - stackDepth);
+            opacity = stackDepth <= 2 ? 0.3 : 0;
+            brightness = 0.5;
+            pointerEvents = stackDepth <= 2 ? 'auto' : 'none';
+            isStacked = true;
+          }
+
+          const finalTx = tx + dragPx;
+
+          card.style.setProperty('--tx', `${tx}px`);
+          card.style.setProperty('--ty', `${ty}px`);
+          card.style.setProperty('--rot', `${rot}deg`);
+          card.style.setProperty('--scale', `${scale}`);
+
+          if (isDragging) {
+            card.style.transition = 'none';
+          } else {
+            card.style.transition = 'transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.1), opacity 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease';
+          }
+
+          card.style.transform = `translateX(${finalTx}px) translateY(${ty}px) scale(${scale}) rotate(${rot}deg)`;
+          card.style.zIndex = zIndex;
+          card.style.opacity = opacity;
+          card.style.filter = `brightness(${brightness})`;
+          card.style.pointerEvents = pointerEvents;
+          card.classList.toggle('deck-card-stacked', isStacked);
+          card.classList.toggle('active', offset === 0);
+        });
+      }
+
+      // Update dots
+      const dotsEl = document.getElementById('dots_' + deckId);
+      if (dotsEl) {
+        const dots = dotsEl.querySelectorAll('.deck-dot');
+        dots.forEach((dot, dIdx) => {
+          dot.classList.toggle('active', dIdx === center);
+        });
+      }
+
+      // Update side pending badges
+      const bLeft = document.getElementById('badge_left_' + deckId);
+      const bRight = document.getElementById('badge_right_' + deckId);
+      const pendingLeft = center;
+      const pendingRight = (total - 1) - center;
+
+      if (bLeft) {
+        bLeft.textContent = pendingLeft > 0 ? `+${pendingLeft}` : '';
+        bLeft.style.display = pendingLeft > 0 ? 'inline-block' : 'none';
+      }
+      if (bRight) {
+        bRight.textContent = pendingRight > 0 ? `+${pendingRight}` : '';
+        bRight.style.display = pendingRight > 0 ? 'inline-block' : 'none';
+      }
+
+      // Update the active campaign details panel in the side empty space!
+      if (!isDragging) {
+        updateDeckInfoPanel(deckId, center, false);
+      }
+    }
+
+    function updateDeckInfoPanel(deckId, activeIdx, isSelectionChange = false) {
+      const state = window.deckRegistry[deckId];
+      if (!state || !state.items) return;
+      const idx = (typeof activeIdx === 'number') ? activeIdx : state.centerIndex;
+      const item = state.items[idx];
+      if (!item) return;
+
+      const panelCard = document.getElementById('info_card_' + deckId);
+      if (panelCard && isSelectionChange) {
+        panelCard.classList.remove('panel-pulse');
+        void panelCard.offsetWidth; // Force CSS reflow to re-trigger pulse animation
+        panelCard.classList.add('panel-pulse');
+      }
+
+      const total = state.total;
+      const isVideo = deckId.startsWith('video_');
+      const secKey = deckId.replace('video_', '').replace('gallery_', '');
+
+      const tagEl = document.getElementById('info_tag_' + deckId);
+      const countEl = document.getElementById('info_count_' + deckId);
+      const titleEl = document.getElementById('info_title_' + deckId);
+      const descEl = document.getElementById('info_desc_' + deckId);
+      const chipMetric = document.getElementById('info_chip_metric_' + deckId);
+      const metricText = document.getElementById('info_metric_text_' + deckId);
+      const chipTool = document.getElementById('info_chip_tool_' + deckId);
+      const toolText = document.getElementById('info_tool_text_' + deckId);
+      const btnVisit = document.getElementById('info_btn_visit_' + deckId);
+      const btnAction = document.getElementById('info_btn_action_' + deckId);
+
+      const numFormatted = (idx + 1) < 10 ? '0' + (idx + 1) : '' + (idx + 1);
+      const totalFormatted = total < 10 ? '0' + total : '' + total;
+
+      if (countEl) countEl.textContent = `#${numFormatted} / ${totalFormatted}`;
+
+      if (tagEl) {
+        if (isVideo) {
+          tagEl.textContent = (item.ratio === '9-16' ? '9:16 VERTICAL REEL' : '16:9 VIDEO MONTAGE');
+        } else {
+          tagEl.textContent = item.tagAr || item.tag || 'CREATIVE CAMPAIGN';
+        }
+      }
+
+      if (titleEl) titleEl.textContent = item.titleAr || item.title || (isVideo ? 'فيديو برومو' : 'تصميم إعلاني');
+      if (descEl) descEl.textContent = item.descAr || item.desc || 'تفاصيل الحملة والتنفيذ الإبداعي المتكامل.';
+
+      // Metric chip
+      if (chipMetric && metricText) {
+        if (item.metric) {
+          chipMetric.style.display = 'inline-flex';
+          metricText.textContent = item.metric;
+        } else if (isVideo) {
+          chipMetric.style.display = 'inline-flex';
+          metricText.textContent = item.ratio === '9-16' ? 'Reels & TikTok' : 'Full HD 1080p';
+        } else {
+          chipMetric.style.display = 'none';
+        }
+      }
+
+      // Tool chip
+      if (chipTool && toolText) {
+        if (item.tool) {
+          chipTool.style.display = 'inline-flex';
+          toolText.textContent = item.tool;
+        } else if (isVideo) {
+          chipTool.style.display = 'inline-flex';
+          toolText.textContent = 'Premiere & AE';
+        } else {
+          chipTool.style.display = 'inline-flex';
+          toolText.textContent = 'Photoshop & AI';
+        }
+      }
+
+      // Visit Button (The live campaign URL)
+      if (btnVisit) {
+        const rawLink = item.link || item.url;
+        if (rawLink && rawLink.startsWith('http')) {
+          btnVisit.href = rawLink;
+          btnVisit.style.display = 'inline-flex';
+          btnVisit.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> زيارة الكامبين';
+          btnVisit.title = 'زيارة الكامبين ورؤيتها على أرض الواقع';
+        } else {
+          btnVisit.href = 'https://www.behance.net/gamalsobih';
+          btnVisit.style.display = 'inline-flex';
+          btnVisit.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> زيارة الكامبين';
+          btnVisit.title = 'مشاهدة المزيد على Behance';
+        }
+      }
+
+      // Action Button
+      if (btnAction) {
+        if (isVideo) {
+          btnAction.innerHTML = '<i class="fa-solid fa-circle-play"></i> تشغيل في السينما';
+          btnAction.onclick = () => openVideoCinemaModal(secKey, idx);
+        } else {
+          btnAction.innerHTML = '<i class="fa-solid fa-expand"></i> معاينة كاملة';
+          btnAction.onclick = () => {
+            const finalImg = formatDriveImageUrl(item.img);
+            showLightbox(finalImg, item.title, item.desc);
+          };
+        }
+      }
+    }
+
+    function setDeckCenter(deckId, idx) {
+      const state = window.deckRegistry[deckId];
+      if (!state) return;
+      state.suppressHoverUntil = Date.now() + 650;
+      state.centerIndex = Math.max(0, Math.min(state.total - 1, idx));
+      updateDeckTransforms(deckId);
+      updateDeckInfoPanel(deckId, state.centerIndex, true);
+    }
+
+    function stepDeck(deckId, dir) {
+      const state = window.deckRegistry[deckId];
+      if (!state) return;
+      state.suppressHoverUntil = Date.now() + 650;
+      let next = state.centerIndex + dir;
+      if (next < 0) next = state.total - 1;
+      else if (next >= state.total) next = 0;
+      state.centerIndex = next;
+      updateDeckTransforms(deckId);
+      updateDeckInfoPanel(deckId, state.centerIndex, true);
+    }
+
+    // Helper: Render Video Deck into playlist container
+    function renderPlaylistInto(secKey, videos, playlistEl) {
+      if (!playlistEl) return;
+
+      if (!videos || videos.length === 0) {
+        playlistEl.innerHTML = `
+          <div style="padding: 24px; text-align: center; color: var(--text-muted); background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--border-subtle); width: 100%;">
+            <i class="fa-solid fa-video-slash" style="font-size: 1.8rem; margin-bottom: 8px; display: block; color: var(--accent-mint);"></i>
+            لا توجد فيديوهات مضافة في هذا السكشن حالياً.
+          </div>
+        `;
+        return;
+      }
+
+      // Initialize Video Playing Cards / Instagram Carousel Deck
+      initDeckSystem(
+        'video_' + secKey,
+        videos,
+        playlistEl,
+        (vid, idx, total) => {
+          const ratio = vid.ratio || '16-9';
+          const finalThumb = formatDriveImageUrl(vid.thumb) || 'assets/images/default-video-poster.svg';
+
+          return `
+            <span class="deck-card-corner-badge">
+              <i class="fa-regular fa-clone" style="font-size: 0.62rem;"></i> ${idx + 1}/${total}
+            </span>
+            <span class="deck-card-format-badge">
+              <i class="fa-solid ${ratio === '9-16' ? 'fa-mobile-screen' : 'fa-film'}"></i> ${ratio === '9-16' ? 'Reel 9:16' : 'Video 16:9'}
+            </span>
+            <div class="deck-card-media">
+              <img src="${finalThumb}" alt="${vid.title || ''}" loading="lazy" onload="onDeckImageLoad(this)" onerror="this.onerror=null; this.src='assets/images/default-video-poster.svg';">
+              <div class="deck-card-media-overlay">
+                <div class="deck-card-play-icon"><i class="fa-solid fa-play"></i></div>
+              </div>
+            </div>
+            <div class="deck-card-content">
+              <div>
+                <h5 class="deck-card-title">${vid.titleAr || vid.title || 'فيديو برومو'}</h5>
+                <p class="deck-card-desc">${vid.descAr || vid.desc || 'مونتاج فيديو إعلاني ديناميكي عالي التأثير ومحقق للنتائج'}</p>
+              </div>
+              <div class="deck-card-footer">
+                <div class="deck-card-meta-tags">
+                  ${vid.tool ? `<span class="deck-card-meta-tag"><i class="fa-solid fa-film"></i> ${vid.tool}</span>` : ''}
+                  ${vid.metric ? `<span class="deck-card-meta-tag deck-meta-highlight"><i class="fa-solid fa-chart-line"></i> ${vid.metric}</span>` : ''}
+                </div>
+                <span class="deck-now-playing-tag"><i class="fa-solid fa-circle-play"></i> تشغيل</span>
+              </div>
+            </div>
+          `;
+        },
+        (vid, idx, cardEl) => {
+          openVideoCinemaModal(secKey, idx);
+        }
+      );
+    }
+
+    // Helper: Render Photo Gallery into a Deck container
+    function renderGalleryInto(secKey, gallery, galleryEl) {
+      if (!galleryEl) return;
+
+      if (!gallery || gallery.length === 0) {
+        galleryEl.innerHTML = `
+          <div style="grid-column: 1 / -1; padding: 30px; text-align: center; color: var(--text-muted); background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--border-subtle); width: 100%;">
+            <i class="fa-solid fa-images" style="font-size: 2rem; margin-bottom: 10px; display: block; color: var(--accent-mint);"></i>
+            لا توجد أعمال مضافة في هذا المعرض حالياً.
+          </div>
+        `;
+        return;
+      }
+
+      // Initialize Gallery Playing Cards / Instagram Carousel Deck
+      initDeckSystem(
+        'gallery_' + secKey,
+        gallery,
+        galleryEl,
+        (item, idx, total) => {
+          const finalImg = formatDriveImageUrl(item.img) || 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80';
+          const tagText = item.tagAr || item.tag || 'تصميم';
+          const tagHtml = `<span class="deck-card-format-badge">${tagText}</span>`;
+
+          return `
+            <span class="deck-card-corner-badge">
+              <i class="fa-regular fa-clone" style="font-size: 0.62rem;"></i> ${idx + 1}/${total}
+            </span>
+            ${tagHtml}
+            <div class="deck-card-media">
+              <img src="${finalImg}" alt="${item.titleAr || item.title || ''}" loading="lazy" onload="onDeckImageLoad(this)" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80';">
+            </div>
+            <div class="deck-card-content">
+              <div>
+                <h5 class="deck-card-title">${item.titleAr || item.title || 'تصميم إبداعي'}</h5>
+                <p class="deck-card-desc">${item.descAr || item.desc || 'تصميم سوشيال ميديا وهوية بصرية متكاملة'}</p>
+              </div>
+              <div class="deck-card-footer">
+                <div class="deck-card-meta-tags">
+                  ${item.tool ? `<span class="deck-card-meta-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> ${item.tool}</span>` : ''}
+                  ${item.metric ? `<span class="deck-card-meta-tag deck-meta-highlight"><i class="fa-solid fa-chart-line"></i> ${item.metric}</span>` : ''}
+                </div>
+                <span class="deck-click-prompt">معاينة وتفاصيل ⚡</span>
+              </div>
+            </div>
+          `;
+        },
+        (item, idx, cardEl) => {
+          const finalImg = formatDriveImageUrl(item.img);
+          showLightbox(finalImg, item.title, item.desc);
+        }
+      );
+    }
+
+    // Helper: Render Custom Dynamic Sections created in Admin Dashboard
+    function renderCustomSections(data) {
+      const container = document.getElementById('customSectionsContainer');
+      if (!container || !data.sections) return;
+
+      const coreKeys = ['afareet', 'travel', 'aiMotion', 'branding'];
+      const customKeys = Object.keys(data.sections).filter(k => !coreKeys.includes(k));
+
+      container.innerHTML = '';
+
+      customKeys.forEach(secKey => {
+        const sec = data.sections[secKey];
+        if (!sec || sec.enabled === false) return;
+
+        const hasVideos = sec.hasVideoPlayer !== false || (sec.videos && sec.videos.length > 0);
+        const color = sec.color || '#00BC91';
+        const numBadge = sec.number || '05';
+
+        const secElem = document.createElement('section');
+        secElem.className = 'case-block-section';
+        secElem.id = 'sec-' + secKey;
+
+        const tagsHtml = (sec.tags || []).map(t => `<span class="role-tag">${t}</span>`).join('');
+
+        let videosHtml = '';
+        if (hasVideos) {
+          videosHtml = `
+            <div class="video-hub-container">
+              <div class="video-hub-header">
+                <div class="video-hub-title">
+                  <h3><i class="fa-solid fa-circle-play" style="color: ${color};"></i> مشغل الفيديوهات والريلز</h3>
+                  <p>اضغط على أي كارت لعرضه في المنتصف وتشغيله في سينما العرض المنبثقة مباشرة</p>
+                </div>
+              </div>
+              <div class="playlist-items-list" id="playlist_${secKey}"></div>
+            </div>
+          `;
+        }
+
+        secElem.innerHTML = `
+          <div class="container">
+            <div class="section-headline-box">
+              <div>
+                <div class="section-counter-badge" style="color: ${color}; border-color: ${color}44;">${numBadge}</div>
+                <h2 class="section-main-heading">${sec.title}</h2>
+                <p class="section-lead-paragraph">${sec.subtitle || ''}</p>
+              </div>
+            </div>
+
+            <div class="case-role-card">
+              <div class="role-info">
+                <h4>${sec.roleTitle || 'Creative Production'}</h4>
+                <p>${sec.roleDesc || ''}</p>
+              </div>
+              <div class="role-tags-wrap">
+                ${tagsHtml}
+              </div>
+            </div>
+
+            ${videosHtml}
+
+            <div style="margin-bottom: 20px;">
+              <h3 style="font-size: 1.3rem;">
+                <i class="fa-solid fa-images" style="color: ${color}; margin-right: 8px;"></i>
+                معرض الأعمال والتصاميم
+              </h3>
+            </div>
+            <div class="gallery-cards-grid" id="gallery_${secKey}"></div>
+          </div>
+        `;
+
+        container.appendChild(secElem);
+
+        if (hasVideos) {
+          const playlistEl = secElem.querySelector('#playlist_' + secKey);
+          const playerEl = secElem.querySelector('#player_' + secKey);
+          renderPlaylistInto(secKey, sec.videos || [], playlistEl, playerEl);
+        }
+
+        const galleryEl = secElem.querySelector('#gallery_' + secKey);
+        renderGalleryInto(secKey, sec.gallery || [], galleryEl);
+      });
+    }
+
+    // Re-adjust deck card transforms on mobile orientation change or window resize
+    let deckResizeDebounce;
+    window.addEventListener('resize', () => {
+      clearTimeout(deckResizeDebounce);
+      deckResizeDebounce = setTimeout(() => {
+        if (window.deckRegistry) {
+          Object.keys(window.deckRegistry).forEach(deckId => {
+            updateDeckTransforms(deckId, 0);
+          });
+        }
+      }, 150);
+    });
+
+    // Touch Swipe gestures inside Video Cinema Modal
+    (function initCinemaModalSwipe() {
+      const dialog = document.querySelector('.video-cinema-dialog');
+      if (!dialog) return;
+      let startX = 0, startY = 0, startTime = 0;
+      dialog.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          startTime = Date.now();
+        }
+      }, { passive: true });
+      dialog.addEventListener('touchend', (e) => {
+        if (e.changedTouches.length === 1) {
+          const dx = e.changedTouches[0].clientX - startX;
+          const dy = e.changedTouches[0].clientY - startY;
+          const dt = Date.now() - startTime;
+          if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) && dt < 450) {
+            if (dx < 0) {
+              // swipe left -> next video
+              cinemaStepVideo(1);
+            } else {
+              // swipe right -> prev video
+              cinemaStepVideo(-1);
+            }
+          }
+        }
+      }, { passive: true });
+    })();
+
+    // Initialize Dynamic Render & Live Server Sync
+    function loadAndRenderPortfolio() {
+      renderLivePortfolio();
+
+      if (window.location.protocol.startsWith('http')) {
+        fetch('assets/js/portfolio-data.json?t=' + Date.now())
+          .then(res => {
+            if (!res.ok) throw new Error('Network error');
+            return res.json();
+          })
+          .then(serverData => {
+            if (serverData && serverData.sections) {
+              if (typeof savePortfolioData === 'function') {
+                savePortfolioData(serverData);
+              }
+              renderLivePortfolio();
+            }
+          })
+          .catch(() => {});
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadAndRenderPortfolio);
+    loadAndRenderPortfolio();
+
+    // Listen to localStorage changes in real time (e.g. from admin dashboard in another tab)
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'gamal_portfolio_data_v1') {
+        renderLivePortfolio();
+      }
+    });
+
+    // Recompute Deck Transforms on window resize (smooth desktop <-> mobile Instagram switch)
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (window.deckRegistry) {
+          Object.keys(window.deckRegistry).forEach(deckId => {
+            updateDeckTransforms(deckId);
+          });
+        }
+      }, 100);
+    });
+  </script>
+</body>
+</html>

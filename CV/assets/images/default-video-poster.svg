@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="50%" stop-color="#14141d"/>
+      <stop offset="100%" stop-color="#07070a"/>
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#00BC91" stop-opacity="0.28"/>
+      <stop offset="40%" stop-color="#00BC91" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00BC91"/>
+      <stop offset="100%" stop-color="#00e6b0"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1200" fill="url(#bgGrad)"/>
+  <rect width="800" height="1200" fill="url(#glowGrad)"/>
+
+  <!-- Subtle Grid Pattern -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="1200"/>
+    <line x1="200" y1="0" x2="200" y2="1200"/>
+    <line x1="300" y1="0" x2="300" y2="1200"/>
+    <line x1="400" y1="0" x2="400" y2="1200"/>
+    <line x1="500" y1="0" x2="500" y2="1200"/>
+    <line x1="600" y1="0" x2="600" y2="1200"/>
+    <line x1="700" y1="0" x2="700" y2="1200"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="800" x2="800" y2="800"/>
+    <line x1="0" y1="1000" x2="800" y2="1000"/>
+  </g>
+
+  <!-- Top Badge -->
+  <g transform="translate(400, 240)">
+    <rect x="-110" y="-22" width="220" height="44" rx="22" fill="#00BC91" fill-opacity="0.12" stroke="#00BC91" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="0" y="7" text-anchor="middle" fill="#00BC91" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="3">PORTFOLIO REEL</text>
+  </g>
+
+  <!-- Center Circle Play Emblem -->
+  <g transform="translate(400, 530)">
+    <!-- Outer Glow Ring -->
+    <circle r="96" fill="url(#cardGrad)" stroke="#00BC91" stroke-opacity="0.35" stroke-width="2"/>
+    <circle r="72" fill="#00BC91" fill-opacity="0.18"/>
+    <circle r="56" fill="url(#mintGrad)"/>
+    <!-- Play Triangle -->
+    <polygon points="-10,-18 20,0 -10,18" fill="#07070a"/>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <text x="400" y="730" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Cairo', sans-serif" font-size="34" font-weight="800" letter-spacing="1">GAMAL SOBIH</text>
+  <text x="400" y="780" text-anchor="middle" fill="#00BC91" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Cairo', sans-serif" font-size="20" font-weight="600" letter-spacing="2">CREATIVE VIDEO PRODUCTION</text>
+  <text x="400" y="830" text-anchor="middle" fill="#888899" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Cairo', sans-serif" font-size="16" font-weight="400">إعلان وموشن جرافيكس • ريلز تفاعلية</text>
+
+  <!-- Bottom Accent Line -->
+  <rect x="320" y="890" width="160" height="3" rx="1.5" fill="url(#mintGrad)" opacity="0.8"/>
+</svg>
